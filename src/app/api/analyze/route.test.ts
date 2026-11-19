@@ -274,4 +274,118 @@ describe("POST /api/analyze", () => {
     expect(dataNoKey.isFallback).toBe(true);
     expect(await getCodeUsage("COBALOLOS")).toBe(0);
   });
+
+  it("menonaktifkan thinkingBudget pada gemini-2.5-flash dan memfilter part thought", async () => {
+    process.env.GEMINI_MODEL = "gemini-2.5-flash";
+    const fetchSpy = vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response(
+        JSON.stringify({
+          candidates: [
+            {
+              finishReason: "STOP",
+              content: {
+                parts: [
+                  { text: "Internal reasoning...", thought: true },
+                  { text: "Analisis final untuk pengguna." },
+                ],
+              },
+            },
+          ],
+        }),
+        { status: 200, headers: { "Content-Type": "application/json" } }
+      )
+    );
+
+    const res = await POST(makeRequest(validSnbtBody(), "198.51.100.40"));
+    expect(res.status).toBe(200);
+
+    const data = (await res.json()) as AnalyzeResponseBody;
+    expect(data.isFallback).toBe(false);
+    expect(data.analysis).toBe("Analisis final untuk pengguna.");
+
+    const [calledUrl, init] = fetchSpy.mock.calls[0];
+    expect(String(calledUrl)).toBe(
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+    );
+    const sent = JSON.parse(String(init?.body ?? "{}")) as {
+      generationConfig?: {
+        temperature?: number;
+        maxOutputTokens?: number;
+        thinkingConfig?: { thinkingBudget?: number; thinkingLevel?: string };
+      };
+    };
+    expect(sent.generationConfig?.temperature).toBe(0.4);
+    expect(sent.generationConfig?.maxOutputTokens).toBe(3072);
+    expect(sent.generationConfig?.thinkingConfig?.thinkingBudget).toBe(0);
+    expect(sent.generationConfig?.thinkingConfig?.thinkingLevel).toBeUndefined();
+  });
+
+  it("memakai thinkingLevel low pada gemini-3.5-flash-lite, maxOutputTokens 3072, status Bahasa Indonesia, dan menggabungkan part non-thought", async () => {
+    process.env.GEMINI_MODEL = "gemini-3.5-flash-lite";
+    const fetchSpy = vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response(
+        JSON.stringify({
+          candidates: [
+            {
+              finishReason: "STOP",
+              content: {
+                parts: [
+                  { text: "Internal thinking...", thought: true },
+                  { text: "Paragraf 1 evaluasi.\n\n" },
+                  { text: "Paragraf 2 strategi.\n\nParagraf 3 alternatif." },
+                ],
+              },
+            },
+          ],
+        }),
+        { status: 200, headers: { "Content-Type": "application/json" } }
+      )
+    );
+
+    const res = await POST(makeRequest(validSnbtBody(), "198.51.100.41"));
+    expect(res.status).toBe(200);
+
+    const data = (await res.json()) as AnalyzeResponseBody;
+    expect(data.isFallback).toBe(false);
+    expect(data.analysis).toBe(
+      "Paragraf 1 evaluasi.\n\nParagraf 2 strategi.\n\nParagraf 3 alternatif."
+    );
+
+    const [calledUrl, init] = fetchSpy.mock.calls[0];
+    expect(String(calledUrl)).toBe(
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent"
+    );
+    const rawBody = String(init?.body ?? "{}");
+    const sent = JSON.parse(rawBody) as {
+      generationConfig?: {
+        temperature?: number;
+        maxOutputTokens?: number;
+        thinkingConfig?: { thinkingBudget?: number; thinkingLevel?: string };
+      };
+    };
+    expect(sent.generationConfig?.temperature).toBeUndefined();
+    expect(sent.generationConfig?.maxOutputTokens).toBe(3072);
+    expect(sent.generationConfig?.thinkingConfig).toEqual({
+      thinkingLevel: "low",
+    });
+    // Payload ke Gemini memakai istilah status Bahasa Indonesia, bukan Inggris atau nama field internal
+    expect(rawBody).toMatch(/Aman|Moderat|Spekulatif/);
+    expect(rawBody).not.toMatch(/"status":"(safe|target|reach)"/);
+    expect(rawBody).not.toContain("alternatif_f5");
+    expect(rawBody).not.toContain("peluang_persen");
+    expect(rawBody).toContain("TKA");
+  });
+
+  it("memakai default GEMINI_MODEL gemini-3.5-flash-lite saat env GEMINI_MODEL kosong", async () => {
+    delete process.env.GEMINI_MODEL;
+    const fetchSpy = mockGeminiSuccess("Analisis default model.");
+
+    const res = await POST(makeRequest(validSnbpBody(), "198.51.100.42"));
+    expect(res.status).toBe(200);
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+    const [calledUrl] = fetchSpy.mock.calls[0];
+    expect(String(calledUrl)).toBe(
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent"
+    );
+  });
 });

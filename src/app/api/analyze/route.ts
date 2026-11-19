@@ -22,6 +22,7 @@ import {
   type Akreditasi,
   type Jalur,
   type PrestasiLevel,
+  type StatusKategori,
 } from "@/config/app.config";
 import {
   DATASET_VERSION,
@@ -55,9 +56,16 @@ import {
   setCache,
 } from "@/lib/redis";
 
-const DEFAULT_GEMINI_MODEL = "gemini-2.5-flash";
+const DEFAULT_GEMINI_MODEL = "gemini-3.5-flash-lite";
 const DEFAULT_MAX_CODE_USES = 50;
-const GEMINI_TIMEOUT_MS = 12_000;
+const GEMINI_TIMEOUT_MS = 25_000;
+const GEMINI_MAX_OUTPUT_TOKENS = 3072;
+
+const STATUS_LABEL_ID: Record<StatusKategori, string> = {
+  safe: "Aman",
+  target: "Moderat",
+  reach: "Spekulatif",
+};
 
 const VALID_AKREDITASI = new Set<string>(["A", "B", "C"]);
 const VALID_PRESTASI = new Set<string>([
@@ -68,15 +76,19 @@ const VALID_PRESTASI = new Set<string>([
 ]);
 
 const SYSTEM_PROMPT = [
-  "Kamu adalah penasihat strategi seleksi masuk PTN Indonesia (SNBP & SNBT) untuk LolosPTN.AI.",
-  "Gunakan Bahasa Indonesia yang jelas, objektif, suportif, dan praktis.",
+  "Kamu adalah mentor pendidikan dan penasihat strategi seleksi masuk PTN Indonesia (SNBP & SNBT) di LolosPTN.AI.",
+  "Gunakan sapaan konsisten 'kamu' (DILARANG memakai 'Anda') dengan nada hangat, lugas, suportif, dan objektif.",
   "ATURAN WAJIB:",
-  "1. DILARANG mengubah, membulatkan secara keliru, atau mengarang angka apa pun. Gunakan HANYA angka dari payload JSON yang diberikan.",
-  "2. Maksimal 3 paragraf pendek (total sekitar 250–300 kata), tanpa daftar panjang atau tabel markdown.",
-  "3. Paragraf 1: evaluasi posisi Pilihan 1 dan Pilihan 2 (jika ada) berdasarkan probabilitas, rentang sensitivitas, dan status.",
-  "4. Paragraf 2: saran urutan pilihan dan pemanfaatan maksimal 3 alternatif prodi F5 yang tersedia.",
-  "5. Paragraf 3: target kenaikan skor/nilai yang realistis serta langkah fokus persiapan.",
-  "6. Ingatkan secara singkat bahwa angka adalah estimasi statistik, bukan passing grade resmi SNPMB.",
+  "1. DILARANG mengubah, membulatkan secara keliru, atau mengarang angka apa pun. Gunakan HANYA angka persis dari data yang diberikan.",
+  "2. Wajib tulis tepat 3 paragraf utuh dalam Bahasa Indonesia (total sekitar 180–250 kata), dipisahkan satu baris kosong antar paragraf.",
+  "3. Paragraf 1: Evaluasi posisi skor UTBK atau nilai komposit rapormu terhadap Pilihan 1 dan Pilihan 2 (jika ada) berdasarkan angka peluang, rentang estimasi, dan statusnya.",
+  "4. Paragraf 2: Analisis strategi urutan pilihan, risiko persaingan, serta catatan penting yang relevan (misalnya syarat portofolio, data historis terbatas, atau peran rekam jejak alumni).",
+  "5. Paragraf 3: Saran konkret memanfaatkan rekomendasi prodi alternatif yang tersedia dan langkah taktis menghadapi seleksi, termasuk target peningkatan yang realistis.",
+  "6. Konteks jalur seleksi: khusus jalur SNBP, wajib sertakan catatan singkat di Paragraf 2 atau 3 bahwa selain konsistensi rapor, PDSS, dan indeks sekolah, kelulusan juga dipengaruhi validasi nilai TKA (Tes Kemampuan Akademik) sesuai ketentuan SNPMB terbaru. Untuk jalur SNBT, tetap fokus pada skor UTBK dan strategi urutan pilihan, dan JANGAN menyebut TKA.",
+  "7. DILARANG KERAS menggunakan format Markdown apa pun (tanpa *, **, _, #, `, blok kode, bullet list, atau penomoran daftar). Tulis murni sebagai paragraf teks polos.",
+  "8. Wajib gunakan istilah status Bahasa Indonesia (Aman, Moderat, Spekulatif). DILARANG menulis kata bahasa Inggris safe, target, atau reach.",
+  "9. DILARANG menyebut kode fitur internal (seperti F2, F5, F6) dan DILARANG mengulang nama field teknis/JSON secara literal (seperti 'skor pengguna', 'peluang persen sebesar ... persen', atau 'rentang sensitivitas persen'). Tulis secara natural, misalnya 'nilai komposit rapormu 93,8', 'peluang sekitar 99,06%', 'rentang estimasi 98,5%–99,41%', dan 'rekomendasi prodi alternatif'.",
+  "10. Tutup dengan disclaimer singkat bahwa angka probabilitas merupakan estimasi statistik berbasis data historis, bukan hasil resmi SNPMB.",
 ].join("\n");
 
 // ---------------------------------------------------------------------------
@@ -85,19 +97,19 @@ const SYSTEM_PROMPT = [
 
 type ValidatedAnalyzePayload =
   | {
-      jalur: "snbt";
-      pilihan1: ProdiIndexItem;
-      pilihan2: ProdiIndexItem | null;
-      snbtInput: SnbtScoreInput;
-    }
+    jalur: "snbt";
+    pilihan1: ProdiIndexItem;
+    pilihan2: ProdiIndexItem | null;
+    snbtInput: SnbtScoreInput;
+  }
   | {
-      jalur: "snbp";
-      pilihan1: ProdiIndexItem;
-      pilihan2: ProdiIndexItem | null;
-      snbpProfile: Omit<SnbpProfileInput, "hasAlumni">;
-      pilihan1HasAlumni: boolean;
-      pilihan2HasAlumni: boolean;
-    };
+    jalur: "snbp";
+    pilihan1: ProdiIndexItem;
+    pilihan2: ProdiIndexItem | null;
+    snbpProfile: Omit<SnbpProfileInput, "hasAlumni">;
+    pilihan1HasAlumni: boolean;
+    pilihan2HasAlumni: boolean;
+  };
 
 interface CachedAnalyzeResult {
   alternatives: AlternativeRecommendation[];
@@ -354,26 +366,26 @@ function buildCacheKey(
   const normalized =
     payload.jalur === "snbt"
       ? {
-          jalur: "snbt",
-          p1: payload.pilihan1.kode_prodi,
-          p2: payload.pilihan2?.kode_prodi ?? null,
-          score: Math.round(calculateSnbtUserScore(payload.snbtInput)),
-          datasetVersion: DATASET_VERSION,
-          model: geminiModel,
-        }
+        jalur: "snbt",
+        p1: payload.pilihan1.kode_prodi,
+        p2: payload.pilihan2?.kode_prodi ?? null,
+        score: Math.round(calculateSnbtUserScore(payload.snbtInput)),
+        datasetVersion: DATASET_VERSION,
+        model: geminiModel,
+      }
       : {
-          jalur: "snbp",
-          p1: payload.pilihan1.kode_prodi,
-          p2: payload.pilihan2?.kode_prodi ?? null,
-          rapor: round1(payload.snbpProfile.raporAverage),
-          mapel: round1(payload.snbpProfile.mapelPendukungAverage),
-          akreditasi: payload.snbpProfile.akreditasi,
-          prestasi: payload.snbpProfile.prestasi,
-          alumni1: payload.pilihan1HasAlumni,
-          alumni2: payload.pilihan2 ? payload.pilihan2HasAlumni : false,
-          datasetVersion: DATASET_VERSION,
-          model: geminiModel,
-        };
+        jalur: "snbp",
+        p1: payload.pilihan1.kode_prodi,
+        p2: payload.pilihan2?.kode_prodi ?? null,
+        rapor: round1(payload.snbpProfile.raporAverage),
+        mapel: round1(payload.snbpProfile.mapelPendukungAverage),
+        akreditasi: payload.snbpProfile.akreditasi,
+        prestasi: payload.snbpProfile.prestasi,
+        alumni1: payload.pilihan1HasAlumni,
+        alumni2: payload.pilihan2 ? payload.pilihan2HasAlumni : false,
+        datasetVersion: DATASET_VERSION,
+        model: geminiModel,
+      };
 
   const digest = createHash("sha256")
     .update(JSON.stringify(normalized))
@@ -391,12 +403,50 @@ function formatAnonymousChoice(
     prodi: prodi.nama,
     jenjang: prodi.jenjang,
     rumpun: prodi.rumpun,
-    skor_acuan: prediction.referenceScore,
-    peluang_persen: prediction.probability,
-    rentang_sensitivitas_persen: [prediction.pLow, prediction.pHigh],
-    status: prediction.status,
+    acuan: prediction.referenceScore,
+    peluang: `${prediction.probability}%`,
+    rentang_estimasi: `${prediction.pLow}%–${prediction.pHigh}%`,
+    status: STATUS_LABEL_ID[prediction.status],
     data_terbatas: prediction.isUncertain,
   };
+}
+
+function buildGeminiEndpoint(model: string): string {
+  const encodedModel = encodeURIComponent(model);
+  return `https://generativelanguage.googleapis.com/v1beta/models/${encodedModel}:generateContent`;
+}
+
+/**
+ * Menyusun `generationConfig` sesuai generasi model Gemini:
+ * - Gemini 3 (`gemini-3*`): pakai `thinkingLevel: "low"` dan JANGAN kirim
+ *   `temperature < 1.0` (berisiko looping/hang).
+ * - Gemini 2.5 (`gemini-2.5*`): pakai `thinkingBudget` (0 untuk Flash,
+ *   128 untuk Pro) dengan `temperature: 0.4`.
+ * - Model lama (2.0/1.5): hanya `temperature: 0.4` & `maxOutputTokens`.
+ */
+function buildGenerationConfig(
+  normalizedModel: string
+): Record<string, unknown> {
+  const config: Record<string, unknown> = {
+    maxOutputTokens: GEMINI_MAX_OUTPUT_TOKENS,
+  };
+
+  if (/^gemini-3/i.test(normalizedModel)) {
+    config.thinkingConfig = {
+      thinkingLevel: "low",
+    };
+    return config;
+  }
+
+  config.temperature = 0.4;
+
+  if (/^gemini-2\.5/i.test(normalizedModel)) {
+    config.thinkingConfig = {
+      thinkingBudget: /flash/i.test(normalizedModel) ? 0 : 128,
+    };
+  }
+
+  return config;
 }
 
 async function callGeminiAdvisor(params: {
@@ -408,13 +458,18 @@ async function callGeminiAdvisor(params: {
 }): Promise<string | null> {
   const apiKey = process.env.GEMINI_API_KEY?.trim();
   if (!apiKey) {
+    console.error(
+      "[/api/analyze] Gemini gagal: GEMINI_API_KEY kosong atau tidak terbaca dari environment."
+    );
     return null;
   }
+
+  const normalizedModel = params.model.trim().replace(/^models\//, "");
 
   // Payload anonim (zero PII): hanya jalur, angka skor/prediksi, dan prodi
   const anonymousPayload = {
     jalur: params.jalur.toUpperCase(),
-    skor_pengguna: params.pilihan1.prediction.userScore,
+    nilai: params.pilihan1.prediction.userScore,
     pilihan_1: formatAnonymousChoice(
       params.pilihan1.prodi,
       params.pilihan1.prediction
@@ -422,23 +477,24 @@ async function callGeminiAdvisor(params: {
     pilihan_2: params.pilihan2
       ? formatAnonymousChoice(params.pilihan2.prodi, params.pilihan2.prediction)
       : null,
-    alternatif_f5: params.alternatives.map((alt) => ({
+    rekomendasi_alternatif: params.alternatives.map((alt) => ({
       ptn: alt.prodi.nama_ptn,
       prodi: alt.prodi.nama,
       jenjang: alt.prodi.jenjang,
-      skor_acuan: alt.prediction.referenceScore,
-      peluang_persen: alt.prediction.probability,
-      status: alt.prediction.status,
+      acuan: alt.prediction.referenceScore,
+      peluang: `${alt.prediction.probability}%`,
+      status: STATUS_LABEL_ID[alt.prediction.status],
     })),
   };
+
+  const generationConfig = buildGenerationConfig(normalizedModel);
+  const startedAt = Date.now();
 
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), GEMINI_TIMEOUT_MS);
 
   try {
-    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(
-      params.model
-    )}:generateContent`;
+    const endpoint = buildGeminiEndpoint(normalizedModel);
 
     const response = await fetch(endpoint, {
       method: "POST",
@@ -463,32 +519,62 @@ async function callGeminiAdvisor(params: {
             ],
           },
         ],
-        generationConfig: {
-          temperature: 0.4,
-          maxOutputTokens: 700,
-        },
+        generationConfig,
       }),
     });
 
     if (!response.ok) {
+      const errorBody = await response.text().catch(() => "");
+      console.error("[/api/analyze] Gemini gagal:", {
+        status: response.status,
+        statusText: response.statusText,
+        model: normalizedModel,
+        elapsedMs: Date.now() - startedAt,
+        endpointHost: new URL(endpoint).host,
+        body: errorBody.slice(0, 1000),
+      });
       return null;
     }
 
     const json = (await response.json()) as {
       candidates?: Array<{
+        finishReason?: string;
         content?: {
-          parts?: Array<{ text?: string }>;
+          parts?: Array<{ text?: string; thought?: boolean }>;
         };
       }>;
+      promptFeedback?: {
+        blockReason?: string;
+      };
     };
 
-    const text = json.candidates?.[0]?.content?.parts
-      ?.map((part) => part.text ?? "")
+    const candidate = json.candidates?.[0];
+    const text = candidate?.content?.parts
+      ?.filter((part) => part.thought !== true && typeof part.text === "string")
+      .map((part) => part.text ?? "")
       .join("")
       .trim();
 
-    return text || null;
-  } catch {
+    if (!text) {
+      console.error("[/api/analyze] Gemini gagal: respons teks kosong.", {
+        model: normalizedModel,
+        elapsedMs: Date.now() - startedAt,
+        finishReason: candidate?.finishReason ?? null,
+        blockReason: json.promptFeedback?.blockReason ?? null,
+      });
+      return null;
+    }
+
+    return text;
+  } catch (error) {
+    console.error("[/api/analyze] Gemini gagal:", {
+      model: normalizedModel,
+      elapsedMs: Date.now() - startedAt,
+      error:
+        error instanceof Error
+          ? { name: error.name, message: error.message }
+          : String(error),
+    });
     return null;
   } finally {
     clearTimeout(timeout);
