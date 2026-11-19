@@ -1,7 +1,7 @@
 # Progress LolosPTN.AI
 
 - [x] M1: Init Next.js & Pipeline Data (`sync_snpmb.py`)
-- [ ] M2: Prediction Engine (`app.config.ts`, `prediction.ts` + Unit Test)
+- [x] M2: Prediction Engine (`app.config.ts`, `prediction.ts` + Unit Test)
 - [ ] M3: Fondasi Desain P0 (`tokens.css`, `copy.ts`, `components/ui/`)
 - [ ] M4: Fitur Gratis (F1, F2, F3)
 - [ ] M5: Backend Server (`redis.ts`, `/api/analyze`, `/api/metric`)
@@ -31,4 +31,18 @@
 - `is_new` tingkat prodi = 1 jika salah satu jalur `is_new == 1`. Rasio tiap jalur memakai `is_new` jalur itu sendiri.
 - Menjalankan sync butuh akses jaringan ke snpmb.id.
 
-**Berikutnya:** M2 (menunggu instruksi).
+### M2 selesai (2026-11-20)
+
+**File yang dibuat / diperbarui:**
+- `src/config/app.config.ts`: seluruh konstanta bisnis PRD Bagian 5 (sigmoid `k_snbt`/`k_snbp`, delta sensitivitas normal & uncertain, `minHistoriYears: 3`, bobot SNBP, tabel `skorSekolahAlumni` & `skorPrestasi`, ambang status tunggal `safe: 75` / `target: 50`, `maxAlternatives: 3`, rate limit `5 / 600s`, serta batas input F1).
+- `src/lib/dataset.ts`: tipe TypeScript 100% selaras dengan skema `data/index.json` dan `public/data/ptn/{id_ptn}.json`, static import `data/index.json` (`DATASET_VERSION`, `DATASET_ITEMS`), helper `getPtnList`, `getProdiByJalur`, `findProdiByKode`, dan client-side `fetchPtnDetail(idPtn)`.
+- `src/lib/prediction.ts`: pure logic tanpa styling/CSS (F2 & F5): `predictSnbt`, `predictSnbp`, `recommendAlternatives`, `calculateSnbtUserScore`, `calculateSnbpCompositeScore`, `getStatusFromProbability`, `toSnbtTarget`, `toSnbpTarget`.
+- `src/lib/prediction.test.ts`: 13 unit test Vitest mencakup SNBT & SNBP pada INFORMATIKA UPNVJT (`13851006`), rentang sensitivitas (`is_new` & histori < 3), batas kategori status (`75%`, `50%`, `49.9%`), skor komposit SNBP terkalibrasi (`85.8`), dan seluruh aturan F5 Recommender (sorting safe/target, eksklusi Pil 1 & 2, aturan alumni per PTN).
+- `vitest.config.ts` & `package.json`: pasang `vitest@3` (devDependency) dan tambah skrip `npm test`.
+
+**Hasil verifikasi:**
+- `npx vitest run --reporter=verbose`: 13/13 test lulus.
+- `npx tsc --noEmit`: lulus (0 error).
+- `npm run lint`: lulus (0 error, 0 warning).
+
+**Berikutnya:** M3 (menunggu instruksi).
