@@ -4,7 +4,7 @@
 - [x] M2: Prediction Engine (`app.config.ts`, `prediction.ts` + Unit Test)
 - [x] M3: Fondasi Desain P0 (`tokens.css`, `copy.ts`, `components/ui/`)
 - [x] M4: Fitur Gratis (F1, F2, F3)
-- [ ] M5: Backend Server (`redis.ts`, `/api/analyze`, `/api/metric`)
+- [x] M5: Backend Server (`redis.ts`, `/api/analyze`, `/api/metric`)
 - [ ] M6: Paywall (F4), Integrasi F5-F6, & Build Deploy
 
 ## Catatan Cekpoin Terakhir
@@ -78,4 +78,19 @@
 - `npm run lint`: lulus (0 error, 0 warning).
 - `npm test`: 13/13 unit test lulus.
 
-**Berikutnya:** M5 (menunggu instruksi).
+### M5 selesai (2026-11-20)
+
+**File yang dibuat / diperbarui:**
+- `.env.example` & `.gitignore`: daftar seluruh env variable PRD Bagian 2 (`GEMINI_API_KEY`, `GEMINI_MODEL`, `ACCESS_CODES`, `ACCESS_CODE_MAX_USES`, `IP_HASH_SALT`, `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`); `.env.local` tetap diabaikan sementara `.env.example` di-unignore (`!.env.example`).
+- `src/lib/redis.ts`: klien Upstash Redis REST API (berbasis `fetch` & `/pipeline`, zero TCP) dengan fallback otomatis ke `Map` in-memory ber-TTL; helper `hashIp`, `extractClientIp`, `getCache`, `setCache` (TTL 24 jam), `checkRateLimit` (TTL <= 1 jam), `getCodeUsage`, `incrementCodeUsage`, `incrementMetric`, `getMetricCount`, dan `resetInMemoryStore`.
+- `src/lib/fallback.ts`: generator analisis strategi naratif template Bahasa Indonesia (maksimal 3 paragraf) berbasis angka deterministik F2 & F5 tanpa mengarang angka.
+- `src/app/api/analyze/route.ts`: endpoint `POST /api/analyze` mengikuti urutan ketat PRD F4 (validasi `ACCESS_CODES` `401` → validasi body `400` → rate limit per IP-hash `429` → cek cache key `[input dibulatkan + dataset_version + GEMINI_MODEL]` tanpa kurangi kuota pada cache hit → cek batas kuota kode `403` pada cache miss → hitung F2 & F5 dari static import `data/index.json` → panggil Gemini REST API payload anonim zero-PII dengan timeout 12 detik → cache 24 jam + increment kuota bila sukses, atau `fallback.ts` tanpa cache & tanpa potong kuota bila gagal/timeout/key kosong).
+- `src/app/api/metric/route.ts`: endpoint `POST /api/metric` menerima hanya whitelist (`sesi_selesai`, `klik_paywall`, `klik_wa`), menerapkan rate limit per IP-hash, dan menaikkan counter via `incrementMetric`.
+- `src/app/api/analyze/route.test.ts` & `src/app/api/metric/route.test.ts`: 12 unit test server (mock `fetch`, tanpa kredensial eksternal) memverifikasi status `401`, `400`, `200`, cache hit tanpa potong kuota, `403` kuota habis, `429` rate limit, fallback `isFallback: true` tanpa cache/potong kuota, serta whitelist & rate limit `/api/metric`.
+
+**Hasil verifikasi:**
+- `npx tsc --noEmit`: lulus (0 error).
+- `npm run lint`: lulus (0 error, 0 warning).
+- `npm test`: 25/25 unit test lulus (3 file test: M2 + M5).
+
+**Berikutnya:** M6 (menunggu instruksi).
