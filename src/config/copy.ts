@@ -218,17 +218,34 @@ export const copy = {
     step2: "2. Kirim bukti pembayaran ke admin via WhatsApp.",
     step3: "3. Masukkan kode akses yang kamu terima.",
     qrisAlt: "Kode QRIS pembayaran",
-    whatsappButton: "Konfirmasi via WhatsApp",
+    qrisPlaceholderTitle: "Placeholder QRIS Rp10.000",
+    qrisPlaceholderNote: "Ganti di public/qris.png",
+    whatsappButton: "Konfirmasi via WhatsApp Admin",
     codeLabel: "Kode akses",
-    codePlaceholder: "Contoh: LOLOS-XXXX",
+    codePlaceholder: "Contoh: COBALOLOS",
+    codeHelper: "Kode akses hanya disimpan di memori halaman selama sesi ini.",
+    codeRequired: "Masukkan kode akses terlebih dahulu.",
     codeSubmit: "Buka Analisis",
+    submitting: "Memverifikasi kode & menyiapkan analisis…",
+    screenshotReminderTitle: "Pengingat",
     screenshotReminder:
       "Simpan atau screenshot hasil analisis ini sebelum menutup halaman.",
+    unlockedTitle: "Analisis Lengkap",
+    cachedBadge: "Dimuat dari cache (kuota kode tidak berkurang)",
     alternativesTitle: "Alternatif Prodi yang Disarankan",
+    alternativesSubtitle:
+      "Rekomendasi prodi di rumpun yang sama dengan Pilihan 1 yang paling realistis untuk posisimu.",
     aiTitle: "Strategi dari AI",
-    previewNoticeTitle: "Segera Hadir",
-    previewNoticeBody:
-      "Pembayaran kode akses dan analisis lengkap (3 alternatif prodi + strategi AI) akan diaktifkan pada tahap berikutnya.",
+    aiSubtitle: "Ringkasan strategi berdasarkan angka hasil perhitunganmu.",
+    refScoreShort: (jalur: "snbt" | "snbp", value: number) =>
+      jalur === "snbt" ? `Skor acuan: ${value}` : `Nilai acuan: ${value}`,
+  },
+
+  feedback: {
+    title: "Laporan Hasil Seleksi Anonim",
+    body:
+      "Sudah menerima hasil SNBP atau SNBT? Bagikan jalur, prodi, rentang nilai, dan status lolos/tidak secara anonim untuk membantu kalibrasi estimasi kami. Tanpa nama, kontak, atau asal sekolah.",
+    cta: "Isi Laporan Hasil Anonim",
   },
 
   fallback: {
@@ -241,6 +258,7 @@ export const copy = {
 
   error: {
     generic: "Terjadi kesalahan. Silakan coba lagi.",
+    badRequest: "Data input tidak valid. Periksa kembali isianmu.",
     network: "Koneksi bermasalah. Periksa internetmu lalu coba lagi.",
     datasetLoad: "Gagal memuat data PTN. Muat ulang halaman untuk mencoba lagi.",
     invalidCode: "Kode akses tidak valid.",

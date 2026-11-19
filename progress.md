@@ -5,7 +5,7 @@
 - [x] M3: Fondasi Desain P0 (`tokens.css`, `copy.ts`, `components/ui/`)
 - [x] M4: Fitur Gratis (F1, F2, F3)
 - [x] M5: Backend Server (`redis.ts`, `/api/analyze`, `/api/metric`)
-- [ ] M6: Paywall (F4), Integrasi F5-F6, & Build Deploy
+- [x] M6: Paywall (F4), Integrasi F5-F6, & Build Deploy
 
 ## Catatan Cekpoin Terakhir
 
@@ -93,4 +93,24 @@
 - `npm run lint`: lulus (0 error, 0 warning).
 - `npm test`: 25/25 unit test lulus (3 file test: M2 + M5).
 
-**Berikutnya:** M6 (menunggu instruksi).
+### M6 selesai (2026-11-20) — MVP Lengkap (M1–M6)
+
+**File yang dibuat / diperbarui:**
+- `src/config/app.config.ts`: menambahkan tipe `MetricEvent` dan `externalLinks` (`whatsappAdminUrl`, `feedbackFormUrl`).
+- `src/config/copy.ts`: menambahkan seluruh teks UI untuk modal paywall (placeholder QRIS, error `400`, status submitting), tampilan hasil F5 & F6 (`UnlockedAnalysis`, pengingat screenshot, badge cache), serta kartu ajakan F7 (`feedback`).
+- `src/lib/metrics.ts`: helper client-side `trackMetric(event)` fire-and-forget (`POST /api/metric`, `keepalive: true`) tanpa mengimpor modul server.
+- `src/lib/redis.ts`: menyatukan sumber tipe `MetricEvent` dari `src/config/app.config.ts`.
+- `src/components/features/PaywallModal.tsx`: modal F4 dengan placeholder QRIS SVG (token CSS, siap diganti `public/qris.png`), tombol WhatsApp Admin (kirim `klik_wa` + buka tab baru), form kode akses (hanya di React state, zero `localStorage`/`sessionStorage`, zero rahasia server), loading state, serta penanganan error `401`/`403`/`429`/`400`/network.
+- `src/components/features/UnlockedAnalysis.tsx`: tampilan hasil F5 (hingga 3 alternatif prodi + `Badge` status, probabilitas & rentang sensitivitas, skor/nilai acuan, atau pesan kosong) & F6 (paragraf strategi AI + `Callout` "Analisis AI sedang tidak tersedia" saat `isFallback: true` + pengingat screenshot wajib).
+- `src/components/features/PaywallPreview.tsx`, `src/components/features/HomeCalculator.tsx`, & `src/components/features/index.ts`: integrasi penuh alur F1–F7 — `sesi_selesai` saat hitung F2 (sekaligus reset hasil F5/F6 lama bila hitung ulang), `klik_paywall` saat klik tombol paywall, transisi ke `UnlockedAnalysis` saat `/api/analyze` sukses, dan footer ajakan F7 menuju `feedbackFormUrl`.
+
+**Hasil verifikasi akhir MVP:**
+- `npx tsc --noEmit`: lulus (0 error).
+- `npm run lint`: lulus (0 error, 0 warning).
+- `npm test`: 25/25 unit test lulus (3 file test: M2 + M5).
+- `npm run build`: production build Next.js 16.4.6 (Turbopack) sukses 0 error (`/`, `/_not-found`, `/api/analyze`, `/api/metric`, `/design`).
+- Audit keamanan klien: tidak ada `localStorage`/`sessionStorage` untuk kode akses dan tidak ada rahasia server di bundle klien.
+
+**Ringkasan Akhir MVP (Siap Konfigurasi & Deploy Vercel):**
+- Seluruh Milestone M1–M6 selesai sesuai PRD v1.2.1.
+- Sebelum deploy publik, perbarui: (1) environment variables di Vercel dari `.env.example` (`GEMINI_API_KEY`, `ACCESS_CODES`, `IP_HASH_SALT`, `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`), (2) gambar QRIS asli (`public/qris.png`), dan (3) tautan nyata `whatsappAdminUrl` & `feedbackFormUrl` di `src/config/app.config.ts`.

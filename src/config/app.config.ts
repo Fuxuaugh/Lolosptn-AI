@@ -12,6 +12,8 @@ export type Akreditasi = "A" | "B" | "C";
 
 export type PrestasiLevel = "nasional" | "provinsi" | "kabupaten" | "tidak_ada";
 
+export type MetricEvent = "sesi_selesai" | "klik_paywall" | "klik_wa";
+
 export const APP_CONFIG = {
   /** Koefisien kurva sigmoid P = 100 / (1 + exp(-k * delta)) */
   sigmoid: {
@@ -79,5 +81,13 @@ export const APP_CONFIG = {
       min: 0,
       max: 100,
     },
+  },
+
+  /** Tautan eksternal (mudah diganti tanpa menyentuh komponen UI) */
+  externalLinks: {
+    whatsappAdminUrl:
+      "https://wa.me/628xxxxxxxxxx?text=Halo%20Admin%20LolosPTN.AI%2C%20saya%20sudah%20transfer%20QRIS%20Rp10.000%20dan%20ingin%20konfirmasi%20kode%20akses.",
+    feedbackFormUrl:
+      "https://docs.google.com/forms/d/e/PLACEHOLDER_FORM_ID/viewform",
   },
 } as const;

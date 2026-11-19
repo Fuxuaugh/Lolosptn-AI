@@ -1,7 +1,8 @@
 "use client";
 
 import { Fragment, useEffect, useRef, useState } from "react";
-import type { Jalur } from "@/config/app.config";
+import type { AnalyzeResponseBody } from "@/app/api/analyze/route";
+import { APP_CONFIG, type Jalur } from "@/config/app.config";
 import { copy } from "@/config/copy";
 import { THEME, type ResultSection } from "@/config/theme";
 import {
@@ -9,6 +10,7 @@ import {
   type ProdiDetail,
   type ProdiIndexItem,
 } from "@/lib/dataset";
+import { trackMetric } from "@/lib/metrics";
 import {
   predictSnbp,
   predictSnbt,
@@ -16,15 +18,17 @@ import {
   toSnbtTarget,
   type PredictionResult,
 } from "@/lib/prediction";
-import { Button, Callout } from "@/components/ui";
+import { Button, Callout, Card, cn, focusRing } from "@/components/ui";
 import { HasilKartu, type HasilPilihanItem } from "./HasilKartu";
 import { MetodologiModal } from "./MetodologiModal";
+import { PaywallModal } from "./PaywallModal";
 import { PaywallPreview } from "./PaywallPreview";
 import {
   PredictionForm,
   type PredictionFormPayload,
 } from "./PredictionForm";
 import { TrenChart, type TrenTargetItem } from "./TrenChart";
+import { UnlockedAnalysis } from "./UnlockedAnalysis";
 
 interface ComputedEntry {
   slot: 1 | 2;
@@ -34,6 +38,7 @@ interface ComputedEntry {
 
 interface CalculationState {
   jalur: Jalur;
+  payload: PredictionFormPayload;
   entries: ComputedEntry[];
 }
 
@@ -44,6 +49,12 @@ export function HomeCalculator() {
   >({});
   const [detailsLoading, setDetailsLoading] = useState(false);
   const [metodologiOpen, setMetodologiOpen] = useState(false);
+
+  // State paywall & hasil F5/F6 hanya hidup di memori halaman (React state)
+  const [paywallOpen, setPaywallOpen] = useState(false);
+  const [unlockedData, setUnlockedData] = useState<AnalyzeResponseBody | null>(
+    null
+  );
 
   const resultSectionRef = useRef<HTMLDivElement>(null);
 
@@ -129,8 +140,14 @@ export function HomeCalculator() {
 
     if (entries.length === 0) return;
 
+    // Reset hasil F5/F6 lama jika pengguna mengubah input & menghitung ulang
+    setUnlockedData(null);
+    setPaywallOpen(false);
     setDetailsLoading(true);
-    setResult({ jalur: payload.jalur, entries });
+    setResult({ jalur: payload.jalur, payload, entries });
+
+    // Catat metrik anonim sesi selesai (fire-and-forget)
+    trackMetric("sesi_selesai");
 
     requestAnimationFrame(() => {
       const prefersReduced =
@@ -147,6 +164,18 @@ export function HomeCalculator() {
     setResult(null);
     setDetailsByKode({});
     setDetailsLoading(false);
+    setUnlockedData(null);
+    setPaywallOpen(false);
+  }
+
+  function handleOpenPaywall() {
+    trackMetric("klik_paywall");
+    setPaywallOpen(true);
+  }
+
+  function handleUnlockSuccess(data: AnalyzeResponseBody) {
+    setPaywallOpen(false);
+    setUnlockedData(data);
   }
 
   function renderResultSection(section: ResultSection) {
@@ -192,7 +221,10 @@ export function HomeCalculator() {
     }
 
     if (section === "paywall") {
-      return <PaywallPreview />;
+      if (unlockedData) {
+        return <UnlockedAnalysis jalur={result.jalur} data={unlockedData} />;
+      }
+      return <PaywallPreview onUnlockClick={handleOpenPaywall} />;
     }
 
     return null;
@@ -233,10 +265,42 @@ export function HomeCalculator() {
         </div>
       )}
 
+      {/* F7: Laporan Hasil Seleksi Anonim (Google Form) */}
+      <footer className="pt-2">
+        <Card
+          as="div"
+          variant="flat"
+          title={copy.feedback.title}
+          description={copy.feedback.body}
+        >
+          <a
+            href={APP_CONFIG.externalLinks.feedbackFormUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              "inline-flex min-h-11 items-center justify-center rounded-control border border-line-strong bg-surface px-4 text-sm font-semibold text-fg hover:bg-surface-muted",
+              "transition-colors motion-reduce:transition-none",
+              focusRing
+            )}
+          >
+            {copy.feedback.cta}
+          </a>
+        </Card>
+      </footer>
+
       <MetodologiModal
         open={metodologiOpen}
         onClose={() => setMetodologiOpen(false)}
       />
+
+      {result && (
+        <PaywallModal
+          open={paywallOpen}
+          onClose={() => setPaywallOpen(false)}
+          payload={result.payload}
+          onSuccess={handleUnlockSuccess}
+        />
+      )}
     </main>
   );
 }

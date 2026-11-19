@@ -8,18 +8,18 @@
  */
 
 import { createHash } from "node:crypto";
-import { APP_CONFIG } from "@/config/app.config";
+import { APP_CONFIG, type MetricEvent } from "@/config/app.config";
 
 export const CACHE_TTL_SECONDS = 24 * 60 * 60; // 24 jam
 export const MAX_RATE_LIMIT_TTL_SECONDS = 60 * 60; // <= 1 jam (aturan privasi PRD)
 
-export const ALLOWED_METRIC_EVENTS = [
+export const ALLOWED_METRIC_EVENTS: readonly MetricEvent[] = [
   "sesi_selesai",
   "klik_paywall",
   "klik_wa",
 ] as const;
 
-export type MetricEvent = (typeof ALLOWED_METRIC_EVENTS)[number];
+export type { MetricEvent };
 
 export interface RateLimitOptions {
   scope?: string;
