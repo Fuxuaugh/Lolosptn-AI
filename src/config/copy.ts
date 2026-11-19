@@ -44,6 +44,7 @@ export const copy = {
     },
     pilihan1: "Pilihan 1",
     pilihan2: "Pilihan 2",
+    pilihan2OptionalHint: "Opsional — kosongkan jika hanya ingin menghitung 1 pilihan.",
     ptnLabel: "PTN",
     ptnPlaceholder: "Pilih PTN",
     ptnSearch: "Cari nama PTN…",
@@ -62,15 +63,15 @@ export const copy = {
       averageHelper: "Rentang 200–1000.",
       subtestsHelper: "Isi skor tiap subtes (200–1000). Rata-rata dihitung otomatis.",
       subtests: [
-        "Penalaran Umum",
-        "Pengetahuan & Pemahaman Umum",
-        "Pemahaman Bacaan & Menulis",
-        "Pengetahuan Kuantitatif",
-        "Literasi Bahasa Indonesia",
-        "Literasi Bahasa Inggris",
-        "Penalaran Matematika",
+        "Penalaran Umum (PU)",
+        "Pengetahuan & Pemahaman Umum (PPU)",
+        "Pemahaman Bacaan & Menulis (PBM)",
+        "Pengetahuan Kuantitatif (PK)",
+        "Literasi Bahasa Indonesia (LBI)",
+        "Literasi Bahasa Inggris (LBE)",
+        "Penalaran Matematika (PM)",
       ],
-      averagePreview: (avg: string) => `Rata-rata: ${avg}`,
+      averagePreview: (avg: string) => `Rata-rata sementara: ${avg}`,
     },
 
     snbp: {
@@ -83,6 +84,7 @@ export const copy = {
         warningBody:
           "Hanya siswa eligible yang dapat mendaftar SNBP. Tanyakan ke guru BK atau cek informasi resmi di situs SNPMB sebelum memakai hasil perhitungan ini.",
         officialLinkLabel: "Buka info resmi SNPMB",
+        officialUrl: "https://snpmb.id",
       },
       raporLabel: "Rata-rata rapor semester 1–5",
       raporHelper: "Rentang 0–100.",
@@ -129,7 +131,9 @@ export const copy = {
     raporAcuan: "Nilai acuan (estimasi)",
     selisih: "Selisih",
     kuotaTerbaru: "Daya tampung tahun ini",
+    kuotaUnavailable: "Belum tersedia",
     portofolio: "Syarat portofolio",
+    pilihanBadge: (slot: number) => `Pilihan ${slot}`,
     lihatMetodologi: "Lihat Metodologi",
     hitungUlang: "Hitung Ulang",
   },
@@ -189,12 +193,12 @@ export const copy = {
       {
         heading: "3. Kurva peluang (sigmoid)",
         body:
-          "Selisih skor kamu dengan skor acuan diubah menjadi persentase peluang. Skor sama dengan acuan berarti peluang 50%.",
+          "Selisih skor kamu dengan skor acuan diubah menjadi persentase peluang memakai fungsi logistik (koefisien k = 0,025 untuk SNBT dan k = 0,47 untuk SNBP). Skor sama dengan acuan berarti peluang tepat 50%.",
       },
       {
         heading: "4. Rentang sensitivitas",
         body:
-          "Rentang dihitung dengan menggeser skor acuan naik dan turun. Ini heuristik untuk menunjukkan sensitivitas, bukan interval kepercayaan statistik.",
+          "Rentang dihitung dengan menggeser skor acuan naik dan turun (±15 poin SNBT / ±1,0 poin SNBP, atau ±25 / ±1,8 untuk prodi baru atau histori < 3 tahun). Ini heuristik untuk menunjukkan sensitivitas, bukan interval kepercayaan statistik.",
       },
       {
         heading: "5. Keterbatasan",
@@ -222,6 +226,9 @@ export const copy = {
       "Simpan atau screenshot hasil analisis ini sebelum menutup halaman.",
     alternativesTitle: "Alternatif Prodi yang Disarankan",
     aiTitle: "Strategi dari AI",
+    previewNoticeTitle: "Segera Hadir",
+    previewNoticeBody:
+      "Pembayaran kode akses dan analisis lengkap (3 alternatif prodi + strategi AI) akan diaktifkan pada tahap berikutnya.",
   },
 
   fallback: {

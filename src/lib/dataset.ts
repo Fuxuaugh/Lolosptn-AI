@@ -168,24 +168,38 @@ export function findProdiByKode(
   return items.find((item) => item.kode_prodi === kodeProdi);
 }
 
+const ptnDetailCache = new Map<number, Promise<PtnDetail>>();
+
 /**
  * Helper client-side untuk memuat detail & data historis satu PTN
- * dari file statis `/data/ptn/{id_ptn}.json`.
+ * dari file statis `/data/ptn/{id_ptn}.json` dengan deduplikasi cache per sesi.
  */
-export async function fetchPtnDetail(idPtn: number): Promise<PtnDetail> {
+export function fetchPtnDetail(idPtn: number): Promise<PtnDetail> {
   if (!Number.isInteger(idPtn) || idPtn <= 0) {
-    throw new Error(`Invalid PTN ID: ${String(idPtn)}`);
+    return Promise.reject(new Error(`Invalid PTN ID: ${String(idPtn)}`));
   }
 
-  const response = await fetch(`/data/ptn/${idPtn}.json`, {
+  const cached = ptnDetailCache.get(idPtn);
+  if (cached) {
+    return cached;
+  }
+
+  const request = fetch(`/data/ptn/${idPtn}.json`, {
     headers: { Accept: "application/json" },
-  });
+  })
+    .then(async (response) => {
+      if (!response.ok) {
+        throw new Error(
+          `Failed to fetch PTN detail for ${idPtn}: HTTP ${response.status}`
+        );
+      }
+      return (await response.json()) as PtnDetail;
+    })
+    .catch((err) => {
+      ptnDetailCache.delete(idPtn);
+      throw err;
+    });
 
-  if (!response.ok) {
-    throw new Error(
-      `Failed to fetch PTN detail for ${idPtn}: HTTP ${response.status}`
-    );
-  }
-
-  return (await response.json()) as PtnDetail;
+  ptnDetailCache.set(idPtn, request);
+  return request;
 }

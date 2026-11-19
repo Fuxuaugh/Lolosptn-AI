@@ -3,7 +3,7 @@
 - [x] M1: Init Next.js & Pipeline Data (`sync_snpmb.py`)
 - [x] M2: Prediction Engine (`app.config.ts`, `prediction.ts` + Unit Test)
 - [x] M3: Fondasi Desain P0 (`tokens.css`, `copy.ts`, `components/ui/`)
-- [ ] M4: Fitur Gratis (F1, F2, F3)
+- [x] M4: Fitur Gratis (F1, F2, F3)
 - [ ] M5: Backend Server (`redis.ts`, `/api/analyze`, `/api/metric`)
 - [ ] M6: Paywall (F4), Integrasi F5-F6, & Build Deploy
 
@@ -61,4 +61,21 @@
 - `npm run lint`: lulus (0 error, 0 warning).
 - `npm test`: 13/13 unit test M2 tetap lulus.
 
-**Berikutnya:** M4 (menunggu instruksi).
+### M4 selesai (2026-11-20)
+
+**File yang dibuat / diperbarui:**
+- `src/components/features/PredictionForm.tsx`: form F1 Dual-Track (tab SNBT/SNBP, searchable dropdown PTN → Prodi Pilihan 1 wajib & Pilihan 2 opsional hanya `tersedia: true`, mode SNBT 7 subtes / rata-rata langsung 200–1000, mode SNBP cek eligibilitas + callout peringatan & tautan SNPMB, rapor 0–100, mapel 0–100, akreditasi A/B/C, prestasi, alumni terpisah untuk Pilihan 1 & 2, validasi lengkap).
+- `src/components/features/HasilKartu.tsx`: kartu hasil F2 per pilihan (PTN, prodi, jenjang, `Badge` status, probabilitas titik, rentang sensitivitas `P_low`–`P_high` + catatan heuristik & `isUncertain`, skor vs acuan, kuota tahun berjalan, syarat portofolio).
+- `src/components/features/TrenChart.tsx`: grafik batang SVG ringan memakai token CSS (`var(--color-*)`) + tabel Peminat vs Daya Tampung, memuat data via `fetchPtnDetail(idPtn)` dengan `Skeleton` loading & tombol retry.
+- `src/components/features/MetodologiModal.tsx`: modal penjelasan metodologi (rasio diterima, persentil normal, koefisien sigmoid SNBT/SNBP, rentang sensitivitas heuristik, keterbatasan data SNPMB).
+- `src/components/features/PaywallPreview.tsx`: placeholder terkunci (*blurred overlay*, tanpa data F5/F6 di klien) dengan tombol "Buka Analisis Lengkap (Rp10.000)".
+- `src/components/features/HomeCalculator.tsx`, `src/components/features/index.ts`, & `src/app/page.tsx`: hero singkat + form + hasil sesuai urutan `THEME.resultLayoutOrder` (`["hasil", "tren", "callout", "paywall"]`) termasuk callout kuning disclaimer + privasi zero-PII & pemicu `MetodologiModal`.
+- `src/config/copy.ts`: penambahan beberapa key teks UI untuk F1–F4 preview & detail koefisien metodologi.
+- `src/lib/dataset.ts`: penambahan deduplikasi cache per sesi pada `fetchPtnDetail(idPtn)`.
+
+**Hasil verifikasi:**
+- `npx tsc --noEmit`: lulus (0 error).
+- `npm run lint`: lulus (0 error, 0 warning).
+- `npm test`: 13/13 unit test lulus.
+
+**Berikutnya:** M5 (menunggu instruksi).
