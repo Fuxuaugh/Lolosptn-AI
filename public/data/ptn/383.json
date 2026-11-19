@@ -1,0 +1,6045 @@
+{
+  "id_ptn": 383,
+  "nama_ptn": "UNIVERSITAS NEGERI SURABAYA",
+  "kota": "Kota Surabaya",
+  "prodi_list": [
+    {
+      "kode_prodi": "13831001",
+      "nama": "PENDIDIKAN MATEMATIKA",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 125,
+        "rasio_diterima_persen": 31.99,
+        "skor_acuan_mentah": 554.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 554.8,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 180,
+            "peminat": 444
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 113,
+            "peminat": 401
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 125,
+            "peminat": 405
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 74,
+        "rasio_diterima_persen": 15.5,
+        "rapor_acuan_mentah": 87.57,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.57,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 90,
+            "peminat": 543
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 68,
+            "peminat": 460
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 75,
+            "peminat": 484
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831002",
+      "nama": "PENDIDIKAN FISIKA",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 66,
+        "rasio_diterima_persen": 55.11,
+        "skor_acuan_mentah": 504.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 504.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 90,
+            "peminat": 149
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 63,
+            "peminat": 102
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 73,
+            "peminat": 149
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 55,
+        "rasio_diterima_persen": 28.62,
+        "rapor_acuan_mentah": 85.54,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.54,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 50,
+            "peminat": 188
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 49,
+            "peminat": 155
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 181
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831003",
+      "nama": "PENDIDIKAN KIMIA",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 73,
+        "rasio_diterima_persen": 40.46,
+        "skor_acuan_mentah": 535.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 535.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 90,
+            "peminat": 154
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 65,
+            "peminat": 146
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 70,
+            "peminat": 227
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 22.01,
+        "rapor_acuan_mentah": 86.47,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.47,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 50,
+            "peminat": 197
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 49,
+            "peminat": 202
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 259
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831004",
+      "nama": "PENDIDIKAN BIOLOGI",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 117,
+        "rasio_diterima_persen": 27.38,
+        "skor_acuan_mentah": 566.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 566.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 150,
+            "peminat": 396
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 108,
+            "peminat": 505
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 121,
+            "peminat": 452
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 75,
+        "rasio_diterima_persen": 15.41,
+        "rapor_acuan_mentah": 87.59,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.59,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 70,
+            "peminat": 454
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 74,
+            "peminat": 458
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 70,
+            "peminat": 468
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831005",
+      "nama": "MATEMATIKA",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 94,
+        "rasio_diterima_persen": 39.74,
+        "skor_acuan_mentah": 537.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 537.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 115,
+            "peminat": 271
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 81,
+            "peminat": 185
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 104,
+            "peminat": 287
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 70,
+        "rasio_diterima_persen": 24.89,
+        "rapor_acuan_mentah": 86.05,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.05,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 54,
+            "peminat": 239
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 60,
+            "peminat": 226
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 69,
+            "peminat": 278
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831006",
+      "nama": "FISIKA",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 46,
+        "rasio_diterima_persen": 49.24,
+        "skor_acuan_mentah": 516.6,
+        "offset_diterapkan": 0,
+        "skor_acuan": 516.6,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 90,
+            "peminat": 186
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 56,
+            "peminat": 84
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 54,
+            "peminat": 138
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 30.93,
+        "rapor_acuan_mentah": 85.24,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.24,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 42,
+            "peminat": 101
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 32,
+            "peminat": 107
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 132
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831007",
+      "nama": "KIMIA",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 67,
+        "rasio_diterima_persen": 25.27,
+        "skor_acuan_mentah": 571.6,
+        "offset_diterapkan": 0,
+        "skor_acuan": 571.6,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 90,
+            "peminat": 197
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 64,
+            "peminat": 313
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 64,
+            "peminat": 320
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 16.75,
+        "rapor_acuan_mentah": 87.34,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.34,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 42,
+            "peminat": 199
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 43,
+            "peminat": 263
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 328
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831008",
+      "nama": "BIOLOGI",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 85,
+        "rasio_diterima_persen": 27.28,
+        "skor_acuan_mentah": 566.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 566.4,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 165,
+            "peminat": 344
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 96,
+            "peminat": 376
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 89,
+            "peminat": 444
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 63,
+        "rasio_diterima_persen": 18.11,
+        "rapor_acuan_mentah": 87.1,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 70,
+            "peminat": 340
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 53,
+            "peminat": 315
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 63,
+            "peminat": 352
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831009",
+      "nama": "PENDIDIKAN ILMU PENGETAHUAN ALAM",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 106,
+        "rasio_diterima_persen": 30.28,
+        "skor_acuan_mentah": 558.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 558.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 120,
+            "peminat": 278
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 97,
+            "peminat": 345
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 107,
+            "peminat": 405
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 65,
+        "rasio_diterima_persen": 18.31,
+        "rapor_acuan_mentah": 87.07,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.07,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 56,
+            "peminat": 295
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 63,
+            "peminat": 328
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 63,
+            "peminat": 360
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831010",
+      "nama": "PENDIDIKAN TEKNIK ELEKTRO",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 60,
+        "rasio_diterima_persen": 40.15,
+        "skor_acuan_mentah": 536.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 536.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 70,
+            "peminat": 120
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 53,
+            "peminat": 152
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 62,
+            "peminat": 172
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 32.06,
+        "rapor_acuan_mentah": 85.1,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 30,
+            "peminat": 100
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 32,
+            "peminat": 117
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 40,
+            "peminat": 112
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831011",
+      "nama": "PENDIDIKAN TEKNIK MESIN",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 61,
+        "rasio_diterima_persen": 42.94,
+        "skor_acuan_mentah": 530.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 530.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 65,
+            "peminat": 96
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 55,
+            "peminat": 162
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 68,
+            "peminat": 177
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 35,
+        "rasio_diterima_persen": 29.7,
+        "rapor_acuan_mentah": 85.4,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.4,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 28,
+            "peminat": 130
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 32,
+            "peminat": 110
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 45,
+            "peminat": 135
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831012",
+      "nama": "PENDIDIKAN TEKNIK BANGUNAN",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 52,
+        "rasio_diterima_persen": 41.54,
+        "skor_acuan_mentah": 533.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 533.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 65,
+            "peminat": 106
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 55,
+            "peminat": 145
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 58,
+            "peminat": 162
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 35.88,
+        "rapor_acuan_mentah": 84.63,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 84.63,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 30,
+            "peminat": 90
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 32,
+            "peminat": 102
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 40,
+            "peminat": 101
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831013",
+      "nama": "ILMU KEOLAHRAGAAN",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Olahraga",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 91,
+        "rasio_diterima_persen": 43.41,
+        "skor_acuan_mentah": 529.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 529.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 130,
+            "peminat": 211
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 92,
+            "peminat": 223
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 107,
+            "peminat": 286
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 80,
+        "rasio_diterima_persen": 29.93,
+        "rapor_acuan_mentah": 85.37,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.37,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 54,
+            "peminat": 145
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 63,
+            "peminat": 216
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 75,
+            "peminat": 273
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831014",
+      "nama": "TEKNIK SIPIL",
+      "jenjang": "S1",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 105,
+        "rasio_diterima_persen": 11.08,
+        "skor_acuan_mentah": 618.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 618.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 170,
+            "peminat": 976
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 99,
+            "peminat": 986
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 108,
+            "peminat": 1177
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 90,
+        "rasio_diterima_persen": 11.5,
+        "rapor_acuan_mentah": 88.4,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.4,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 70,
+            "peminat": 669
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 70,
+            "peminat": 632
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 92,
+            "peminat": 756
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831015",
+      "nama": "PENDIDIKAN TEKNOLOGI INFORMASI",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 100,
+        "rasio_diterima_persen": 35.78,
+        "skor_acuan_mentah": 546.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 546.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 90,
+            "peminat": 192
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 90,
+            "peminat": 343
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 106,
+            "peminat": 286
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 60,
+        "rasio_diterima_persen": 23.88,
+        "rapor_acuan_mentah": 86.2,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 42,
+            "peminat": 201
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 53,
+            "peminat": 245
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 70,
+            "peminat": 265
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831016",
+      "nama": "TEKNIK ELEKTRO",
+      "jenjang": "S1",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 86,
+        "rasio_diterima_persen": 14.44,
+        "skor_acuan_mentah": 605.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 605.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 130,
+            "peminat": 462
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 95,
+            "peminat": 748
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 89,
+            "peminat": 889
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 70,
+        "rasio_diterima_persen": 12.85,
+        "rapor_acuan_mentah": 88.1,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 56,
+            "peminat": 419
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 63,
+            "peminat": 481
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 70,
+            "peminat": 560
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831017",
+      "nama": "TEKNIK MESIN",
+      "jenjang": "S1",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 92,
+        "rasio_diterima_persen": 12.55,
+        "skor_acuan_mentah": 612.6,
+        "offset_diterapkan": 0,
+        "skor_acuan": 612.6,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 130,
+            "peminat": 577
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 97,
+            "peminat": 751
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 89,
+            "peminat": 1068
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 70,
+        "rasio_diterima_persen": 9.79,
+        "rapor_acuan_mentah": 88.82,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.82,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 56,
+            "peminat": 528
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 53,
+            "peminat": 614
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 70,
+            "peminat": 689
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831018",
+      "nama": "SISTEM INFORMASI",
+      "jenjang": "S1",
+      "rumpun": "Komputer & IT",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 85,
+        "rasio_diterima_persen": 9.99,
+        "skor_acuan_mentah": 624.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 624.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 150,
+            "peminat": 1105
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 100,
+            "peminat": 1019
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 87,
+            "peminat": 1005
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 80,
+        "rasio_diterima_persen": 9.7,
+        "rapor_acuan_mentah": 88.84,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.84,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 70,
+            "peminat": 622
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 62,
+            "peminat": 777
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 80,
+            "peminat": 791
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831019",
+      "nama": "TEKNIK INFORMATIKA",
+      "jenjang": "S1",
+      "rumpun": "Komputer & IT",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 88,
+        "rasio_diterima_persen": 7.79,
+        "skor_acuan_mentah": 635.6,
+        "offset_diterapkan": 0,
+        "skor_acuan": 635.6,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 200,
+            "peminat": 1549
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 98,
+            "peminat": 1381
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 84,
+            "peminat": 1364
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 55,
+        "rasio_diterima_persen": 6.23,
+        "rapor_acuan_mentah": 89.91,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.91,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 84,
+            "peminat": 1065
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 62,
+            "peminat": 1103
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 55,
+            "peminat": 928
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831020",
+      "nama": "GIZI",
+      "jenjang": "S1",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 61,
+        "rasio_diterima_persen": 7.62,
+        "skor_acuan_mentah": 636.6,
+        "offset_diterapkan": 0,
+        "skor_acuan": 636.6,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 152,
+            "peminat": 1380
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 101,
+            "peminat": 1254
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 84,
+            "peminat": 1399
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 7.26,
+        "rapor_acuan_mentah": 89.55,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.55,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 98,
+            "peminat": 1117
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 70,
+            "peminat": 1009
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 70,
+            "peminat": 1022
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831027",
+      "nama": "BIMBINGAN DAN KONSELING",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 108,
+        "rasio_diterima_persen": 12.87,
+        "skor_acuan_mentah": 611.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 611.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 160,
+            "peminat": 928
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 109,
+            "peminat": 943
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 108,
+            "peminat": 907
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 90,
+        "rasio_diterima_persen": 10.17,
+        "rapor_acuan_mentah": 88.72,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.72,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 72,
+            "peminat": 881
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 68,
+            "peminat": 790
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 90,
+            "peminat": 756
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831028",
+      "nama": "TEKNOLOGI PENDIDIKAN",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 92,
+        "rasio_diterima_persen": 31.46,
+        "skor_acuan_mentah": 556.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 556.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 115,
+            "peminat": 315
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 83,
+            "peminat": 264
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 101,
+            "peminat": 343
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 80,
+        "rasio_diterima_persen": 23.35,
+        "rapor_acuan_mentah": 86.27,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.27,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 54,
+            "peminat": 296
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 45,
+            "peminat": 222
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 70,
+            "peminat": 257
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831029",
+      "nama": "PENDIDIKAN LUAR SEKOLAH",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 77,
+        "rasio_diterima_persen": 55.85,
+        "skor_acuan_mentah": 502.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 502.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 100,
+            "peminat": 263
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 79,
+            "peminat": 139
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 78,
+            "peminat": 125
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 36.64,
+        "rapor_acuan_mentah": 84.54,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 84.54,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 45,
+            "peminat": 152
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 41,
+            "peminat": 140
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 114
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831030",
+      "nama": "PENDIDIKAN LUAR BIASA",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 64,
+        "rasio_diterima_persen": 34.14,
+        "skor_acuan_mentah": 549.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 549.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 80,
+            "peminat": 250
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 64,
+            "peminat": 217
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 82,
+            "peminat": 217
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 75,
+        "rasio_diterima_persen": 25.23,
+        "rapor_acuan_mentah": 86.0,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 45,
+            "peminat": 212
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 41,
+            "peminat": 176
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 56,
+            "peminat": 200
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831031",
+      "nama": "PENDIDIKAN GURU SEKOLAH DASAR",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 145,
+        "rasio_diterima_persen": 10.12,
+        "skor_acuan_mentah": 623.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 623.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 280,
+            "peminat": 1784
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 184,
+            "peminat": 1945
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 147,
+            "peminat": 1772
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 130,
+        "rasio_diterima_persen": 7.28,
+        "rapor_acuan_mentah": 89.55,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.55,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 126,
+            "peminat": 1680
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 113,
+            "peminat": 1682
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 120,
+            "peminat": 1594
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831032",
+      "nama": "PSIKOLOGI",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 173,
+        "rasio_diterima_persen": 7.13,
+        "skor_acuan_mentah": 639.6,
+        "offset_diterapkan": 0,
+        "skor_acuan": 639.6,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 200,
+            "peminat": 2408
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 176,
+            "peminat": 2459
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 175,
+            "peminat": 2633
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 114,
+        "rasio_diterima_persen": 9.55,
+        "rapor_acuan_mentah": 88.88,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.88,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 126,
+            "peminat": 1775
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 135,
+            "peminat": 1594
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 162,
+            "peminat": 1448
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831033",
+      "nama": "PENDIDIKAN GURU PENDIDIKAN ANAK USIA DINI",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 128,
+        "rasio_diterima_persen": 36.71,
+        "skor_acuan_mentah": 543.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 543.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 180,
+            "peminat": 445
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 148,
+            "peminat": 406
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 133,
+            "peminat": 376
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 90,
+        "rasio_diterima_persen": 24.27,
+        "rapor_acuan_mentah": 86.14,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.14,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 80,
+            "peminat": 417
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 81,
+            "peminat": 379
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 90,
+            "peminat": 321
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831034",
+      "nama": "PENDIDIKAN BAHASA DAN SASTRA INDONESIA",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 105,
+        "rasio_diterima_persen": 16.76,
+        "skor_acuan_mentah": 596.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 596.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 170,
+            "peminat": 741
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 110,
+            "peminat": 793
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 120,
+            "peminat": 749
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 100,
+        "rasio_diterima_persen": 10.59,
+        "rapor_acuan_mentah": 88.62,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.62,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 72,
+            "peminat": 753
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 68,
+            "peminat": 736
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 89,
+            "peminat": 754
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831035",
+      "nama": "PENDIDIKAN BAHASA INGGRIS",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 111,
+        "rasio_diterima_persen": 17.44,
+        "skor_acuan_mentah": 594.6,
+        "offset_diterapkan": 0,
+        "skor_acuan": 594.6,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 165,
+            "peminat": 736
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 109,
+            "peminat": 716
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 120,
+            "peminat": 715
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 95,
+        "rasio_diterima_persen": 12.06,
+        "rapor_acuan_mentah": 88.27,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.27,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 72,
+            "peminat": 636
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 68,
+            "peminat": 599
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 89,
+            "peminat": 696
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831036",
+      "nama": "PENDIDIKAN BAHASA JERMAN",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 39,
+        "rasio_diterima_persen": 55.22,
+        "skor_acuan_mentah": 503.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 503.8,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 70,
+            "peminat": 86
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 45,
+            "peminat": 70
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 46,
+            "peminat": 117
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 42.5,
+        "rapor_acuan_mentah": 83.85,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 83.85,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 30,
+            "peminat": 50
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 27,
+            "peminat": 63
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 30,
+            "peminat": 85
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831037",
+      "nama": "PENDIDIKAN BAHASA JEPANG",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 114,
+        "rasio_diterima_persen": 29.57,
+        "skor_acuan_mentah": 560.6,
+        "offset_diterapkan": 0,
+        "skor_acuan": 560.6,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 110,
+            "peminat": 350
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 126,
+            "peminat": 365
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 129,
+            "peminat": 499
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 90,
+        "rasio_diterima_persen": 20.02,
+        "rapor_acuan_mentah": 86.78,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.78,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 45,
+            "peminat": 261
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 57,
+            "peminat": 279
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 75,
+            "peminat": 359
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831038",
+      "nama": "PENDIDIKAN BAHASA DAN SASTRA JAWA",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 56,
+        "rasio_diterima_persen": 28.14,
+        "skor_acuan_mentah": 564.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 564.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 95,
+            "peminat": 329
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 63,
+            "peminat": 252
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 77,
+            "peminat": 259
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 65,
+        "rasio_diterima_persen": 14.86,
+        "rapor_acuan_mentah": 87.69,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.69,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 36,
+            "peminat": 324
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 38,
+            "peminat": 273
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 45,
+            "peminat": 266
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831039",
+      "nama": "PENDIDIKAN SENI RUPA",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Seni Rupa, Desain, dan Kriya",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 47,
+        "rasio_diterima_persen": 50.89,
+        "skor_acuan_mentah": 513.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 513.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 70,
+            "peminat": 121
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 58,
+            "peminat": 95
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 63,
+            "peminat": 150
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 60,
+        "rasio_diterima_persen": 25.12,
+        "rapor_acuan_mentah": 86.02,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.02,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 156
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 37,
+            "peminat": 147
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 45,
+            "peminat": 172
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831040",
+      "nama": "PENDIDIKAN SENI DRAMA, TARI, DAN MUSIK",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Sendratasik",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 45,
+        "rasio_diterima_persen": 50.21,
+        "skor_acuan_mentah": 514.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 514.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 72,
+            "peminat": 125
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 59,
+            "peminat": 124
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 63,
+            "peminat": 129
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 60,
+        "rasio_diterima_persen": 24.39,
+        "rapor_acuan_mentah": 86.12,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.12,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 132
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 37,
+            "peminat": 152
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 45,
+            "peminat": 191
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831041",
+      "nama": "SASTRA INDONESIA",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 103,
+        "rasio_diterima_persen": 27.56,
+        "skor_acuan_mentah": 565.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 565.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 120,
+            "peminat": 377
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 84,
+            "peminat": 293
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 105,
+            "peminat": 417
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 60,
+        "rasio_diterima_persen": 18.19,
+        "rapor_acuan_mentah": 87.09,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.09,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 54,
+            "peminat": 343
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 45,
+            "peminat": 250
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 60,
+            "peminat": 311
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831042",
+      "nama": "SASTRA INGGRIS",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 91,
+        "rasio_diterima_persen": 14.22,
+        "skor_acuan_mentah": 606.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 606.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 150,
+            "peminat": 755
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 80,
+            "peminat": 632
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 93,
+            "peminat": 721
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 75,
+        "rasio_diterima_persen": 11.67,
+        "rapor_acuan_mentah": 88.36,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.36,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 72,
+            "peminat": 594
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 57,
+            "peminat": 534
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 75,
+            "peminat": 621
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831043",
+      "nama": "SASTRA JERMAN",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 49,
+        "rasio_diterima_persen": 39.56,
+        "skor_acuan_mentah": 537.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 537.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 80,
+            "peminat": 140
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 47,
+            "peminat": 103
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 52,
+            "peminat": 180
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 40.45,
+        "rapor_acuan_mentah": 84.09,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 84.09,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 45,
+            "peminat": 71
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 32,
+            "peminat": 70
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 128
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831044",
+      "nama": "PENDIDIKAN PANCASILA DAN KEWARGANEGARAAN",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 85,
+        "rasio_diterima_persen": 23.8,
+        "skor_acuan_mentah": 575.6,
+        "offset_diterapkan": 0,
+        "skor_acuan": 575.6,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 120,
+            "peminat": 533
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 83,
+            "peminat": 337
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 86,
+            "peminat": 361
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 75,
+        "rasio_diterima_persen": 14.4,
+        "rapor_acuan_mentah": 87.78,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.78,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 54,
+            "peminat": 394
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 47,
+            "peminat": 359
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 62,
+            "peminat": 401
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831045",
+      "nama": "PENDIDIKAN GEOGRAFI",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 91,
+        "rasio_diterima_persen": 33.58,
+        "skor_acuan_mentah": 551.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 551.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 120,
+            "peminat": 310
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 92,
+            "peminat": 255
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 106,
+            "peminat": 353
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 75,
+        "rasio_diterima_persen": 19.28,
+        "rapor_acuan_mentah": 86.9,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 54,
+            "peminat": 295
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 52,
+            "peminat": 279
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 62,
+            "peminat": 309
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831046",
+      "nama": "PENDIDIKAN SEJARAH",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 97,
+        "rasio_diterima_persen": 30.3,
+        "skor_acuan_mentah": 558.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 558.8,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 120,
+            "peminat": 339
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 93,
+            "peminat": 362
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 103,
+            "peminat": 332
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 75,
+        "rasio_diterima_persen": 18.54,
+        "rapor_acuan_mentah": 87.03,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.03,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 54,
+            "peminat": 396
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 63,
+            "peminat": 380
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 62,
+            "peminat": 286
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831047",
+      "nama": "SOSIOLOGI",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 125,
+        "rasio_diterima_persen": 23.11,
+        "skor_acuan_mentah": 577.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 577.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 210,
+            "peminat": 561
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 127,
+            "peminat": 633
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 126,
+            "peminat": 656
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 90,
+        "rasio_diterima_persen": 18.52,
+        "rapor_acuan_mentah": 87.03,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.03,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 90,
+            "peminat": 467
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 68,
+            "peminat": 420
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 90,
+            "peminat": 459
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831048",
+      "nama": "ILMU ADMINISTRASI NEGARA",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 108,
+        "rasio_diterima_persen": 13.12,
+        "skor_acuan_mentah": 610.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 610.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 240,
+            "peminat": 999
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 147,
+            "peminat": 1497
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 123,
+            "peminat": 1145
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 90,
+        "rasio_diterima_persen": 11.3,
+        "rapor_acuan_mentah": 88.45,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.45,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 108,
+            "peminat": 881
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 90,
+            "peminat": 1067
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 115,
+            "peminat": 910
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831050",
+      "nama": "PENDIDIKAN JASMANI, KESEHATAN, DAN REKREASI",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Olahraga",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 110,
+        "rasio_diterima_persen": 20.77,
+        "skor_acuan_mentah": 584.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 584.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 210,
+            "peminat": 640
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 145,
+            "peminat": 689
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 120,
+            "peminat": 760
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 119,
+        "rasio_diterima_persen": 16.11,
+        "rapor_acuan_mentah": 87.45,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.45,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 90,
+            "peminat": 429
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 79,
+            "peminat": 542
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 100,
+            "peminat": 663
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831051",
+      "nama": "PENDIDIKAN KEPELATIHAN OLAHRAGA",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Olahraga",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 141,
+        "rasio_diterima_persen": 27.91,
+        "skor_acuan_mentah": 564.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 564.8,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 210,
+            "peminat": 495
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 144,
+            "peminat": 508
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 135,
+            "peminat": 618
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 115,
+        "rasio_diterima_persen": 22.94,
+        "rapor_acuan_mentah": 86.33,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.33,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 90,
+            "peminat": 336
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 111,
+            "peminat": 439
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 113,
+            "peminat": 565
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831052",
+      "nama": "PENDIDIKAN EKONOMI",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 82,
+        "rasio_diterima_persen": 30.77,
+        "skor_acuan_mentah": 557.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 557.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 120,
+            "peminat": 293
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 91,
+            "peminat": 339
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 88,
+            "peminat": 303
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 60,
+        "rasio_diterima_persen": 19.11,
+        "rapor_acuan_mentah": 86.93,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.93,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 65,
+            "peminat": 344
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 63,
+            "peminat": 346
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 60,
+            "peminat": 304
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831053",
+      "nama": "MANAJEMEN",
+      "jenjang": "S1",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 105,
+        "rasio_diterima_persen": 6.61,
+        "skor_acuan_mentah": 643.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 643.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 240,
+            "peminat": 1950
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 113,
+            "peminat": 2410
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 108,
+            "peminat": 1970
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 72,
+        "rasio_diterima_persen": 4.55,
+        "rapor_acuan_mentah": 90.61,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 90.61,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 126,
+            "peminat": 2151
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 79,
+            "peminat": 1960
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 70,
+            "peminat": 1613
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831054",
+      "nama": "AKUNTANSI",
+      "jenjang": "S1",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 119,
+        "rasio_diterima_persen": 10.03,
+        "skor_acuan_mentah": 623.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 623.8,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 240,
+            "peminat": 1313
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 127,
+            "peminat": 1500
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 119,
+            "peminat": 1552
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 80,
+        "rasio_diterima_persen": 6.93,
+        "rapor_acuan_mentah": 89.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.66,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 108,
+            "peminat": 1407
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 90,
+            "peminat": 1288
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 78,
+            "peminat": 1182
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831055",
+      "nama": "PENDIDIKAN TATA RIAS",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 76,
+        "rasio_diterima_persen": 16.09,
+        "skor_acuan_mentah": 599.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 599.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 100,
+            "peminat": 418
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 64,
+            "peminat": 471
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 87,
+            "peminat": 602
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 65,
+        "rasio_diterima_persen": 9.85,
+        "rapor_acuan_mentah": 88.81,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.81,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 42,
+            "peminat": 417
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 42,
+            "peminat": 449
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 497
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831056",
+      "nama": "MANAJEMEN PENDIDIKAN",
+      "jenjang": "S1",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 125,
+        "rasio_diterima_persen": 28.43,
+        "skor_acuan_mentah": 563.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 563.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 160,
+            "peminat": 513
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 121,
+            "peminat": 468
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 127,
+            "peminat": 440
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 90,
+        "rasio_diterima_persen": 20.82,
+        "rapor_acuan_mentah": 86.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.66,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 72,
+            "peminat": 405
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 68,
+            "peminat": 400
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 90,
+            "peminat": 370
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831057",
+      "nama": "ILMU HUKUM",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 165,
+        "rasio_diterima_persen": 10.94,
+        "skor_acuan_mentah": 619.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 619.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 250,
+            "peminat": 1518
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 179,
+            "peminat": 1694
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 165,
+            "peminat": 1842
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 108,
+        "rasio_diterima_persen": 12.2,
+        "rapor_acuan_mentah": 88.24,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.24,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 126,
+            "peminat": 1109
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 124,
+            "peminat": 1182
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 130,
+            "peminat": 959
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831058",
+      "nama": "PENDIDIKAN BAHASA MANDARIN",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 66,
+        "rasio_diterima_persen": 38.3,
+        "skor_acuan_mentah": 540.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 540.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 75,
+            "peminat": 134
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 82,
+            "peminat": 165
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 81,
+            "peminat": 332
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 70,
+        "rasio_diterima_persen": 32.93,
+        "rapor_acuan_mentah": 84.99,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 84.99,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 45,
+            "peminat": 111
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 48,
+            "peminat": 122
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 56,
+            "peminat": 215
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831059",
+      "nama": "PENDIDIKAN TATA BOGA",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 133,
+        "rasio_diterima_persen": 24.15,
+        "skor_acuan_mentah": 574.6,
+        "offset_diterapkan": 0,
+        "skor_acuan": 574.6,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 170,
+            "peminat": 612
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 117,
+            "peminat": 580
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 151,
+            "peminat": 602
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 100,
+        "rasio_diterima_persen": 15.09,
+        "rapor_acuan_mentah": 87.65,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.65,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 70,
+            "peminat": 589
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 70,
+            "peminat": 520
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 84,
+            "peminat": 484
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831060",
+      "nama": "PENDIDIKAN TATA BUSANA",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 116,
+        "rasio_diterima_persen": 34.88,
+        "skor_acuan_mentah": 548.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 548.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 170,
+            "peminat": 481
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 130,
+            "peminat": 429
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 137,
+            "peminat": 366
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 100,
+        "rasio_diterima_persen": 15.96,
+        "rapor_acuan_mentah": 87.48,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.48,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 70,
+            "peminat": 522
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 62,
+            "peminat": 495
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 80,
+            "peminat": 420
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831061",
+      "nama": "PENDIDIKAN AKUNTANSI",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 84,
+        "rasio_diterima_persen": 29.8,
+        "skor_acuan_mentah": 560.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 560.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 120,
+            "peminat": 431
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 93,
+            "peminat": 285
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 106,
+            "peminat": 367
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 75,
+        "rasio_diterima_persen": 19.95,
+        "rapor_acuan_mentah": 86.8,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.8,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 65,
+            "peminat": 327
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 58,
+            "peminat": 268
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 62,
+            "peminat": 327
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831062",
+      "nama": "PENDIDIKAN BISNIS",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 56,
+        "rasio_diterima_persen": 18.46,
+        "skor_acuan_mentah": 591.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 591.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 90,
+            "peminat": 376
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 47,
+            "peminat": 246
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 51,
+            "peminat": 321
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 13.43,
+        "rapor_acuan_mentah": 87.98,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.98,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 40,
+            "peminat": 259
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 27,
+            "peminat": 209
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 37,
+            "peminat": 286
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831063",
+      "nama": "PENDIDIKAN ADMINISTRASI PERKANTORAN",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 132,
+        "rasio_diterima_persen": 17.7,
+        "skor_acuan_mentah": 593.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 593.8,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 190,
+            "peminat": 623
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 130,
+            "peminat": 1045
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 108,
+            "peminat": 686
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 70,
+        "rasio_diterima_persen": 13.67,
+        "rapor_acuan_mentah": 87.93,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.93,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 90,
+            "peminat": 677
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 79,
+            "peminat": 840
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 108,
+            "peminat": 659
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831064",
+      "nama": "ILMU KOMUNIKASI",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 92,
+        "rasio_diterima_persen": 7.49,
+        "skor_acuan_mentah": 637.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 637.4,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 210,
+            "peminat": 1571
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 112,
+            "peminat": 1948
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 106,
+            "peminat": 1712
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 80,
+        "rasio_diterima_persen": 7.24,
+        "rapor_acuan_mentah": 89.56,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.56,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 108,
+            "peminat": 1332
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 79,
+            "peminat": 1279
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 85,
+            "peminat": 1129
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831065",
+      "nama": "MUSIK",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Musik",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 43,
+        "rasio_diterima_persen": 76.52,
+        "skor_acuan_mentah": 453.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 460.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 70,
+            "peminat": 85
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 60,
+            "peminat": 54
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 53,
+            "peminat": 84
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 45,
+        "rasio_diterima_persen": 49.18,
+        "rapor_acuan_mentah": 83.09,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 83.09,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 60
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 27,
+            "peminat": 63
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 73
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831066",
+      "nama": "DESAIN KOMUNIKASI VISUAL",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Seni Rupa, Desain, dan Kriya",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 81,
+        "rasio_diterima_persen": 15.06,
+        "skor_acuan_mentah": 602.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 602.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 140,
+            "peminat": 618
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 75,
+            "peminat": 599
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 101,
+            "peminat": 746
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 90,
+        "rasio_diterima_persen": 12.45,
+        "rapor_acuan_mentah": 88.19,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.19,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 56,
+            "peminat": 449
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 54,
+            "peminat": 463
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 70,
+            "peminat": 542
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831067",
+      "nama": "SENI RUPA MURNI",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Seni Rupa, Desain, dan Kriya",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 27,
+        "rasio_diterima_persen": 58.23,
+        "skor_acuan_mentah": 497.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 497.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 50,
+            "peminat": 76
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 40,
+            "peminat": 63
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 38,
+            "peminat": 73
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 34,
+        "rasio_diterima_persen": 32.99,
+        "rapor_acuan_mentah": 84.98,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 84.98,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 27,
+            "peminat": 61
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 21,
+            "peminat": 62
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 26,
+            "peminat": 93
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831068",
+      "nama": "EKONOMI ISLAM",
+      "jenjang": "S1",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 125,
+        "rasio_diterima_persen": 22.58,
+        "skor_acuan_mentah": 579.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 579.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 160,
+            "peminat": 607
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 113,
+            "peminat": 436
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 107,
+            "peminat": 561
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 68,
+        "rasio_diterima_persen": 21.36,
+        "rapor_acuan_mentah": 86.57,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.57,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 72,
+            "peminat": 363
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 81,
+            "peminat": 343
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 80,
+            "peminat": 388
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831069",
+      "nama": "PENDIDIKAN IPS",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 91,
+        "rasio_diterima_persen": 30.21,
+        "skor_acuan_mentah": 559.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 559.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 116,
+            "peminat": 310
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 83,
+            "peminat": 312
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 105,
+            "peminat": 356
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 75,
+        "rasio_diterima_persen": 18.43,
+        "rapor_acuan_mentah": 87.05,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.05,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 54,
+            "peminat": 338
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 46,
+            "peminat": 290
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 62,
+            "peminat": 296
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831070",
+      "nama": "EKONOMI",
+      "jenjang": "S1",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 121,
+        "rasio_diterima_persen": 17.33,
+        "skor_acuan_mentah": 595.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 595.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 200,
+            "peminat": 699
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 115,
+            "peminat": 809
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 123,
+            "peminat": 838
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 100,
+        "rasio_diterima_persen": 13.22,
+        "rapor_acuan_mentah": 88.02,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.02,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 90,
+            "peminat": 639
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 79,
+            "peminat": 648
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 100,
+            "peminat": 741
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831075",
+      "nama": "BISNIS DIGITAL",
+      "jenjang": "S1",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 157,
+        "rasio_diterima_persen": 9.73,
+        "skor_acuan_mentah": 625.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 625.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 210,
+            "peminat": 1181
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 128,
+            "peminat": 1518
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 118,
+            "peminat": 1621
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 100,
+        "rasio_diterima_persen": 8.64,
+        "rapor_acuan_mentah": 89.13,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.13,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 108,
+            "peminat": 1043
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 90,
+            "peminat": 1145
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 80,
+            "peminat": 950
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831087",
+      "nama": "SAINS DATA",
+      "jenjang": "S1",
+      "rumpun": "Komputer & IT",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 65,
+        "rasio_diterima_persen": 17.25,
+        "skor_acuan_mentah": 595.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 595.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 125,
+            "peminat": 805
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 110,
+            "peminat": 566
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 120,
+            "peminat": 722
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 55,
+        "rasio_diterima_persen": 15.93,
+        "rapor_acuan_mentah": 87.49,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.49,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 54,
+            "peminat": 277
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 68,
+            "peminat": 467
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 89,
+            "peminat": 581
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831088",
+      "nama": "MANAJEMEN OLAHRAGA",
+      "jenjang": "S1",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Olahraga",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 42,
+        "rasio_diterima_persen": 48.44,
+        "skor_acuan_mentah": 518.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 518.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 77,
+            "peminat": 120
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 43,
+            "peminat": 86
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 54,
+            "peminat": 131
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 48.51,
+        "rapor_acuan_mentah": 83.17,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 83.17,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 45,
+            "peminat": 37
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 27,
+            "peminat": 61
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 37,
+            "peminat": 114
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831089",
+      "nama": "ILMU POLITIK",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 98,
+        "rasio_diterima_persen": 19.51,
+        "skor_acuan_mentah": 588.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 588.0,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 77,
+            "peminat": 368
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 84,
+            "peminat": 450
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 65,
+        "rasio_diterima_persen": 22.59,
+        "rapor_acuan_mentah": 86.39,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.39,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 45,
+            "peminat": 201
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 72,
+            "peminat": 317
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831090",
+      "nama": "KEDOKTERAN",
+      "jenjang": "S1",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 15,
+        "rasio_diterima_persen": 2.08,
+        "skor_acuan_mentah": 688.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 688.2,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 15,
+            "peminat": 655
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 15,
+            "peminat": 767
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 10,
+        "rasio_diterima_persen": 2.51,
+        "rapor_acuan_mentah": 91.81,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 91.81,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 10,
+            "peminat": 380
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 10,
+            "peminat": 410
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831091",
+      "nama": "PENDIDIKAN JASMANI, KESEHATAN, DAN REKREASI (UNESA KAMPUS MAGETAN)",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Olahraga",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 44,
+        "rasio_diterima_persen": 39.38,
+        "skor_acuan_mentah": 537.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 537.9,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 48,
+            "peminat": 76
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 56,
+            "peminat": 223
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 45,
+        "rasio_diterima_persen": 33.97,
+        "rapor_acuan_mentah": 84.86,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 84.86,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 27,
+            "peminat": 58
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 37,
+            "peminat": 140
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831092",
+      "nama": "PENDIDIKAN GURU SEKOLAH DASAR (UNESA KAMPUS MAGETAN)",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 64,
+        "rasio_diterima_persen": 17.71,
+        "skor_acuan_mentah": 593.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 593.8,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 73,
+            "peminat": 282
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 81,
+            "peminat": 633
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 13.46,
+        "rapor_acuan_mentah": 87.97,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.97,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 41,
+            "peminat": 213
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 56,
+            "peminat": 561
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831093",
+      "nama": "PENDIDIKAN MATEMATIKA (UNESA KAMPUS MAGETAN)",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 42,
+        "rasio_diterima_persen": 53.09,
+        "skor_acuan_mentah": 508.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 508.4,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 49,
+            "peminat": 40
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 45,
+            "peminat": 161
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 31,
+        "rasio_diterima_persen": 31.52,
+        "rapor_acuan_mentah": 85.16,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.16,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 27,
+            "peminat": 51
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 31,
+            "peminat": 166
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831094",
+      "nama": "ILMU HUKUM (UNESA KAMPUS MAGETAN)",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 83,
+        "rasio_diterima_persen": 27.49,
+        "skor_acuan_mentah": 565.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 565.8,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 72,
+            "peminat": 183
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 85,
+            "peminat": 417
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 42,
+        "rasio_diterima_persen": 33.38,
+        "rapor_acuan_mentah": 84.93,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 84.93,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 41,
+            "peminat": 81
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 56,
+            "peminat": 243
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831095",
+      "nama": "ILMU KOMUNIKASI (UNESA KAMPUS MAGETAN)",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 68,
+        "rasio_diterima_persen": 19.39,
+        "skor_acuan_mentah": 588.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 588.4,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 71,
+            "peminat": 311
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 83,
+            "peminat": 479
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 23.11,
+        "rapor_acuan_mentah": 86.31,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.31,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 41,
+            "peminat": 122
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 56,
+            "peminat": 333
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831096",
+      "nama": "MANAJEMEN (UNESA KAMPUS MAGETAN)",
+      "jenjang": "S1",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 67,
+        "rasio_diterima_persen": 14.82,
+        "skor_acuan_mentah": 603.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.7,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 69,
+            "peminat": 418
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 83,
+            "peminat": 601
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 13.78,
+        "rapor_acuan_mentah": 87.91,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.91,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 41,
+            "peminat": 206
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 56,
+            "peminat": 554
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831097",
+      "nama": "SASTRA INGGRIS (UNESA KAMPUS MAGETAN)",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 37,
+        "rasio_diterima_persen": 52.67,
+        "skor_acuan_mentah": 509.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 509.3,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 56,
+            "peminat": 41
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 45,
+            "peminat": 165
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 35,
+        "rasio_diterima_persen": 49.66,
+        "rapor_acuan_mentah": 83.04,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 83.04,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 27,
+            "peminat": 26
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 31,
+            "peminat": 138
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831098",
+      "nama": "PENDIDIKAN TATA RIAS (UNESA KAMPUS MAGETAN)",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 37,
+        "rasio_diterima_persen": 51.08,
+        "skor_acuan_mentah": 512.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 512.7,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 51,
+            "peminat": 50
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 46,
+            "peminat": 186
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 41.58,
+        "rapor_acuan_mentah": 83.96,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 83.96,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 27,
+            "peminat": 36
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 31,
+            "peminat": 144
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831099",
+      "nama": "MASASE",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Olahraga",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 95.0,
+        "skor_acuan_mentah": 375.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 460.0,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 102,
+            "peminat": 16
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 59,
+            "peminat": 38
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 95.0,
+        "rapor_acuan_mentah": 75.6,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 78.0,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 40,
+            "peminat": 5
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 31,
+            "peminat": 23
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831101",
+      "nama": "FISIOTERAPI",
+      "jenjang": "S1",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 15,
+        "rasio_diterima_persen": 2.37,
+        "skor_acuan_mentah": 683.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 683.5,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 16,
+            "peminat": 674
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 12,
+        "rasio_diterima_persen": 3.31,
+        "rapor_acuan_mentah": 91.26,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 91.26,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 12,
+            "peminat": 362
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831102",
+      "nama": "KEBIDANAN",
+      "jenjang": "S1",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 16,
+        "rasio_diterima_persen": 5.32,
+        "skor_acuan_mentah": 652.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 652.3,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 16,
+            "peminat": 301
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 10,
+        "rasio_diterima_persen": 3.87,
+        "rapor_acuan_mentah": 90.95,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 90.95,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 12,
+            "peminat": 310
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831103",
+      "nama": "KEPERAWATAN",
+      "jenjang": "S1",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 16,
+        "rasio_diterima_persen": 1.52,
+        "skor_acuan_mentah": 698.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 698.9,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 15,
+            "peminat": 984
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 10,
+        "rasio_diterima_persen": 1.41,
+        "rapor_acuan_mentah": 92.87,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 92.87,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 12,
+            "peminat": 850
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831104",
+      "nama": "HUBUNGAN INTERNASIONAL",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 56,
+        "rasio_diterima_persen": 12.45,
+        "skor_acuan_mentah": 613.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 613.0,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 67,
+            "peminat": 538
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 16.25,
+        "rapor_acuan_mentah": 87.43,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.43,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 45,
+            "peminat": 277
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831105",
+      "nama": "PERENCANAAN WILAYAH DAN KOTA",
+      "jenjang": "S1",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 45,
+        "rasio_diterima_persen": 10.82,
+        "skor_acuan_mentah": 620.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 620.1,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 49,
+            "peminat": 453
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 45,
+        "rasio_diterima_persen": 15.02,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 35,
+            "peminat": 233
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831106",
+      "nama": "SAINS AKTUARIA",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 52,
+        "rasio_diterima_persen": 34.15,
+        "skor_acuan_mentah": 549.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 549.7,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 42,
+            "peminat": 123
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 35,
+        "rasio_diterima_persen": 29.17,
+        "rapor_acuan_mentah": 85.47,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.47,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 35,
+            "peminat": 120
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831109",
+      "nama": "PENDIDIKAN GURU PENDIDIKAN ANAK USIA DINI (KAMPUS KABUPATEN MAGETAN)",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 26,
+        "rasio_diterima_persen": 95.0,
+        "skor_acuan_mentah": 375.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 460.0,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 53,
+            "peminat": 48
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 20,
+        "rasio_diterima_persen": 44.93,
+        "rapor_acuan_mentah": 83.57,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 83.57,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 31,
+            "peminat": 69
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831110",
+      "nama": "TEKNOLOGI PENDIDIKAN (KAMPUS KABUPATEN MAGETAN)",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 37,
+        "rasio_diterima_persen": 58.97,
+        "skor_acuan_mentah": 495.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 495.7,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 46,
+            "peminat": 78
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 35,
+        "rasio_diterima_persen": 41.33,
+        "rapor_acuan_mentah": 83.99,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 83.99,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 31,
+            "peminat": 75
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831111",
+      "nama": "BIMBINGAN DAN KONSELING (KAMPUS KABUPATEN MAGETAN)",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 37,
+        "rasio_diterima_persen": 15.19,
+        "skor_acuan_mentah": 602.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 602.4,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 48,
+            "peminat": 316
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 35,
+        "rasio_diterima_persen": 11.31,
+        "rapor_acuan_mentah": 88.45,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.45,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 31,
+            "peminat": 274
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831112",
+      "nama": "PENDIDIKAN KEPELATIHAN OLAHRAGA (KAMPUS KABUPATEN MAGETAN)",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Olahraga",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 35,
+        "rasio_diterima_persen": 53.41,
+        "skor_acuan_mentah": 507.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 507.7,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 47,
+            "peminat": 88
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 35,
+        "rasio_diterima_persen": 42.47,
+        "rapor_acuan_mentah": 83.85,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 83.85,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 31,
+            "peminat": 73
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831113",
+      "nama": "PENDIDIKAN BAHASA DAN SASTRA INDONESIA (KAMPUS KABUPATEN MAGETAN)",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 22.83,
+        "skor_acuan_mentah": 578.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 578.3,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 219
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 15.27,
+        "rapor_acuan_mentah": 87.61,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.61,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 31,
+            "peminat": 203
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831115",
+      "nama": "TEKNOLOGI PANGAN DAN HASIL PERTANIAN",
+      "jenjang": "S1",
+      "rumpun": "Pertanian & Hayati",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 37,
+        "rasio_diterima_persen": 8.28,
+        "skor_acuan_mentah": 632.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 632.8,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 42,
+            "peminat": 507
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 11.07,
+        "rapor_acuan_mentah": 88.5,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.5,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 244
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831116",
+      "nama": "AKUAKULTUR",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 37,
+        "rasio_diterima_persen": 56.52,
+        "skor_acuan_mentah": 501.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 501.0,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 52,
+            "peminat": 92
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 64.29,
+        "rapor_acuan_mentah": 81.35,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 81.35,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 42
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831117",
+      "nama": "PARIWISATA",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 34,
+        "rasio_diterima_persen": 8.01,
+        "skor_acuan_mentah": 634.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 634.4,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 43,
+            "peminat": 537
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 35,
+        "rasio_diterima_persen": 8.08,
+        "rapor_acuan_mentah": 89.3,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.3,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 334
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831118",
+      "nama": "FILM DAN ANIMASI",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Film dan Televisi",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 31,
+        "rasio_diterima_persen": 47.62,
+        "skor_acuan_mentah": 520.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 520.1,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 40,
+            "peminat": 84
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 35,
+        "rasio_diterima_persen": 55.1,
+        "rapor_acuan_mentah": 82.42,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 82.42,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 49
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831119",
+      "nama": "BIOSAINS HEWAN",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 38,
+        "rasio_diterima_persen": 86.44,
+        "skor_acuan_mentah": 421.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 460.0,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 51,
+            "peminat": 59
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 95.0,
+        "rapor_acuan_mentah": 75.6,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 78.0,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 26
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831120",
+      "nama": "AGRIBISNIS DIGITAL",
+      "jenjang": "S1",
+      "rumpun": "Pertanian & Hayati",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 33,
+        "rasio_diterima_persen": 15.57,
+        "skor_acuan_mentah": 601.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 601.0,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 45,
+            "peminat": 289
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 18.62,
+        "rapor_acuan_mentah": 87.01,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.01,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 145
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831121",
+      "nama": "KECERDASAN ARTIFISIAL",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 31,
+        "rasio_diterima_persen": 19.52,
+        "skor_acuan_mentah": 588.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 588.0,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 41,
+            "peminat": 210
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 29.35,
+        "rapor_acuan_mentah": 85.44,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.44,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 92
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831122",
+      "nama": "ILMU ADMINISTRASI NEGARA (PSDKU MAGETAN)",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 42,
+        "rasio_diterima_persen": 13.12,
+        "skor_acuan_mentah": 610.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 610.3,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 45,
+            "peminat": 343
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 33,
+        "rasio_diterima_persen": 14.62,
+        "rapor_acuan_mentah": 87.74,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.74,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 31,
+            "peminat": 212
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13831123",
+      "nama": "AKUNTANSI (KAMPUS KABUPATEN MAGETAN)",
+      "jenjang": "S1",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 34,
+        "rasio_diterima_persen": 26.2,
+        "skor_acuan_mentah": 569.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 569.2,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 60,
+            "peminat": 229
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 22,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "13831124",
+      "nama": "KEDOKTERAN GIGI",
+      "jenjang": "S1",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 8,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 5,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "13831125",
+      "nama": "BIOTEKNOLOGI",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 32,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 25,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "13831126",
+      "nama": "PENDIDIKAN VOKASIONAL TEKNOLOGI OTOMOTIF",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 21,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 20,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "13831127",
+      "nama": "TEKNIK METALURGI",
+      "jenjang": "S1",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 22,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 20,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "13831128",
+      "nama": "TEKNIK PERTAMBANGAN",
+      "jenjang": "S1",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 20,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 22,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "13831129",
+      "nama": "SAINS INFORMASI GEOGRAFI",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 26,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 20,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "13831130",
+      "nama": "GEOFISIKA",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 27,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 20,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "13832021",
+      "nama": "MANAJEMEN INFORMATIKA",
+      "jenjang": "D4",
+      "rumpun": "Komputer & IT",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 72,
+        "rasio_diterima_persen": 10.95,
+        "skor_acuan_mentah": 619.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 619.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 120,
+            "peminat": 326
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 102,
+            "peminat": 2133
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 72,
+            "peminat": 1668
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 75,
+        "rasio_diterima_persen": 24.5,
+        "rapor_acuan_mentah": 86.11,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.11,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 50,
+            "peminat": 265
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 50,
+            "peminat": 238
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 75,
+            "peminat": 260
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13832022",
+      "nama": "TEKNIK MESIN",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 8.72,
+        "skor_acuan_mentah": 630.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 630.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 70,
+            "peminat": 256
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 39,
+            "peminat": 655
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 29,
+            "peminat": 991
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 24,
+        "rasio_diterima_persen": 14.53,
+        "rapor_acuan_mentah": 87.76,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.76,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 28,
+            "peminat": 142
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 21,
+            "peminat": 181
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 29,
+            "peminat": 204
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13832023",
+      "nama": "TEKNIK SIPIL",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 58,
+        "rasio_diterima_persen": 10.36,
+        "skor_acuan_mentah": 622.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 622.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 120,
+            "peminat": 345
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 83,
+            "peminat": 1483
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 59,
+            "peminat": 1715
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 65,
+        "rasio_diterima_persen": 23.38,
+        "rapor_acuan_mentah": 86.27,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.27,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 48,
+            "peminat": 160
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 56,
+            "peminat": 222
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 64,
+            "peminat": 326
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13832024",
+      "nama": "TRANSPORTASI",
+      "jenjang": "D4",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 47,
+        "rasio_diterima_persen": 16.17,
+        "skor_acuan_mentah": 598.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 598.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 90,
+            "peminat": 203
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 45,
+            "peminat": 545
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 47,
+            "peminat": 487
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 25,
+        "rasio_diterima_persen": 27.1,
+        "rapor_acuan_mentah": 85.74,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.74,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 131
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 23,
+            "peminat": 107
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 30,
+            "peminat": 98
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13832025",
+      "nama": "KEPELATIHAN OLAHRAGA",
+      "jenjang": "D4",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Olahraga",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 42,
+        "rasio_diterima_persen": 24.96,
+        "skor_acuan_mentah": 572.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 572.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 45,
+            "peminat": 47
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 46,
+            "peminat": 522
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 41,
+            "peminat": 619
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 47.73,
+        "rapor_acuan_mentah": 83.26,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 83.26,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 18,
+            "peminat": 38
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 31,
+            "peminat": 65
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 34,
+            "peminat": 71
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13832026",
+      "nama": "TEKNIK LISTRIK",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 47,
+        "rasio_diterima_persen": 18.22,
+        "skor_acuan_mentah": 592.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 592.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 85,
+            "peminat": 191
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 47,
+            "peminat": 336
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 49,
+            "peminat": 478
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 32,
+        "rasio_diterima_persen": 20.74,
+        "rapor_acuan_mentah": 86.67,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.67,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 142
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 24,
+            "peminat": 119
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 33,
+            "peminat": 169
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13832071",
+      "nama": "DESAIN GRAFIS",
+      "jenjang": "D4",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Seni Rupa, Desain, dan Kriya",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 37,
+        "rasio_diterima_persen": 19.73,
+        "skor_acuan_mentah": 587.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 587.4,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 70,
+            "peminat": 124
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 53,
+            "peminat": 535
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 67,
+            "peminat": 613
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 25.57,
+        "rapor_acuan_mentah": 85.96,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.96,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 28,
+            "peminat": 110
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 37,
+            "peminat": 138
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 45,
+            "peminat": 181
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13832072",
+      "nama": "ADMINISTRASI NEGARA",
+      "jenjang": "D4",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 75,
+        "rasio_diterima_persen": 7.49,
+        "skor_acuan_mentah": 637.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 637.4,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 185,
+            "peminat": 660
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 116,
+            "peminat": 4968
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 101,
+            "peminat": 4281
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 55,
+        "rasio_diterima_persen": 17.45,
+        "rapor_acuan_mentah": 87.21,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.21,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 75,
+            "peminat": 360
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 57,
+            "peminat": 418
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 75,
+            "peminat": 408
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13832073",
+      "nama": "TATA BOGA",
+      "jenjang": "D4",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 81,
+        "rasio_diterima_persen": 11.52,
+        "skor_acuan_mentah": 616.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 616.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 170,
+            "peminat": 554
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 129,
+            "peminat": 1663
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 113,
+            "peminat": 1847
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 60,
+        "rasio_diterima_persen": 17.75,
+        "rapor_acuan_mentah": 87.16,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.16,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 90,
+            "peminat": 470
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 72,
+            "peminat": 431
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 80,
+            "peminat": 449
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13832074",
+      "nama": "TATA BUSANA",
+      "jenjang": "D4",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 83,
+        "rasio_diterima_persen": 19.94,
+        "skor_acuan_mentah": 586.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 586.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 120,
+            "peminat": 257
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 97,
+            "peminat": 685
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 89,
+            "peminat": 700
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 55,
+        "rasio_diterima_persen": 24.74,
+        "rapor_acuan_mentah": 86.07,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.07,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 60,
+            "peminat": 219
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 48,
+            "peminat": 213
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 56,
+            "peminat": 224
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13832107",
+      "nama": "TEKNOLOGI REKAYASA OTOMOTIF",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 54,
+        "rasio_diterima_persen": 24.43,
+        "skor_acuan_mentah": 573.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 573.9,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 54,
+            "peminat": 221
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 45.35,
+        "rapor_acuan_mentah": 83.53,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 83.53,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 39,
+            "peminat": 86
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13832108",
+      "nama": "PRODUKSI MEDIA",
+      "jenjang": "D4",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 52,
+        "rasio_diterima_persen": 4.86,
+        "skor_acuan_mentah": 656.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 656.0,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 53,
+            "peminat": 1090
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 35.14,
+        "rapor_acuan_mentah": 84.72,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 84.72,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 39,
+            "peminat": 111
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13832114",
+      "nama": "ANALISIS PERFORMA OLAHRAGA",
+      "jenjang": "D4",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Olahraga",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 55,
+        "rasio_diterima_persen": 64.21,
+        "skor_acuan_mentah": 484.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 484.1,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 61,
+            "peminat": 95
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 20,
+        "rasio_diterima_persen": 95.0,
+        "rapor_acuan_mentah": 75.6,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 78.0,
+        "historis": [
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 10
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13832131",
+      "nama": "ARSITEKTUR BANGUNAN GEDUNG",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 26,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 17,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "13832132",
+      "nama": "REKAYASA MULTIMEDIA EDUKASI DIGITAL",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 24,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 20,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    }
+  ]
+}

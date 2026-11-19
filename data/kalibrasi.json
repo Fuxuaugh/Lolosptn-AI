@@ -1,0 +1,9 @@
+{
+  "13851006": {
+    "snbt_offset": -10,
+    "snbp_offset": 0,
+    "n_laporan": 0,
+    "rumpun_override": null,
+    "catatan": "Offset hanya aktif jika n_laporan >= 10"
+  }
+}

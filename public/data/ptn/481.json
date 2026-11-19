@@ -1,0 +1,941 @@
+{
+  "id_ptn": 481,
+  "nama_ptn": "POLITEKNIK PERKAPALAN NEGERI SURABAYA",
+  "kota": "Kota Surabaya",
+  "prodi_list": [
+    {
+      "kode_prodi": "24812001",
+      "nama": "TEKNIK KESELAMATAN DAN KESEHATAN KERJA",
+      "jenjang": "D4",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 127,
+        "rasio_diterima_persen": 5.18,
+        "skor_acuan_mentah": 653.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 653.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 53,
+            "peminat": 536
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 77,
+            "peminat": 1716
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 121,
+            "peminat": 3255
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 94,
+        "rasio_diterima_persen": 10.29,
+        "rapor_acuan_mentah": 88.69,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.69,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 39,
+            "peminat": 328
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 58,
+            "peminat": 535
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 90,
+            "peminat": 966
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24812002",
+      "nama": "TEKNIK DESAIN DAN MANUFAKTUR",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 49,
+        "rasio_diterima_persen": 30.98,
+        "skor_acuan_mentah": 557.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 557.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 57,
+            "peminat": 111
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 41,
+            "peminat": 105
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 278
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 36,
+        "rasio_diterima_persen": 31.07,
+        "rapor_acuan_mentah": 85.22,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.22,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 39,
+            "peminat": 86
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 29,
+            "peminat": 87
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 150
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24812003",
+      "nama": "TEKNIK PENGELASAN",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 48,
+        "rasio_diterima_persen": 14.79,
+        "skor_acuan_mentah": 603.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 54,
+            "peminat": 176
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 42,
+            "peminat": 303
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 556
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 36,
+        "rasio_diterima_persen": 16.84,
+        "rapor_acuan_mentah": 87.32,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.32,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 39,
+            "peminat": 123
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 29,
+            "peminat": 195
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 298
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24812004",
+      "nama": "TEKNIK PERPIPAAN",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 70,
+        "rasio_diterima_persen": 28.75,
+        "skor_acuan_mentah": 562.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 562.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 40,
+            "peminat": 91
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 52,
+            "peminat": 147
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 60,
+            "peminat": 321
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 49,
+        "rasio_diterima_persen": 33.33,
+        "rapor_acuan_mentah": 84.94,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 84.94,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 29,
+            "peminat": 72
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 39,
+            "peminat": 115
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 45,
+            "peminat": 149
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24812005",
+      "nama": "TEKNIK OTOMASI",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 67,
+        "rasio_diterima_persen": 34.77,
+        "skor_acuan_mentah": 548.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 548.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 53,
+            "peminat": 76
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 54,
+            "peminat": 148
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 62,
+            "peminat": 314
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 49,
+        "rasio_diterima_persen": 31.98,
+        "rapor_acuan_mentah": 85.11,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.11,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 39,
+            "peminat": 82
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 39,
+            "peminat": 119
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 45,
+            "peminat": 178
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24812006",
+      "nama": "TEKNIK PENGOLAHAN LIMBAH",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 68,
+        "rasio_diterima_persen": 21.72,
+        "skor_acuan_mentah": 581.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 581.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 56,
+            "peminat": 112
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 52,
+            "peminat": 250
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 62,
+            "peminat": 566
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 49,
+        "rasio_diterima_persen": 26.92,
+        "rapor_acuan_mentah": 85.77,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.77,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 39,
+            "peminat": 103
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 39,
+            "peminat": 124
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 45,
+            "peminat": 227
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24812008",
+      "nama": "TEKNIK PERANCANGAN DAN KONSTRUKSI KAPAL",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 56,
+        "rasio_diterima_persen": 23.92,
+        "skor_acuan_mentah": 575.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 575.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 55,
+            "peminat": 121
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 56,
+            "peminat": 208
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 49,
+            "peminat": 363
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 41,
+        "rasio_diterima_persen": 27.64,
+        "rapor_acuan_mentah": 85.67,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.67,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 39,
+            "peminat": 100
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 39,
+            "peminat": 134
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 162
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24812009",
+      "nama": "TEKNIK PERMESINAN KAPAL",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 55,
+        "rasio_diterima_persen": 15.29,
+        "skor_acuan_mentah": 602.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 602.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 40,
+            "peminat": 136
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 41,
+            "peminat": 306
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 49,
+            "peminat": 455
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 41,
+        "rasio_diterima_persen": 15.63,
+        "rapor_acuan_mentah": 87.54,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.54,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 29,
+            "peminat": 128
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 29,
+            "peminat": 190
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 276
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24812010",
+      "nama": "TEKNIK KELISTRIKAN KAPAL",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 55,
+        "rasio_diterima_persen": 27.75,
+        "skor_acuan_mentah": 565.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 565.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 27,
+            "peminat": 52
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 39,
+            "peminat": 158
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 51,
+            "peminat": 256
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 41,
+        "rasio_diterima_persen": 23.5,
+        "rapor_acuan_mentah": 86.25,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.25,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 64
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 29,
+            "peminat": 106
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 199
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24812011",
+      "nama": "MANAJEMEN BISNIS",
+      "jenjang": "D4",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 103,
+        "rasio_diterima_persen": 13.76,
+        "skor_acuan_mentah": 607.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 607.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 64,
+            "peminat": 189
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 80,
+            "peminat": 843
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 101,
+            "peminat": 1219
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 75,
+        "rasio_diterima_persen": 27.44,
+        "rapor_acuan_mentah": 85.7,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 48,
+            "peminat": 130
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 58,
+            "peminat": 219
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 70,
+            "peminat": 289
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24812016",
+      "nama": "TEKNOLOGI REKAYASA ENERGI BERKELANJUTAN",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 32,
+        "rasio_diterima_persen": 24.34,
+        "skor_acuan_mentah": 574.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 574.1,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 28,
+            "peminat": 62
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 25,
+            "peminat": 211
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 22,
+        "rasio_diterima_persen": 31.66,
+        "rapor_acuan_mentah": 85.15,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.15,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 19,
+            "peminat": 39
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 18,
+            "peminat": 84
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24812017",
+      "nama": "TEKNOLOGI REKAYASA KONSTRUKSI PERKAPALAN",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 31,
+        "rasio_diterima_persen": 23.81,
+        "skor_acuan_mentah": 575.6,
+        "offset_diterapkan": 0,
+        "skor_acuan": 575.6,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 15,
+            "peminat": 36
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 25,
+            "peminat": 191
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 22,
+        "rasio_diterima_persen": 43.67,
+        "rapor_acuan_mentah": 83.72,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 83.72,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 10,
+            "peminat": 19
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 18,
+            "peminat": 47
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24812018",
+      "nama": "TEKNOLOGI REKAYASA INSTRUMENTASI",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 12,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 9,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "24813012",
+      "nama": "TEKNIK KELISTRIKAN KAPAL",
+      "jenjang": "D3",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 46,
+        "rasio_diterima_persen": 26.24,
+        "skor_acuan_mentah": 569.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 569.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 30,
+            "peminat": 22
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 30,
+            "peminat": 252
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 37,
+            "peminat": 504
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 27,
+        "rasio_diterima_persen": 73.32,
+        "rapor_acuan_mentah": 80.2,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 80.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 32
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 19,
+            "peminat": 27
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 34
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24813013",
+      "nama": "TEKNIK PERMESINAN KAPAL",
+      "jenjang": "D3",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 21.29,
+        "skor_acuan_mentah": 582.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 582.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 36,
+            "peminat": 42
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 29,
+            "peminat": 529
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 40,
+            "peminat": 799
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 27,
+        "rasio_diterima_persen": 48.42,
+        "rapor_acuan_mentah": 83.18,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 83.18,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 30
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 19,
+            "peminat": 50
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 57
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24813014",
+      "nama": "TEKNIK PERANCANGAN DAN KONSTRUKSI KAPAL",
+      "jenjang": "D3",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 49,
+        "rasio_diterima_persen": 23.89,
+        "skor_acuan_mentah": 575.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 575.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 40,
+            "peminat": 23
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 35,
+            "peminat": 535
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 47,
+            "peminat": 803
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 27,
+        "rasio_diterima_persen": 89.91,
+        "rapor_acuan_mentah": 77.26,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 78.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 11
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 19,
+            "peminat": 22
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 30
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24813015",
+      "nama": "TEKNIK BANGUNAN KAPAL",
+      "jenjang": "D3",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 47,
+        "rasio_diterima_persen": 27.27,
+        "skor_acuan_mentah": 566.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 566.4,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 42,
+            "peminat": 19
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 32,
+            "peminat": 265
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 42,
+            "peminat": 452
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 27,
+        "rasio_diterima_persen": 86.07,
+        "rapor_acuan_mentah": 78.12,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 78.12,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 7
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 19,
+            "peminat": 20
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 35
+          }
+        ]
+      }
+    }
+  ]
+}

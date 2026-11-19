@@ -1,0 +1,429 @@
+{
+  "id_ptn": 483,
+  "nama_ptn": "POLITEKNIK NEGERI MADURA",
+  "kota": "Kabupaten Sampang",
+  "prodi_list": [
+    {
+      "kode_prodi": "24832005",
+      "nama": "TEKNOLOGI REKAYASA KESELAMATAN",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 60.5,
+        "skor_acuan_mentah": 492.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 492.4,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 19,
+            "peminat": 38
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 42,
+            "peminat": 31
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 33,
+            "peminat": 75
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 35,
+        "rasio_diterima_persen": 70.21,
+        "rapor_acuan_mentah": 80.61,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 80.61,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 15,
+            "peminat": 26
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 30,
+            "peminat": 23
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 35,
+            "peminat": 58
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24832006",
+      "nama": "TEKNOLOGI REKAYASA OTOMASI",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 23,
+        "rasio_diterima_persen": 95.0,
+        "skor_acuan_mentah": 375.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 460.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 27,
+            "peminat": 11
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 25,
+            "peminat": 9
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 24,
+            "peminat": 21
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 15,
+        "rasio_diterima_persen": 95.0,
+        "rapor_acuan_mentah": 75.6,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 78.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 15,
+            "peminat": 8
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 15,
+            "peminat": 7
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 15,
+            "peminat": 7
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24832007",
+      "nama": "PROMOSI KESEHATAN",
+      "jenjang": "D4",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 33,
+        "rasio_diterima_persen": 35.01,
+        "skor_acuan_mentah": 547.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 547.7,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 34,
+            "peminat": 76
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 35,
+            "peminat": 120
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 35,
+        "rasio_diterima_persen": 42.16,
+        "rapor_acuan_mentah": 83.89,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 83.89,
+        "historis": [
+          {
+            "tahun": 2024,
+            "daya_tampung": 30,
+            "peminat": 63
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 35,
+            "peminat": 90
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24832008",
+      "nama": "TEKNOLOGI REKAYASA INFORMATIKA INDUSTRI",
+      "jenjang": "D4",
+      "rumpun": "Komputer & IT",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 44,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "24833001",
+      "nama": "TEKNIK MESIN ALAT BERAT",
+      "jenjang": "D3",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 31,
+        "rasio_diterima_persen": 65.04,
+        "skor_acuan_mentah": 482.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 482.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 42,
+            "peminat": 37
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 37,
+            "peminat": 48
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 33,
+            "peminat": 72
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 35,
+        "rasio_diterima_persen": 73.88,
+        "rapor_acuan_mentah": 80.12,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 80.12,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 33,
+            "peminat": 28
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 30,
+            "peminat": 35
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 35,
+            "peminat": 60
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24833002",
+      "nama": "TEKNIK LISTRIK INDUSTRI",
+      "jenjang": "D3",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 42,
+        "rasio_diterima_persen": 79.08,
+        "skor_acuan_mentah": 446.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 460.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 51,
+            "peminat": 26
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 42,
+            "peminat": 41
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 57
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 86.97,
+        "rapor_acuan_mentah": 77.94,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 78.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 33,
+            "peminat": 27
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 30,
+            "peminat": 19
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 30,
+            "peminat": 38
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24833003",
+      "nama": "TEKNIK BANGUNAN KAPAL",
+      "jenjang": "D3",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 42,
+        "rasio_diterima_persen": 93.64,
+        "skor_acuan_mentah": 385.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 460.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 56,
+            "peminat": 10
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 19,
+            "peminat": 21
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 40,
+            "peminat": 42
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 87.93,
+        "rapor_acuan_mentah": 77.73,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 78.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 33,
+            "peminat": 20
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 15,
+            "peminat": 21
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 30,
+            "peminat": 24
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24833004",
+      "nama": "KEPERAWATAN",
+      "jenjang": "D3",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 67,
+        "rasio_diterima_persen": 19.21,
+        "skor_acuan_mentah": 589.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 589.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 52,
+            "peminat": 215
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 56,
+            "peminat": 291
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 71,
+            "peminat": 413
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 75,
+        "rasio_diterima_persen": 27.82,
+        "rapor_acuan_mentah": 85.65,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.65,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 45,
+            "peminat": 199
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 60,
+            "peminat": 204
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 75,
+            "peminat": 259
+          }
+        ]
+      }
+    }
+  ]
+}

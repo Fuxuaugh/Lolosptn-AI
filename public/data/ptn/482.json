@@ -1,0 +1,1245 @@
+{
+  "id_ptn": 482,
+  "nama_ptn": "POLITEKNIK ELEKTRONIKA NEGERI SURABAYA (PENS)",
+  "kota": "Kota Surabaya",
+  "prodi_list": [
+    {
+      "kode_prodi": "24822001",
+      "nama": "TEKNIK ELEKTRONIKA",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 60,
+        "rasio_diterima_persen": 9.54,
+        "skor_acuan_mentah": 626.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 626.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 24,
+            "peminat": 167
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 48,
+            "peminat": 488
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 60,
+            "peminat": 808
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 45,
+        "rasio_diterima_persen": 11.93,
+        "rapor_acuan_mentah": 88.3,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 150
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 36,
+            "peminat": 272
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 45,
+            "peminat": 436
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24822002",
+      "nama": "TEKNIK TELEKOMUNIKASI",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 17.05,
+        "skor_acuan_mentah": 595.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 595.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 24,
+            "peminat": 78
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 48,
+            "peminat": 320
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 48,
+            "peminat": 375
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 36,
+        "rasio_diterima_persen": 22.16,
+        "rapor_acuan_mentah": 86.45,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.45,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 90
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 36,
+            "peminat": 141
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 183
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24822003",
+      "nama": "TEKNIK ELEKTRO INDUSTRI",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 48,
+        "rasio_diterima_persen": 7.83,
+        "skor_acuan_mentah": 635.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 635.4,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 209
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 48,
+            "peminat": 546
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 49,
+            "peminat": 876
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 36,
+        "rasio_diterima_persen": 8.92,
+        "rapor_acuan_mentah": 89.06,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.06,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 220
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 36,
+            "peminat": 330
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 482
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24822004",
+      "nama": "TEKNIK INFORMATIKA",
+      "jenjang": "D4",
+      "rumpun": "Komputer & IT",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 49,
+        "rasio_diterima_persen": 3.94,
+        "skor_acuan_mentah": 664.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 664.4,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 431
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 48,
+            "peminat": 1324
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 48,
+            "peminat": 1417
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 36,
+        "rasio_diterima_persen": 7.12,
+        "rapor_acuan_mentah": 89.6,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.6,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 325
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 36,
+            "peminat": 424
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 548
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24822005",
+      "nama": "TEKNIK KOMPUTER",
+      "jenjang": "D4",
+      "rumpun": "Komputer & IT",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 48,
+        "rasio_diterima_persen": 9.95,
+        "skor_acuan_mentah": 624.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 624.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 24,
+            "peminat": 159
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 36,
+            "peminat": 374
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 48,
+            "peminat": 593
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 36,
+        "rasio_diterima_persen": 13.48,
+        "rapor_acuan_mentah": 87.97,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.97,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 158
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 27,
+            "peminat": 166
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 303
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24822006",
+      "nama": "TEKNIK MEKATRONIKA",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 49,
+        "rasio_diterima_persen": 12.83,
+        "skor_acuan_mentah": 611.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 611.4,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 24,
+            "peminat": 134
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 36,
+            "peminat": 243
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 48,
+            "peminat": 500
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 36,
+        "rasio_diterima_persen": 15.9,
+        "rapor_acuan_mentah": 87.49,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.49,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 127
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 27,
+            "peminat": 163
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 236
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24822007",
+      "nama": "SISTEM PEMBANGKIT ENERGI",
+      "jenjang": "D4",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 19.39,
+        "skor_acuan_mentah": 588.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 588.4,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 24,
+            "peminat": 73
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 36,
+            "peminat": 132
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 48,
+            "peminat": 518
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 36,
+        "rasio_diterima_persen": 23.11,
+        "rapor_acuan_mentah": 86.31,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.31,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 80
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 27,
+            "peminat": 85
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 216
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24822008",
+      "nama": "TEKNOLOGI GAME",
+      "jenjang": "D4",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 48,
+        "rasio_diterima_persen": 15.23,
+        "skor_acuan_mentah": 602.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 602.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 37,
+            "peminat": 155
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 49,
+            "peminat": 329
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 49,
+            "peminat": 409
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 36,
+        "rasio_diterima_persen": 25.43,
+        "rapor_acuan_mentah": 85.98,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.98,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 32,
+            "peminat": 122
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 36,
+            "peminat": 120
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 161
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24822009",
+      "nama": "TEKNOLOGI REKAYASA INTERNET",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 43,
+        "rasio_diterima_persen": 15.03,
+        "skor_acuan_mentah": 603.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 26,
+            "peminat": 118
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 24,
+            "peminat": 136
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 338
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 31,
+        "rasio_diterima_persen": 19.2,
+        "rapor_acuan_mentah": 86.92,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.92,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 76
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 18,
+            "peminat": 88
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 179
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24822010",
+      "nama": "TEKNOLOGI REKAYASA MULTIMEDIA",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 43,
+        "rasio_diterima_persen": 13.13,
+        "skor_acuan_mentah": 610.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 610.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 100
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 24,
+            "peminat": 289
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 319
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 31,
+        "rasio_diterima_persen": 18.67,
+        "rapor_acuan_mentah": 87.01,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.01,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 69
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 18,
+            "peminat": 127
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 162
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24822011",
+      "nama": "SAINS DATA TERAPAN",
+      "jenjang": "D4",
+      "rumpun": "Komputer & IT",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 43,
+        "rasio_diterima_persen": 7.42,
+        "skor_acuan_mentah": 637.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 637.8,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 188
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 25,
+            "peminat": 450
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 582
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 31,
+        "rasio_diterima_persen": 14.61,
+        "rapor_acuan_mentah": 87.74,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.74,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 113
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 18,
+            "peminat": 120
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 211
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24822022",
+      "nama": "BISNIS DIGITAL",
+      "jenjang": "D4",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 36,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 27,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "24822023",
+      "nama": "TEKNOLOGI REKAYASA PERANCANGAN MANUFAKTUR",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 24,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 18,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "24822024",
+      "nama": "TEKNOLOGI REKAYASA KESELAMATAN",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 25,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 18,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "24823012",
+      "nama": "TEKNOLOGI MULTIMEDIA BROADCASTING (KAMPUS KAB LAMONGAN)",
+      "jenjang": "D3",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 21,
+        "rasio_diterima_persen": 32.36,
+        "skor_acuan_mentah": 553.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 553.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 19,
+            "peminat": 19
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 12,
+            "peminat": 68
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 15,
+            "peminat": 93
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 13,
+        "rasio_diterima_persen": 71.5,
+        "rapor_acuan_mentah": 80.44,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 80.44,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 11,
+            "peminat": 8
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 9,
+            "peminat": 18
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 9,
+            "peminat": 12
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24823013",
+      "nama": "TEKNIK ELEKTRO INDUSTRI",
+      "jenjang": "D3",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 31,
+        "rasio_diterima_persen": 8.37,
+        "skor_acuan_mentah": 632.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 632.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 24,
+            "peminat": 73
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 26,
+            "peminat": 864
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 25,
+            "peminat": 1400
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 22,
+        "rasio_diterima_persen": 27.33,
+        "rapor_acuan_mentah": 85.71,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.71,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 55
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 18,
+            "peminat": 61
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 18,
+            "peminat": 83
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24823015",
+      "nama": "TEKNIK INFORMATIKA (KAMPUS KAB SUMENEP)",
+      "jenjang": "D3",
+      "rumpun": "Komputer & IT",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 14,
+        "rasio_diterima_persen": 59.82,
+        "skor_acuan_mentah": 493.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 493.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 19,
+            "peminat": 3
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 15,
+            "peminat": 14
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 17,
+            "peminat": 69
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 9,
+        "rasio_diterima_persen": 89.0,
+        "rapor_acuan_mentah": 77.48,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 78.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 11,
+            "peminat": 9
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 9,
+            "peminat": 12
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 9,
+            "peminat": 9
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24823016",
+      "nama": "TEKNIK ELEKTRONIKA",
+      "jenjang": "D3",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 25,
+        "rasio_diterima_persen": 10.94,
+        "skor_acuan_mentah": 619.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 619.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 27,
+            "peminat": 64
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 24,
+            "peminat": 585
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 24,
+            "peminat": 940
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 18,
+        "rasio_diterima_persen": 40.67,
+        "rapor_acuan_mentah": 84.06,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 84.06,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 40
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 18,
+            "peminat": 34
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 18,
+            "peminat": 63
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24823017",
+      "nama": "TEKNOLOGI MULTIMEDIA BROADCASTING (KAMPUS KAB. SUMENEP)",
+      "jenjang": "D3",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 12,
+        "rasio_diterima_persen": 86.97,
+        "skor_acuan_mentah": 419.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 460.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 5
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 18,
+            "peminat": 18
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 15,
+            "peminat": 19
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 9,
+        "rasio_diterima_persen": 95.0,
+        "rapor_acuan_mentah": 75.6,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 78.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 11,
+            "peminat": 7
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 9,
+            "peminat": 6
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 9,
+            "peminat": 8
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24823018",
+      "nama": "TEKNIK INFORMATIKA (KAMPUS KAB LAMONGAN)",
+      "jenjang": "D3",
+      "rumpun": "Komputer & IT",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 29,
+        "rasio_diterima_persen": 32.14,
+        "skor_acuan_mentah": 554.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 554.4,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 37,
+            "peminat": 28
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 31,
+            "peminat": 146
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 26,
+            "peminat": 192
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 18,
+        "rasio_diterima_persen": 79.64,
+        "rapor_acuan_mentah": 79.27,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 79.27,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 10
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 18,
+            "peminat": 14
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 18,
+            "peminat": 28
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24823019",
+      "nama": "TEKNOLOGI MULTIMEDIA DAN BROADCASTING",
+      "jenjang": "D3",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 24,
+        "rasio_diterima_persen": 7.68,
+        "skor_acuan_mentah": 636.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 636.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 98
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 24,
+            "peminat": 709
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 25,
+            "peminat": 801
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 18,
+        "rasio_diterima_persen": 24.22,
+        "rapor_acuan_mentah": 86.15,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.15,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 68
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 18,
+            "peminat": 85
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 18,
+            "peminat": 77
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24823020",
+      "nama": "TEKNIK INFORMATIKA",
+      "jenjang": "D3",
+      "rumpun": "Komputer & IT",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 26,
+        "rasio_diterima_persen": 5.02,
+        "skor_acuan_mentah": 654.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 654.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 125
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 24,
+            "peminat": 1765
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 24,
+            "peminat": 1974
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 18,
+        "rasio_diterima_persen": 25.22,
+        "rapor_acuan_mentah": 86.0,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 70
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 18,
+            "peminat": 56
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 18,
+            "peminat": 94
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "24823021",
+      "nama": "TEKNIK TELEKOMUNIKASI",
+      "jenjang": "D3",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 25,
+        "rasio_diterima_persen": 22.42,
+        "skor_acuan_mentah": 579.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 579.4,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 36,
+            "peminat": 37
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 24,
+            "peminat": 524
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 26,
+            "peminat": 635
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 18,
+        "rasio_diterima_persen": 62.13,
+        "rapor_acuan_mentah": 81.61,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 81.61,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 18
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 18,
+            "peminat": 36
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 18,
+            "peminat": 32
+          }
+        ]
+      }
+    }
+  ]
+}

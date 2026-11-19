@@ -1,0 +1,4287 @@
+{
+  "id_ptn": 371,
+  "nama_ptn": "UNIVERSITAS JEMBER",
+  "kota": "Kabupate Jember",
+  "prodi_list": [
+    {
+      "kode_prodi": "13711001",
+      "nama": "AGROTEKNOLOGI / AGROEKOTEKNOLOGI",
+      "jenjang": "S1",
+      "rumpun": "Pertanian & Hayati",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 82,
+        "rasio_diterima_persen": 26.52,
+        "skor_acuan_mentah": 568.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 568.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 94,
+            "peminat": 395
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 93,
+            "peminat": 292
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 84,
+            "peminat": 344
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 60,
+        "rasio_diterima_persen": 18.05,
+        "rapor_acuan_mentah": 87.11,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.11,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 45,
+            "peminat": 277
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 45,
+            "peminat": 250
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 60,
+            "peminat": 319
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711002",
+      "nama": "AGRIBISNIS",
+      "jenjang": "S1",
+      "rumpun": "Pertanian & Hayati",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 57,
+        "rasio_diterima_persen": 17.16,
+        "skor_acuan_mentah": 595.6,
+        "offset_diterapkan": 0,
+        "skor_acuan": 595.6,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 84,
+            "peminat": 454
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 80,
+            "peminat": 432
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 73,
+            "peminat": 462
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 42,
+        "rasio_diterima_persen": 12.84,
+        "rapor_acuan_mentah": 88.1,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 40,
+            "peminat": 394
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 40,
+            "peminat": 385
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 54,
+            "peminat": 351
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711003",
+      "nama": "PENDIDIKAN MATEMATIKA",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 76,
+        "rasio_diterima_persen": 38.13,
+        "skor_acuan_mentah": 540.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 540.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 111,
+            "peminat": 332
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 113,
+            "peminat": 314
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 102,
+            "peminat": 247
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 57,
+        "rasio_diterima_persen": 20.12,
+        "rapor_acuan_mentah": 86.77,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.77,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 55,
+            "peminat": 336
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 60,
+            "peminat": 336
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 77,
+            "peminat": 335
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711004",
+      "nama": "PENDIDIKAN FISIKA",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 67,
+        "rasio_diterima_persen": 70.7,
+        "skor_acuan_mentah": 468.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 468.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 66,
+            "peminat": 119
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 70,
+            "peminat": 75
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 67,
+            "peminat": 106
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 64,
+        "rasio_diterima_persen": 37.22,
+        "rapor_acuan_mentah": 84.47,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 84.47,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 126
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 35,
+            "peminat": 110
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 113
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711005",
+      "nama": "PENDIDIKAN BIOLOGI",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 67,
+        "rasio_diterima_persen": 24.77,
+        "skor_acuan_mentah": 572.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 572.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 65,
+            "peminat": 293
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 68,
+            "peminat": 272
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 67,
+            "peminat": 261
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 55,
+        "rasio_diterima_persen": 14.89,
+        "rapor_acuan_mentah": 87.68,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.68,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 282
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 35,
+            "peminat": 263
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 297
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711006",
+      "nama": "TEKNOLOGI HASIL PERTANIAN",
+      "jenjang": "S1",
+      "rumpun": "Pertanian & Hayati",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 60,
+        "rasio_diterima_persen": 28.51,
+        "skor_acuan_mentah": 563.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 563.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 71,
+            "peminat": 244
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 71,
+            "peminat": 206
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 62,
+            "peminat": 251
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 20.98,
+        "rapor_acuan_mentah": 86.63,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.63,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 178
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 35,
+            "peminat": 154
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 45,
+            "peminat": 220
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711007",
+      "nama": "TEKNIK PERTANIAN",
+      "jenjang": "S1",
+      "rumpun": "Pertanian & Hayati",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 62,
+        "rasio_diterima_persen": 29.87,
+        "skor_acuan_mentah": 559.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 559.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 65,
+            "peminat": 199
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 69,
+            "peminat": 200
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 66,
+            "peminat": 254
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 27.35,
+        "rapor_acuan_mentah": 85.71,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.71,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 128
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 35,
+            "peminat": 130
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 45,
+            "peminat": 163
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711008",
+      "nama": "PENDIDIKAN DOKTER GIGI",
+      "jenjang": "S1",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 76,
+        "rasio_diterima_persen": 5.77,
+        "skor_acuan_mentah": 648.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 648.8,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 86,
+            "peminat": 1425
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 85,
+            "peminat": 1252
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 76,
+            "peminat": 1506
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 57,
+        "rasio_diterima_persen": 6.33,
+        "rapor_acuan_mentah": 89.88,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.88,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 40,
+            "peminat": 755
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 40,
+            "peminat": 681
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 57,
+            "peminat": 813
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711009",
+      "nama": "MATEMATIKA",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 54,
+        "rasio_diterima_persen": 52.98,
+        "skor_acuan_mentah": 508.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 508.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 60,
+            "peminat": 151
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 64,
+            "peminat": 125
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 54,
+            "peminat": 91
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 48,
+        "rasio_diterima_persen": 23.98,
+        "rapor_acuan_mentah": 86.18,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.18,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 30,
+            "peminat": 151
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 30,
+            "peminat": 138
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 41,
+            "peminat": 152
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711010",
+      "nama": "FISIKA",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 66,
+        "rasio_diterima_persen": 86.78,
+        "skor_acuan_mentah": 420.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 460.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 68,
+            "peminat": 99
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 63,
+            "peminat": 63
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 49,
+            "peminat": 55
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 49.56,
+        "rapor_acuan_mentah": 83.05,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 83.05,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 74
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 35,
+            "peminat": 68
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 73
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711011",
+      "nama": "KIMIA",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 54,
+        "rasio_diterima_persen": 37.98,
+        "skor_acuan_mentah": 541.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 541.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 63,
+            "peminat": 154
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 61,
+            "peminat": 131
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 57,
+            "peminat": 180
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 46,
+        "rasio_diterima_persen": 23.8,
+        "rapor_acuan_mentah": 86.21,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.21,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 30,
+            "peminat": 110
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 35,
+            "peminat": 147
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 41,
+            "peminat": 183
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711012",
+      "nama": "BIOLOGI",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 55,
+        "rasio_diterima_persen": 30.31,
+        "skor_acuan_mentah": 558.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 558.8,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 67,
+            "peminat": 172
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 60,
+            "peminat": 225
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 54,
+            "peminat": 186
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 42,
+        "rasio_diterima_persen": 19.63,
+        "rapor_acuan_mentah": 86.85,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.85,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 30,
+            "peminat": 159
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 30,
+            "peminat": 165
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 41,
+            "peminat": 197
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711013",
+      "nama": "PENDIDIKAN DOKTER",
+      "jenjang": "S1",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 76,
+        "rasio_diterima_persen": 4.25,
+        "skor_acuan_mentah": 661.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 661.4,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 81,
+            "peminat": 2388
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 80,
+            "peminat": 1791
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 76,
+            "peminat": 1706
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 57,
+        "rasio_diterima_persen": 4.37,
+        "rapor_acuan_mentah": 90.69,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 90.69,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 1000
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 35,
+            "peminat": 924
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 57,
+            "peminat": 1124
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711014",
+      "nama": "KESEHATAN MASYARAKAT",
+      "jenjang": "S1",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 100,
+        "rasio_diterima_persen": 10.42,
+        "skor_acuan_mentah": 621.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 621.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 102,
+            "peminat": 968
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 115,
+            "peminat": 1076
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 104,
+            "peminat": 1018
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 80,
+        "rasio_diterima_persen": 8.22,
+        "rapor_acuan_mentah": 89.26,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.26,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 50,
+            "peminat": 788
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 60,
+            "peminat": 792
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 75,
+            "peminat": 802
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711015",
+      "nama": "TEKNIK MESIN",
+      "jenjang": "S1",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 56,
+        "rasio_diterima_persen": 14.27,
+        "skor_acuan_mentah": 605.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 605.8,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 56,
+            "peminat": 376
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 60,
+            "peminat": 361
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 57,
+            "peminat": 452
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 42,
+        "rasio_diterima_persen": 13.61,
+        "rapor_acuan_mentah": 87.94,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.94,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 30,
+            "peminat": 239
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 30,
+            "peminat": 221
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 42,
+            "peminat": 299
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711016",
+      "nama": "TEKNIK ELEKTRO",
+      "jenjang": "S1",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 56,
+        "rasio_diterima_persen": 18.4,
+        "skor_acuan_mentah": 591.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 591.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 61,
+            "peminat": 250
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 63,
+            "peminat": 337
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 57,
+            "peminat": 360
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 44,
+        "rasio_diterima_persen": 15.24,
+        "rapor_acuan_mentah": 87.62,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.62,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 30,
+            "peminat": 177
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 30,
+            "peminat": 201
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 42,
+            "peminat": 285
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711017",
+      "nama": "TEKNIK SIPIL",
+      "jenjang": "S1",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 68,
+        "rasio_diterima_persen": 12.93,
+        "skor_acuan_mentah": 611.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 611.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 82,
+            "peminat": 567
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 80,
+            "peminat": 548
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 68,
+            "peminat": 601
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 52,
+        "rasio_diterima_persen": 11.67,
+        "rapor_acuan_mentah": 88.36,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.36,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 40,
+            "peminat": 416
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 40,
+            "peminat": 372
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 51,
+            "peminat": 391
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711018",
+      "nama": "FARMASI",
+      "jenjang": "S1",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 76,
+        "rasio_diterima_persen": 5.68,
+        "skor_acuan_mentah": 649.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 649.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 81,
+            "peminat": 1506
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 80,
+            "peminat": 1296
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 73,
+            "peminat": 1327
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 57,
+        "rasio_diterima_persen": 4.23,
+        "rapor_acuan_mentah": 90.76,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 90.76,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 40,
+            "peminat": 1199
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 40,
+            "peminat": 1113
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 54,
+            "peminat": 1086
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711019",
+      "nama": "ILMU KEPERAWATAN",
+      "jenjang": "S1",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 75,
+        "rasio_diterima_persen": 9.33,
+        "skor_acuan_mentah": 627.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 627.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 103,
+            "peminat": 1093
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 105,
+            "peminat": 1127
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 95,
+            "peminat": 1021
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 60,
+        "rasio_diterima_persen": 6.19,
+        "rapor_acuan_mentah": 89.93,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.93,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 50,
+            "peminat": 1109
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 50,
+            "peminat": 1033
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 69,
+            "peminat": 900
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711020",
+      "nama": "SISTEM INFORMASI",
+      "jenjang": "S1",
+      "rumpun": "Komputer & IT",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 53,
+        "rasio_diterima_persen": 9.87,
+        "skor_acuan_mentah": 624.6,
+        "offset_diterapkan": 0,
+        "skor_acuan": 624.6,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 50,
+            "peminat": 495
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 52,
+            "peminat": 587
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 48,
+            "peminat": 462
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 8.48,
+        "rapor_acuan_mentah": 89.18,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.18,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 363
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 25,
+            "peminat": 400
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 344
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711024",
+      "nama": "TEKNOLOGI INDUSTRI PERTANIAN",
+      "jenjang": "S1",
+      "rumpun": "Pertanian & Hayati",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 58,
+        "rasio_diterima_persen": 29.39,
+        "skor_acuan_mentah": 561.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 561.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 60,
+            "peminat": 160
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 60,
+            "peminat": 195
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 58,
+            "peminat": 229
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 23.48,
+        "rapor_acuan_mentah": 86.25,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.25,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 30,
+            "peminat": 139
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 30,
+            "peminat": 135
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 44,
+            "peminat": 176
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711025",
+      "nama": "ILMU TANAH",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 34,
+        "rasio_diterima_persen": 32.37,
+        "skor_acuan_mentah": 553.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 553.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 37,
+            "peminat": 123
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 36,
+            "peminat": 82
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 34,
+            "peminat": 129
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 30.86,
+        "rapor_acuan_mentah": 85.25,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.25,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 56
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 20,
+            "peminat": 88
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 24,
+            "peminat": 71
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711026",
+      "nama": "PROTEKSI TANAMAN",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 39,
+        "rasio_diterima_persen": 53.62,
+        "skor_acuan_mentah": 507.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 507.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 39,
+            "peminat": 60
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 39,
+            "peminat": 101
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 62
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 35,
+        "rasio_diterima_persen": 34.96,
+        "rapor_acuan_mentah": 84.74,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 84.74,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 64
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 20,
+            "peminat": 56
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 75
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711027",
+      "nama": "TEKNOLOGI INFORMASI",
+      "jenjang": "S1",
+      "rumpun": "Komputer & IT",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 52,
+        "rasio_diterima_persen": 13.44,
+        "skor_acuan_mentah": 609.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 609.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 51,
+            "peminat": 403
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 50,
+            "peminat": 390
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 354
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 10.95,
+        "rapor_acuan_mentah": 88.53,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.53,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 296
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 25,
+            "peminat": 257
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 284
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711028",
+      "nama": "PENDIDIKAN IPA",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 68,
+        "rasio_diterima_persen": 30.37,
+        "skor_acuan_mentah": 558.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 558.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 66,
+            "peminat": 248
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 69,
+            "peminat": 252
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 69,
+            "peminat": 205
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 55,
+        "rasio_diterima_persen": 16.7,
+        "rapor_acuan_mentah": 87.35,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.35,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 250
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 35,
+            "peminat": 278
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 247
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711029",
+      "nama": "PERENCANAAN WILAYAH DAN KOTA",
+      "jenjang": "S1",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 46,
+        "rasio_diterima_persen": 14.59,
+        "skor_acuan_mentah": 604.6,
+        "offset_diterapkan": 0,
+        "skor_acuan": 604.6,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 30,
+            "peminat": 299
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 41,
+            "peminat": 241
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 41,
+            "peminat": 274
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 38,
+        "rasio_diterima_persen": 11.86,
+        "rapor_acuan_mentah": 88.32,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.32,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 15,
+            "peminat": 193
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 20,
+            "peminat": 182
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 30,
+            "peminat": 214
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711030",
+      "nama": "TEKNIK KIMIA",
+      "jenjang": "S1",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 32,
+        "rasio_diterima_persen": 16.63,
+        "skor_acuan_mentah": 597.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 597.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 22,
+            "peminat": 99
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 20,
+            "peminat": 131
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 28,
+            "peminat": 184
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 25,
+        "rasio_diterima_persen": 10.9,
+        "rapor_acuan_mentah": 88.54,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.54,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 11,
+            "peminat": 83
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 10,
+            "peminat": 93
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 21,
+            "peminat": 209
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711031",
+      "nama": "AGRONOMI",
+      "jenjang": "S1",
+      "rumpun": "Pertanian & Hayati",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 47,
+        "rasio_diterima_persen": 35.65,
+        "skor_acuan_mentah": 546.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 546.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 53,
+            "peminat": 116
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 50,
+            "peminat": 133
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 46,
+            "peminat": 151
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 24.86,
+        "rapor_acuan_mentah": 86.06,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.06,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 114
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 25,
+            "peminat": 93
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 33,
+            "peminat": 133
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711032",
+      "nama": "ILMU PERTANIAN KAMPUS BONDOWOSO",
+      "jenjang": "S1",
+      "rumpun": "Pertanian & Hayati",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 52,
+        "rasio_diterima_persen": 30.76,
+        "skor_acuan_mentah": 557.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 557.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 43,
+            "peminat": 129
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 54,
+            "peminat": 146
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 46,
+            "peminat": 177
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 45,
+        "rasio_diterima_persen": 24.74,
+        "rapor_acuan_mentah": 86.07,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.07,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 106
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 28,
+            "peminat": 106
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 30,
+            "peminat": 115
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711033",
+      "nama": "INFORMATIKA",
+      "jenjang": "S1",
+      "rumpun": "Komputer & IT",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 52,
+        "rasio_diterima_persen": 9.59,
+        "skor_acuan_mentah": 626.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 626.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 51,
+            "peminat": 602
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 52,
+            "peminat": 594
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 51,
+            "peminat": 484
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 8.23,
+        "rapor_acuan_mentah": 89.25,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.25,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 434
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 25,
+            "peminat": 424
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 339
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711034",
+      "nama": "PENYULUHAN PERTANIAN",
+      "jenjang": "S1",
+      "rumpun": "Pertanian & Hayati",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 35,
+        "rasio_diterima_persen": 36.72,
+        "skor_acuan_mentah": 543.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 543.8,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 38,
+            "peminat": 89
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 37,
+            "peminat": 111
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 99
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 25,
+        "rasio_diterima_persen": 26.6,
+        "rapor_acuan_mentah": 85.81,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.81,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 83
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 20,
+            "peminat": 71
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 24,
+            "peminat": 90
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711035",
+      "nama": "TEKNIK LINGKUNGAN",
+      "jenjang": "S1",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 32,
+        "rasio_diterima_persen": 10.84,
+        "skor_acuan_mentah": 620.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 620.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 31,
+            "peminat": 285
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 32,
+            "peminat": 218
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 29,
+            "peminat": 340
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 25,
+        "rasio_diterima_persen": 9.35,
+        "rapor_acuan_mentah": 88.94,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.94,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 15,
+            "peminat": 182
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 15,
+            "peminat": 161
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 21,
+            "peminat": 214
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711036",
+      "nama": "TEKNIK KONSTRUKSI PERKAPALAN",
+      "jenjang": "S1",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 34,
+        "rasio_diterima_persen": 22.98,
+        "skor_acuan_mentah": 577.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 577.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 32,
+            "peminat": 127
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 30,
+            "peminat": 121
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 25,
+            "peminat": 119
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 27,
+        "rasio_diterima_persen": 27.19,
+        "rapor_acuan_mentah": 85.73,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.73,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 17,
+            "peminat": 61
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 15,
+            "peminat": 55
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 18,
+            "peminat": 67
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711037",
+      "nama": "PETERNAKAN KAMPUS BONDOWOSO",
+      "jenjang": "S1",
+      "rumpun": "Pertanian & Hayati",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 25.33,
+        "skor_acuan_mentah": 571.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 571.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 39,
+            "peminat": 192
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 53,
+            "peminat": 157
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 43,
+            "peminat": 193
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 35,
+        "rasio_diterima_persen": 19.3,
+        "rapor_acuan_mentah": 86.9,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 115
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 27,
+            "peminat": 128
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 30,
+            "peminat": 158
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711038",
+      "nama": "GIZI KAMPUS BONDOWOSO",
+      "jenjang": "S1",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 45,
+        "rasio_diterima_persen": 7.87,
+        "skor_acuan_mentah": 635.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 635.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 46,
+            "peminat": 565
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 41,
+            "peminat": 549
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 37,
+            "peminat": 462
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 36,
+        "rasio_diterima_persen": 5.54,
+        "rapor_acuan_mentah": 90.18,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 90.18,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 588
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 20,
+            "peminat": 413
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 417
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711039",
+      "nama": "TEKNIK PERTAMBANGAN",
+      "jenjang": "S1",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 32,
+        "rasio_diterima_persen": 4.58,
+        "skor_acuan_mentah": 658.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 658.4,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 430
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 21,
+            "peminat": 517
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 28,
+            "peminat": 577
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 24,
+        "rasio_diterima_persen": 4.4,
+        "rapor_acuan_mentah": 90.67,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 90.67,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 11,
+            "peminat": 289
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 10,
+            "peminat": 282
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 21,
+            "peminat": 407
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711040",
+      "nama": "TEKNIK PERMINYAKAN",
+      "jenjang": "S1",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 27,
+        "rasio_diterima_persen": 7.58,
+        "skor_acuan_mentah": 636.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 636.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 183
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 20,
+            "peminat": 286
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 20,
+            "peminat": 303
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 24,
+        "rasio_diterima_persen": 7.2,
+        "rapor_acuan_mentah": 89.57,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.57,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 11,
+            "peminat": 150
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 10,
+            "peminat": 125
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 15,
+            "peminat": 225
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711041",
+      "nama": "ILMU HUKUM",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 184,
+        "rasio_diterima_persen": 18.23,
+        "skor_acuan_mentah": 592.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 592.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 231,
+            "peminat": 1303
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 228,
+            "peminat": 1189
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 185,
+            "peminat": 1036
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 135,
+        "rasio_diterima_persen": 16.15,
+        "rapor_acuan_mentah": 87.45,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.45,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 115,
+            "peminat": 913
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 115,
+            "peminat": 789
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 135,
+            "peminat": 729
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711042",
+      "nama": "HUBUNGAN INTERNASIONAL",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 65,
+        "rasio_diterima_persen": 16.81,
+        "skor_acuan_mentah": 596.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 596.8,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 75,
+            "peminat": 552
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 74,
+            "peminat": 479
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 66,
+            "peminat": 349
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 13.6,
+        "rapor_acuan_mentah": 87.94,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.94,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 392
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 35,
+            "peminat": 412
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 48,
+            "peminat": 259
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711043",
+      "nama": "ILMU ADMINISTRASI NEGARA",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 64,
+        "rasio_diterima_persen": 13.04,
+        "skor_acuan_mentah": 610.6,
+        "offset_diterapkan": 0,
+        "skor_acuan": 610.6,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 79,
+            "peminat": 534
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 75,
+            "peminat": 597
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 64,
+            "peminat": 507
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 9.91,
+        "rapor_acuan_mentah": 88.79,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.79,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 417
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 35,
+            "peminat": 420
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 48,
+            "peminat": 419
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711044",
+      "nama": "ILMU ADMINISTRASI BISNIS",
+      "jenjang": "S1",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 66,
+        "rasio_diterima_persen": 9.22,
+        "skor_acuan_mentah": 627.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 627.8,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 88,
+            "peminat": 762
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 75,
+            "peminat": 857
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 64,
+            "peminat": 746
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 6.62,
+        "rapor_acuan_mentah": 89.77,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.77,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 40,
+            "peminat": 596
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 35,
+            "peminat": 635
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 48,
+            "peminat": 662
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711045",
+      "nama": "ILMU KESEJAHTERAAN SOSIAL",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 64,
+        "rasio_diterima_persen": 19.95,
+        "skor_acuan_mentah": 586.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 586.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 61,
+            "peminat": 383
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 70,
+            "peminat": 289
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 65,
+            "peminat": 342
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 55,
+        "rasio_diterima_persen": 17.06,
+        "rapor_acuan_mentah": 87.28,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.28,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 30,
+            "peminat": 309
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 35,
+            "peminat": 222
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 48,
+            "peminat": 231
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711046",
+      "nama": "SOSIOLOGI",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 65,
+        "rasio_diterima_persen": 21.9,
+        "skor_acuan_mentah": 580.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 580.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 45,
+            "peminat": 259
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 62,
+            "peminat": 220
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 64,
+            "peminat": 321
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 55,
+        "rasio_diterima_persen": 14.89,
+        "rapor_acuan_mentah": 87.68,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.68,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 227
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 30,
+            "peminat": 209
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 45,
+            "peminat": 255
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711047",
+      "nama": "EKONOMI PEMBANGUNAN",
+      "jenjang": "S1",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 85,
+        "rasio_diterima_persen": 21.09,
+        "skor_acuan_mentah": 583.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 583.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 76,
+            "peminat": 330
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 93,
+            "peminat": 472
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 88,
+            "peminat": 416
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 70,
+        "rasio_diterima_persen": 15.29,
+        "rapor_acuan_mentah": 87.61,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.61,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 40,
+            "peminat": 351
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 47,
+            "peminat": 303
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 63,
+            "peminat": 377
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711048",
+      "nama": "MANAJEMEN",
+      "jenjang": "S1",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 114,
+        "rasio_diterima_persen": 10.52,
+        "skor_acuan_mentah": 621.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 621.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 106,
+            "peminat": 1164
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 118,
+            "peminat": 1125
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 107,
+            "peminat": 964
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 85,
+        "rasio_diterima_persen": 6.56,
+        "rapor_acuan_mentah": 89.79,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.79,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 50,
+            "peminat": 1151
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 55,
+            "peminat": 985
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 78,
+            "peminat": 972
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711049",
+      "nama": "AKUNTANSI",
+      "jenjang": "S1",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 78,
+        "rasio_diterima_persen": 14.33,
+        "skor_acuan_mentah": 605.6,
+        "offset_diterapkan": 0,
+        "skor_acuan": 605.6,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 113,
+            "peminat": 835
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 125,
+            "peminat": 829
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 108,
+            "peminat": 761
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 61,
+        "rasio_diterima_persen": 9.14,
+        "rapor_acuan_mentah": 88.99,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.99,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 55,
+            "peminat": 820
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 60,
+            "peminat": 756
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 81,
+            "peminat": 747
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711050",
+      "nama": "PENDIDIKAN LUAR SEKOLAH",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 52,
+        "rasio_diterima_persen": 51.27,
+        "skor_acuan_mentah": 512.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 512.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 46,
+            "peminat": 114
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 48,
+            "peminat": 93
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 51,
+            "peminat": 92
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 45,
+        "rasio_diterima_persen": 39.52,
+        "rapor_acuan_mentah": 84.2,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 84.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 101
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 25,
+            "peminat": 67
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 77
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711051",
+      "nama": "PENDIDIKAN EKONOMI",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 67,
+        "rasio_diterima_persen": 26.75,
+        "skor_acuan_mentah": 567.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 567.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 67,
+            "peminat": 249
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 68,
+            "peminat": 217
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 67,
+            "peminat": 280
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 15.44,
+        "rapor_acuan_mentah": 87.58,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.58,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 279
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 35,
+            "peminat": 218
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 308
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711052",
+      "nama": "PENDIDIKAN SEJARAH",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 49,
+        "rasio_diterima_persen": 23.35,
+        "skor_acuan_mentah": 576.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 576.8,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 44,
+            "peminat": 248
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 46,
+            "peminat": 200
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 48,
+            "peminat": 186
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 14.55,
+        "rapor_acuan_mentah": 87.75,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.75,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 252
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 25,
+            "peminat": 216
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 198
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711053",
+      "nama": "PENDIDIKAN BAHASA INGGRIS",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 67,
+        "rasio_diterima_persen": 19.52,
+        "skor_acuan_mentah": 588.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 588.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 66,
+            "peminat": 397
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 71,
+            "peminat": 365
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 69,
+            "peminat": 333
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 55,
+        "rasio_diterima_persen": 12.2,
+        "rapor_acuan_mentah": 88.24,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.24,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 341
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 35,
+            "peminat": 302
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 375
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711054",
+      "nama": "PENDIDIKAN BHS. & SASTRA INDO.",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 68,
+        "rasio_diterima_persen": 14.68,
+        "skor_acuan_mentah": 604.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 604.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 67,
+            "peminat": 524
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 68,
+            "peminat": 426
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 67,
+            "peminat": 457
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 55,
+        "rasio_diterima_persen": 8.69,
+        "rapor_acuan_mentah": 89.12,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 89.12,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 526
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 35,
+            "peminat": 489
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 480
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711055",
+      "nama": "PENDIDIKAN GURU SEKOLAH DASAR",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 68,
+        "rasio_diterima_persen": 8.31,
+        "skor_acuan_mentah": 632.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 632.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 66,
+            "peminat": 936
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 71,
+            "peminat": 883
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 69,
+            "peminat": 769
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 4.76,
+        "rapor_acuan_mentah": 90.51,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 90.51,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 894
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 35,
+            "peminat": 842
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 917
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711056",
+      "nama": "SASTRA INGGRIS",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 48,
+        "rasio_diterima_persen": 17.9,
+        "skor_acuan_mentah": 593.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 593.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 47,
+            "peminat": 324
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 45,
+            "peminat": 236
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 49,
+            "peminat": 264
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 36,
+        "rasio_diterima_persen": 11.74,
+        "rapor_acuan_mentah": 88.35,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.35,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 276
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 23,
+            "peminat": 215
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 268
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711057",
+      "nama": "SASTRA INDONESIA",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 48,
+        "rasio_diterima_persen": 26.9,
+        "skor_acuan_mentah": 567.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 567.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 45,
+            "peminat": 252
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 48,
+            "peminat": 162
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 54,
+            "peminat": 187
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 17.38,
+        "rapor_acuan_mentah": 87.23,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.23,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 216
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 23,
+            "peminat": 141
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 177
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711058",
+      "nama": "ILMU SEJARAH",
+      "jenjang": "S1",
+      "rumpun": "Sosial, Hukum & Humaniora",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 53,
+        "rasio_diterima_persen": 36.97,
+        "skor_acuan_mentah": 543.3,
+        "offset_diterapkan": 0,
+        "skor_acuan": 543.3,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 52,
+            "peminat": 185
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 48,
+            "peminat": 126
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 49,
+            "peminat": 123
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 45,
+        "rasio_diterima_persen": 26.99,
+        "rapor_acuan_mentah": 85.76,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.76,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 143
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 27,
+            "peminat": 116
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 109
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711059",
+      "nama": "TELEVISI & FILM",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Film dan Televisi",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 50,
+        "rasio_diterima_persen": 18.41,
+        "skor_acuan_mentah": 591.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 591.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 47,
+            "peminat": 291
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 49,
+            "peminat": 288
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 51,
+            "peminat": 253
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 36,
+        "rasio_diterima_persen": 12.83,
+        "rapor_acuan_mentah": 88.1,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 243
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 22,
+            "peminat": 235
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 226
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711060",
+      "nama": "PG PAUD",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 71,
+        "rasio_diterima_persen": 50.43,
+        "skor_acuan_mentah": 514.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 514.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 78,
+            "peminat": 204
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 79,
+            "peminat": 139
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 70,
+            "peminat": 136
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 60,
+        "rasio_diterima_persen": 27.19,
+        "rapor_acuan_mentah": 85.73,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.73,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 35,
+            "peminat": 202
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 40,
+            "peminat": 150
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 159
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711061",
+      "nama": "EKONOMI SYARIAH",
+      "jenjang": "S1",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 49,
+        "rasio_diterima_persen": 18.84,
+        "skor_acuan_mentah": 590.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 590.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 40,
+            "peminat": 305
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 51,
+            "peminat": 240
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 50,
+            "peminat": 254
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 42,
+        "rasio_diterima_persen": 11.78,
+        "rapor_acuan_mentah": 88.34,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 88.34,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 306
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 25,
+            "peminat": 208
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 262
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711062",
+      "nama": "PENDIDIKAN GEOGRAFI",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 49,
+        "rasio_diterima_persen": 23.6,
+        "skor_acuan_mentah": 576.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 576.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 45,
+            "peminat": 217
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 45,
+            "peminat": 173
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 48,
+            "peminat": 206
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 13.95,
+        "rapor_acuan_mentah": 87.87,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.87,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 238
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 25,
+            "peminat": 182
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 233
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711063",
+      "nama": "EKONOMI SYARIAH KAMPUS BONDOWOSO",
+      "jenjang": "S1",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 24,
+        "rasio_diterima_persen": 33.87,
+        "skor_acuan_mentah": 550.4,
+        "offset_diterapkan": 0,
+        "skor_acuan": 550.4,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 22,
+            "peminat": 89
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 28,
+            "peminat": 73
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 31,
+            "peminat": 89
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 24,
+        "rasio_diterima_persen": 23.62,
+        "rapor_acuan_mentah": 86.23,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.23,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 10,
+            "peminat": 71
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 13,
+            "peminat": 51
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 20,
+            "peminat": 76
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711064",
+      "nama": "PEND. GURU SEKOLAH DASAR KAMPUS BONDOWOSO",
+      "jenjang": "S1",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 51,
+        "rasio_diterima_persen": 24.67,
+        "skor_acuan_mentah": 573.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 573.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 46,
+            "peminat": 243
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 53,
+            "peminat": 205
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 52,
+            "peminat": 198
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 15.53,
+        "rapor_acuan_mentah": 87.56,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.56,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 202
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 25,
+            "peminat": 187
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 36,
+            "peminat": 199
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13711076",
+      "nama": "AGRIBISNIS KAMPUS BONDOWOSO",
+      "jenjang": "S1",
+      "rumpun": "Pertanian & Hayati",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 25,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 18,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "13711077",
+      "nama": "AKUNTANSI KAMPUS BONDOWOSO",
+      "jenjang": "S1",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 34,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 26,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "13711078",
+      "nama": "PENDIDIKAN MATEMATIKA KAMPUS BONDOWOSO",
+      "jenjang": "S1",
+      "rumpun": "Pendidikan",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 42,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 25,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "13711079",
+      "nama": "ILMU KEPERAWATAN KAMPUS LUMAJANG",
+      "jenjang": "S1",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 1,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 37,
+        "rasio_diterima_persen": 15.0,
+        "skor_acuan_mentah": 603.1,
+        "offset_diterapkan": 0,
+        "skor_acuan": 603.1,
+        "historis": []
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 25,
+        "rasio_diterima_persen": 15.0,
+        "rapor_acuan_mentah": 87.66,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.66,
+        "historis": []
+      }
+    },
+    {
+      "kode_prodi": "13712066",
+      "nama": "TEKNOLOGI REKAYASA KONSTRUKSI BANGUNAN GEDUNG",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 31,
+        "rasio_diterima_persen": 16.59,
+        "skor_acuan_mentah": 597.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 597.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 21,
+            "peminat": 39
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 21,
+            "peminat": 282
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 24,
+            "peminat": 335
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 33.88,
+        "rapor_acuan_mentah": 84.87,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 84.87,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 12,
+            "peminat": 18
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 11,
+            "peminat": 57
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 18,
+            "peminat": 61
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13712070",
+      "nama": "REKAYASA PERANCANGAN MEKANIK",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 40,
+        "rasio_diterima_persen": 31.99,
+        "skor_acuan_mentah": 554.8,
+        "offset_diterapkan": 0,
+        "skor_acuan": 554.8,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 27,
+            "peminat": 12
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 20,
+            "peminat": 89
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 24,
+            "peminat": 192
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 56.6,
+        "rapor_acuan_mentah": 82.25,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 82.25,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 12,
+            "peminat": 11
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 12,
+            "peminat": 23
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 18,
+            "peminat": 41
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13712072",
+      "nama": "TEKNOLOGI REKAYASA ELEKTRONIKA",
+      "jenjang": "D4",
+      "rumpun": "Teknik & Rekayasa",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 27.74,
+        "skor_acuan_mentah": 565.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 565.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 45,
+            "peminat": 27
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 21,
+            "peminat": 179
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 26,
+            "peminat": 249
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 48.1,
+        "rapor_acuan_mentah": 83.21,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 83.21,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 18,
+            "peminat": 7
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 12,
+            "peminat": 26
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 18,
+            "peminat": 59
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13713065",
+      "nama": "ADMINISTRASI KEUANGAN",
+      "jenjang": "D3",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 34,
+        "rasio_diterima_persen": 16.02,
+        "skor_acuan_mentah": 599.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 599.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 38,
+            "peminat": 60
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 37,
+            "peminat": 960
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 37,
+            "peminat": 842
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 32.07,
+        "rapor_acuan_mentah": 85.1,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.1,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 43
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 20,
+            "peminat": 60
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 24,
+            "peminat": 94
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13713067",
+      "nama": "KEPERAWATAN KAMPUS LUMAJANG",
+      "jenjang": "D3",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 81,
+        "rasio_diterima_persen": 8.57,
+        "skor_acuan_mentah": 631.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 631.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 82,
+            "peminat": 348
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 84,
+            "peminat": 1641
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 84,
+            "peminat": 1808
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 65,
+        "rasio_diterima_persen": 13.97,
+        "rapor_acuan_mentah": 87.87,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 87.87,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 38,
+            "peminat": 284
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 45,
+            "peminat": 341
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 54,
+            "peminat": 368
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13713068",
+      "nama": "AKUNTANSI",
+      "jenjang": "D3",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 38,
+        "rasio_diterima_persen": 17.74,
+        "skor_acuan_mentah": 593.7,
+        "offset_diterapkan": 0,
+        "skor_acuan": 593.7,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 43,
+            "peminat": 61
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 44,
+            "peminat": 983
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 40,
+            "peminat": 870
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 38.01,
+        "rapor_acuan_mentah": 84.37,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 84.37,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 35
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 25,
+            "peminat": 79
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 79
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13713069",
+      "nama": "PERPAJAKAN",
+      "jenjang": "D3",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 38,
+        "rasio_diterima_persen": 9.18,
+        "skor_acuan_mentah": 628.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 628.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 51,
+            "peminat": 169
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 40,
+            "peminat": 1095
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 39,
+            "peminat": 951
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 25.78,
+        "rapor_acuan_mentah": 85.93,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.93,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 30,
+            "peminat": 84
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 25,
+            "peminat": 127
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 106
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13713071",
+      "nama": "KEPERAWATAN (KAMPUS KOTA PASURUAN)",
+      "jenjang": "D3",
+      "rumpun": "Kesehatan & Medis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 81,
+        "rasio_diterima_persen": 15.59,
+        "skor_acuan_mentah": 601.0,
+        "offset_diterapkan": 0,
+        "skor_acuan": 601.0,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 53,
+            "peminat": 136
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 73,
+            "peminat": 554
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 67,
+            "peminat": 871
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 60,
+        "rasio_diterima_persen": 21.85,
+        "rapor_acuan_mentah": 86.5,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 86.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 91
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 40,
+            "peminat": 201
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 48,
+            "peminat": 231
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13713073",
+      "nama": "MANAJEMEN PERUSAHAAN",
+      "jenjang": "D3",
+      "rumpun": "Ekonomi & Bisnis",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 35,
+        "rasio_diterima_persen": 9.53,
+        "skor_acuan_mentah": 626.2,
+        "offset_diterapkan": 0,
+        "skor_acuan": 626.2,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 37,
+            "peminat": 106
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 37,
+            "peminat": 1177
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 35,
+            "peminat": 1087
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 26.98,
+        "rapor_acuan_mentah": 85.76,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 85.76,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 68
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 20,
+            "peminat": 86
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 24,
+            "peminat": 85
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13713074",
+      "nama": "KESEKRETARIATAN",
+      "jenjang": "D3",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 42,
+        "rasio_diterima_persen": 24.95,
+        "skor_acuan_mentah": 572.5,
+        "offset_diterapkan": 0,
+        "skor_acuan": 572.5,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 39,
+            "peminat": 39
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 38,
+            "peminat": 525
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 32,
+            "peminat": 424
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 30,
+        "rasio_diterima_persen": 59.55,
+        "rapor_acuan_mentah": 81.91,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 81.91,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 20,
+            "peminat": 32
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 20,
+            "peminat": 47
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 24,
+            "peminat": 35
+          }
+        ]
+      }
+    },
+    {
+      "kode_prodi": "13713075",
+      "nama": "USAHA PERJALANAN WISATA",
+      "jenjang": "D3",
+      "rumpun": "Sains & Umum",
+      "nama_portofolio": "Tidak Ada",
+      "is_new": 0,
+      "snbt": {
+        "tersedia": true,
+        "kuota_terbaru": 41,
+        "rasio_diterima_persen": 17.98,
+        "skor_acuan_mentah": 592.9,
+        "offset_diterapkan": 0,
+        "skor_acuan": 592.9,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 47,
+            "peminat": 79
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 43,
+            "peminat": 526
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 41,
+            "peminat": 565
+          }
+        ]
+      },
+      "snbp": {
+        "tersedia": true,
+        "kuota_terbaru": 35,
+        "rasio_diterima_persen": 39.72,
+        "rapor_acuan_mentah": 84.17,
+        "offset_diterapkan": 0,
+        "rapor_acuan": 84.17,
+        "historis": [
+          {
+            "tahun": 2023,
+            "daya_tampung": 25,
+            "peminat": 66
+          },
+          {
+            "tahun": 2024,
+            "daya_tampung": 25,
+            "peminat": 56
+          },
+          {
+            "tahun": 2025,
+            "daya_tampung": 27,
+            "peminat": 72
+          }
+        ]
+      }
+    }
+  ]
+}
