@@ -1,0 +1,37 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@theme",
+      "description": "Tailwind CSS v4: mendefinisikan design tokens dan tema kustom."
+    },
+    {
+      "name": "@utility",
+      "description": "Tailwind CSS v4: mendaftarkan utilitas kustom."
+    },
+    {
+      "name": "@variant",
+      "description": "Tailwind CSS v4: menerapkan varian pada blok CSS."
+    },
+    {
+      "name": "@custom-variant",
+      "description": "Tailwind CSS v4: mendefinisikan varian kustom."
+    },
+    {
+      "name": "@apply",
+      "description": "Tailwind CSS: menyisipkan kelas utilitas ke dalam CSS."
+    },
+    {
+      "name": "@source",
+      "description": "Tailwind CSS v4: menentukan sumber pemindaian kelas."
+    },
+    {
+      "name": "@plugin",
+      "description": "Tailwind CSS v4: memuat plugin JS."
+    },
+    {
+      "name": "@reference",
+      "description": "Tailwind CSS v4: mereferensikan tema/utilitas tanpa menduplikasi output."
+    }
+  ]
+}

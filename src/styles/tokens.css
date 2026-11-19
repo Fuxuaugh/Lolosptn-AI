@@ -1,0 +1,86 @@
+/*
+ * Design tokens LolosPTN.AI (PRD Bagian 7.2).
+ * Satu-satunya tempat nilai mentah (hex, ukuran, font) boleh ditulis.
+ * Komponen hanya memakai kelas Tailwind semantik yang dipetakan di
+ * `src/app/globals.css` (@theme inline), mis. bg-surface, text-fg, bg-brand.
+ *
+ * Ganti identitas visual cukup dengan mengubah nilai di file ini.
+ */
+
+:root {
+  /* Brand */
+  --color-brand: #2563eb;
+  --color-brand-hover: #1d4ed8;
+  --color-brand-fg: #ffffff;
+
+  /* Permukaan & teks */
+  --color-surface: #ffffff;
+  --color-surface-muted: #f4f5f7;
+  --color-fg: #111827;
+  --color-fg-muted: #4b5563;
+  --color-line: #e5e7eb;
+  --color-line-strong: #9ca3af;
+  --color-focus: #2563eb;
+  --color-overlay: rgb(17 24 39 / 0.55);
+
+  /* Status (warna dasar: ikon, garis, grafik) */
+  --color-status-safe: #16a34a;
+  --color-status-target: #d97706;
+  --color-status-reach: #dc2626;
+
+  /* Status: latar lembut + teks gelap (kontras WCAG AA >= 4.5:1) */
+  --color-status-safe-soft: #dcfce7;
+  --color-status-safe-fg: #166534;
+  --color-status-target-soft: #fef3c7;
+  --color-status-target-fg: #92400e;
+  --color-status-reach-soft: #fee2e2;
+  --color-status-reach-fg: #991b1b;
+
+  /* Callout (kuning, wajib di halaman hasil) */
+  --color-callout-bg: #fef9c3;
+  --color-callout-fg: #713f12;
+  --color-callout-border: #facc15;
+
+  /* Galat input */
+  --color-danger: #b91c1c;
+
+  /* Bentuk */
+  --radius-card: 16px;
+  --radius-control: 12px;
+  --shadow-card: 0 1px 2px rgb(17 24 39 / 0.06), 0 1px 3px rgb(17 24 39 / 0.08);
+  --shadow-popover: 0 10px 25px rgb(17 24 39 / 0.15);
+
+  /* Tipografi (--font-inter diisi oleh next/font di layout.tsx) */
+  --font-sans: var(--font-inter), "Inter", system-ui, sans-serif;
+
+  /* Spasi */
+  --space-section: 24px;
+  --space-card: 16px;
+
+  color-scheme: light;
+}
+
+/*
+ * P2 (ditunda): dark mode. Blok ini disiapkan sesuai PRD 7.2 tetapi belum
+ * diaktifkan; tema aktif dikunci ke "light" di src/config/theme.ts.
+ */
+[data-theme="dark"] {
+  --color-surface: #0f172a;
+  --color-surface-muted: #1e293b;
+  --color-fg: #f1f5f9;
+  --color-fg-muted: #94a3b8;
+  --color-line: #334155;
+  color-scheme: dark;
+}
+
+/* Hormati preferensi pengurangan gerak */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

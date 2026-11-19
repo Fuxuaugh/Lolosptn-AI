@@ -2,7 +2,7 @@
 
 - [x] M1: Init Next.js & Pipeline Data (`sync_snpmb.py`)
 - [x] M2: Prediction Engine (`app.config.ts`, `prediction.ts` + Unit Test)
-- [ ] M3: Fondasi Desain P0 (`tokens.css`, `copy.ts`, `components/ui/`)
+- [x] M3: Fondasi Desain P0 (`tokens.css`, `copy.ts`, `components/ui/`)
 - [ ] M4: Fitur Gratis (F1, F2, F3)
 - [ ] M5: Backend Server (`redis.ts`, `/api/analyze`, `/api/metric`)
 - [ ] M6: Paywall (F4), Integrasi F5-F6, & Build Deploy
@@ -45,4 +45,20 @@
 - `npx tsc --noEmit`: lulus (0 error).
 - `npm run lint`: lulus (0 error, 0 warning).
 
-**Berikutnya:** M3 (menunggu instruksi).
+### M3 selesai (2026-11-20)
+
+**File yang dibuat / diperbarui:**
+- `src/styles/tokens.css`: semantic CSS variables PRD Bagian 7.2 (`--color-*`, `--radius-*`, `--font-sans`, `--space-*`, warna status kontras WCAG AA, dan `@media (prefers-reduced-motion: reduce)`).
+- `src/app/globals.css`: impor `tokens.css` dan pemetaan `@theme inline` untuk Tailwind v4 (`bg-surface`, `bg-surface-muted`, `text-fg`, `text-fg-muted`, `bg-brand`, `border-line`, `bg-status-safe`, `bg-status-target`, `bg-status-reach`, `bg-callout-bg`, `rounded-card`, `rounded-control`, dll.).
+- `src/app/layout.tsx`: memuat font `Inter` (`next/font/google`) ke `--font-inter`, menerapkan `lang`, `data-theme`, metadata dari `theme.ts`, dan kelas token semantik.
+- `src/config/theme.ts`: konfigurasi tema aktif (`light`), `brandName`, metadata dasar, `cardStyle`, dan `resultLayoutOrder: ["hasil", "tren", "callout", "paywall"]`.
+- `src/config/copy.ts`: seluruh string UI Bahasa Indonesia terstruktur (`meta`, `common`, `hero`, `form` SNBT & SNBP termasuk cek eligibilitas, `hasil`, `status`, `tren`, `disclaimer` & privasi zero-PII, `metodologi`, `paywall`, `fallback`, `error`, `design`).
+- `src/components/ui/`: 9 komponen primitif generik mobile-first (target sentuh min 44px, WCAG AA, tanpa hardcode warna/teks) + `cn.ts` & `index.ts`: `Button.tsx`, `Card.tsx`, `Badge.tsx` (ikon + label untuk `safe`/`target`/`reach`), `Modal.tsx` (close tombol, ESC, backdrop), `Tabs.tsx`, `Select.tsx` (searchable), `Callout.tsx`, `Input.tsx` (label, helper, error), `Skeleton.tsx`.
+- `src/app/design/page.tsx` & `src/app/design/DesignGallery.tsx`: galeri komponen minimal dev-only (`notFound()` di production).
+
+**Hasil verifikasi:**
+- `npx tsc --noEmit`: lulus (0 error).
+- `npm run lint`: lulus (0 error, 0 warning).
+- `npm test`: 13/13 unit test M2 tetap lulus.
+
+**Berikutnya:** M4 (menunggu instruksi).
