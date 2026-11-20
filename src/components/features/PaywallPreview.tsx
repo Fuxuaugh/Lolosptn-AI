@@ -1,5 +1,6 @@
 "use client";
 
+import { APP_CONFIG } from "@/config/app.config";
 import { copy } from "@/config/copy";
 import { Button, Card } from "@/components/ui";
 
@@ -12,6 +13,10 @@ export interface PaywallPreviewProps {
  * Isi F5 dan F6 tidak pernah ada di klien sebelum kode akses tervalidasi di server.
  */
 export function PaywallPreview({ onUnlockClick }: PaywallPreviewProps) {
+  const unlockLabel = APP_CONFIG.paywall.isBetaMode
+    ? copy.paywall.beta.unlockButton
+    : copy.paywall.unlockButton;
+
   return (
     <Card
       title={copy.paywall.lockedTitle}
@@ -42,7 +47,7 @@ export function PaywallPreview({ onUnlockClick }: PaywallPreviewProps) {
         {/* Overlay tombol pembuka */}
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-surface/65 p-4 text-center">
           <Button variant="primary" size="lg" onClick={onUnlockClick}>
-            {copy.paywall.unlockButton}
+            {unlockLabel}
           </Button>
         </div>
       </div>

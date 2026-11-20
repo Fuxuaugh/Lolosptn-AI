@@ -173,36 +173,76 @@ export function PaywallModal({
     }
   }
 
+  const isBetaMode = APP_CONFIG.paywall.isBetaMode;
+  const modalTitle = isBetaMode
+    ? copy.paywall.beta.modalTitle
+    : copy.paywall.modalTitle;
+
   return (
-    <Modal open={open} onClose={handleClose} title={copy.paywall.modalTitle}>
+    <Modal open={open} onClose={handleClose} title={modalTitle}>
       <div className="space-y-4">
-        {/* Langkah 1: QRIS */}
-        <div className="space-y-2.5">
-          <p className="text-sm font-medium text-fg">{copy.paywall.step1}</p>
-          <QrisPlaceholder />
-        </div>
+        {isBetaMode ? (
+          /* Mode Beta Gratis: kuesioner 1 menit untuk kode akses gratis */
+          <div className="space-y-3">
+            <p className="text-sm leading-relaxed text-fg-muted">
+              {copy.paywall.beta.intro}
+            </p>
+            <p className="text-sm font-medium text-fg">
+              {copy.paywall.beta.step1}
+            </p>
+            <a
+              href={APP_CONFIG.externalLinks.feedbackFormUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                "inline-flex min-h-12 w-full items-center justify-center rounded-control bg-brand px-5 text-center text-base font-semibold text-brand-fg hover:bg-brand-hover",
+                "transition-colors motion-reduce:transition-none",
+                focusRing
+              )}
+            >
+              {copy.paywall.beta.questionnaireButton}
+            </a>
+          </div>
+        ) : (
+          /* Mode Berbayar (QRIS + konfirmasi WhatsApp Admin) — aktif saat isBetaMode: false */
+          <>
+            <div className="space-y-2.5">
+              <p className="text-sm font-medium text-fg">
+                {copy.paywall.step1}
+              </p>
+              <QrisPlaceholder />
+            </div>
 
-        {/* Langkah 2: Konfirmasi WhatsApp Admin */}
-        <div className="space-y-2">
-          <p className="text-sm font-medium text-fg">{copy.paywall.step2}</p>
-          <a
-            href={APP_CONFIG.externalLinks.whatsappAdminUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackMetric("klik_wa")}
-            className={cn(
-              "inline-flex min-h-11 w-full items-center justify-center rounded-control border border-line-strong bg-surface px-4 text-sm font-semibold text-fg hover:bg-surface-muted",
-              "transition-colors motion-reduce:transition-none",
-              focusRing
-            )}
-          >
-            {copy.paywall.whatsappButton}
-          </a>
-        </div>
+            <div className="space-y-2">
+              <p className="text-sm font-medium text-fg">
+                {copy.paywall.step2}
+              </p>
+              <a
+                href={APP_CONFIG.externalLinks.whatsappAdminUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackMetric("klik_wa")}
+                className={cn(
+                  "inline-flex min-h-11 w-full items-center justify-center rounded-control border border-line-strong bg-surface px-4 text-sm font-semibold text-fg hover:bg-surface-muted",
+                  "transition-colors motion-reduce:transition-none",
+                  focusRing
+                )}
+              >
+                {copy.paywall.whatsappButton}
+              </a>
+            </div>
+          </>
+        )}
 
-        {/* Langkah 3: Form Kode Akses */}
-        <form onSubmit={handleSubmit} noValidate className="space-y-3 border-t border-line pt-4">
-          <p className="text-sm font-medium text-fg">{copy.paywall.step3}</p>
+        {/* Form Kode Akses (aktif di mode Beta maupun mode Berbayar) */}
+        <form
+          onSubmit={handleSubmit}
+          noValidate
+          className="space-y-3 border-t border-line pt-4"
+        >
+          <p className="text-sm font-medium text-fg">
+            {isBetaMode ? copy.paywall.beta.step2 : copy.paywall.step3}
+          </p>
           <Input
             label={copy.paywall.codeLabel}
             type="text"
@@ -222,6 +262,7 @@ export function PaywallModal({
           <Button
             type="submit"
             size="lg"
+            variant={isBetaMode ? "secondary" : "primary"}
             fullWidth
             isLoading={submitting}
           >

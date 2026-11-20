@@ -83,11 +83,16 @@ export const APP_CONFIG = {
     },
   },
 
+  /** Mode paywall: set `isBetaMode: false` saat QRIS berbayar siap diaktifkan */
+  paywall: {
+    isBetaMode: true,
+  },
+
   /** Tautan eksternal (mudah diganti tanpa menyentuh komponen UI) */
   externalLinks: {
     whatsappAdminUrl:
       "https://wa.me/628xxxxxxxxxx?text=Halo%20Admin%20LolosPTN.AI%2C%20saya%20sudah%20transfer%20QRIS%20Rp10.000%20dan%20ingin%20konfirmasi%20kode%20akses.",
     feedbackFormUrl:
-      "https://docs.google.com/forms/d/e/PLACEHOLDER_FORM_ID/viewform",
+      "https://docs.google.com/forms/d/e/1FAIpQLScq31vXB_Gd4R1Gk9FWt4m5w62t8zAyeSF8huUw4h1UCNnZGQ/viewform",
   },
 } as const;

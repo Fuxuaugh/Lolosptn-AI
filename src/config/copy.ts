@@ -217,6 +217,17 @@ export const copy = {
     step1: "1. Scan QRIS di bawah dan bayar Rp10.000.",
     step2: "2. Kirim bukti pembayaran ke admin via WhatsApp.",
     step3: "3. Masukkan kode akses yang kamu terima.",
+    beta: {
+      unlockButton: "Buka Analisis Lengkap (Gratis Beta)",
+      modalTitle: "Mode Akses Beta Gratis",
+      intro:
+        "Selama masa Beta, kamu bisa membuka 3 rekomendasi prodi alternatif dan Strategi dari AI secara gratis cukup dengan mengisi kuesioner singkat (1 menit).",
+      step1:
+        "1. Isi kuesioner 1 menit berikut untuk mendapatkan kode akses di pesan konfirmasi setelah submit.",
+      questionnaireButton: "Isi Kuesioner & Ambil Kode Akses Gratis",
+      step2:
+        "2. Masukkan kode akses yang muncul di pesan konfirmasi kuesioner di bawah ini.",
+    },
     qrisAlt: "Kode QRIS pembayaran",
     qrisPlaceholderTitle: "Placeholder QRIS Rp10.000",
     qrisPlaceholderNote: "Ganti di public/qris.png",
