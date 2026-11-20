@@ -1,9 +1,12 @@
 "use client";
 
+import { motion } from "framer-motion";
 import type { AnalyzeResponseBody } from "@/app/api/analyze/route";
 import type { Jalur } from "@/config/app.config";
 import { copy } from "@/config/copy";
 import { Badge, Callout, Card } from "@/components/ui";
+
+const EASE_SNAPPY = [0.22, 1, 0.36, 1] as const;
 
 export interface UnlockedAnalysisProps {
   jalur: Jalur;
@@ -21,8 +24,12 @@ export function UnlockedAnalysis({ jalur, data }: UnlockedAnalysisProps) {
     .filter(Boolean);
 
   return (
-    <section
+    <motion.section
       aria-label={copy.paywall.unlockedTitle}
+      initial={{ opacity: 0, y: 18, scale: 0.985 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.36, ease: EASE_SNAPPY }}
       className="flex flex-col gap-5"
     >
       {/* Pengingat screenshot wajib (PRD Bagian 5 F4) */}
@@ -30,9 +37,8 @@ export function UnlockedAnalysis({ jalur, data }: UnlockedAnalysisProps) {
         <p>{copy.paywall.screenshotReminder}</p>
       </Callout>
 
-      {/* F6: Kartu "Strategi dari AI" (header ungu lembut #EEF2FF, isi putih 3 paragraf) + F5 */}
+      {/* F6: Kartu "Strategi dari AI" (header ungu lembut, isi putih) + F5 */}
       <Card as="article" noPadding className="overflow-hidden">
-        {/* Header #EEF2FF */}
         <div className="flex flex-wrap items-center justify-between gap-2 border-b-2 border-line bg-ai-header px-5 py-4">
           <div className="flex items-center gap-2.5">
             <span
@@ -77,7 +83,18 @@ export function UnlockedAnalysis({ jalur, data }: UnlockedAnalysisProps) {
 
           <div className="space-y-3.5 text-sm leading-relaxed text-fg">
             {paragraphs.map((paragraph, idx) => (
-              <p key={idx}>{paragraph}</p>
+              <motion.p
+                key={idx}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.28,
+                  delay: 0.08 + idx * 0.07,
+                  ease: EASE_SNAPPY,
+                }}
+              >
+                {paragraph}
+              </motion.p>
             ))}
           </div>
 
@@ -98,9 +115,16 @@ export function UnlockedAnalysis({ jalur, data }: UnlockedAnalysisProps) {
               </p>
             ) : (
               <ul className="flex flex-col gap-2.5">
-                {data.alternatives.map(({ prodi, prediction }) => (
-                  <li
+                {data.alternatives.map(({ prodi, prediction }, idx) => (
+                  <motion.li
                     key={prodi.kode_prodi}
+                    initial={{ opacity: 0, x: -8 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                      duration: 0.26,
+                      delay: 0.16 + idx * 0.06,
+                      ease: EASE_SNAPPY,
+                    }}
                     className="rounded-control border-2 border-line bg-surface p-3"
                   >
                     <div className="flex flex-wrap items-start justify-between gap-2">
@@ -139,13 +163,13 @@ export function UnlockedAnalysis({ jalur, data }: UnlockedAnalysisProps) {
                         )}
                       </p>
                     </div>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             )}
           </div>
         </div>
       </Card>
-    </section>
+    </motion.section>
   );
 }

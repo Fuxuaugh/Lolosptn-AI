@@ -1,8 +1,9 @@
 "use client";
 
 import { Fragment, useEffect, useRef, useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import type { AnalyzeResponseBody } from "@/app/api/analyze/route";
-import { type Jalur } from "@/config/app.config";
+import { APP_CONFIG, type Jalur } from "@/config/app.config";
 import { copy } from "@/config/copy";
 import { THEME, type ResultSection } from "@/config/theme";
 import {
@@ -18,11 +19,16 @@ import {
   toSnbtTarget,
   type PredictionResult,
 } from "@/lib/prediction";
-import { Button, Callout, Card } from "@/components/ui";
-import { BentoBenefits } from "./BentoBenefits";
-import { FaqSection } from "./FaqSection";
+import {
+  Button,
+  Callout,
+  Card,
+  cn,
+  focusRing,
+  tactileControlButton,
+} from "@/components/ui";
+import { Footer } from "./Footer";
 import { HasilKartu, type HasilPilihanItem } from "./HasilKartu";
-import { HeroSection } from "./HeroSection";
 import { MetodologiModal } from "./MetodologiModal";
 import { Navbar } from "./Navbar";
 import { PaywallModal } from "./PaywallModal";
@@ -41,6 +47,7 @@ interface ComputedEntry {
 }
 
 interface CalculationState {
+  calcSeq: number;
   jalur: Jalur;
   payload: PredictionFormPayload;
   entries: ComputedEntry[];
@@ -148,7 +155,12 @@ export function HomeCalculator() {
     setUnlockedData(null);
     setPaywallOpen(false);
     setDetailsLoading(true);
-    setResult({ jalur: payload.jalur, payload, entries });
+    setResult((prev) => ({
+      calcSeq: (prev?.calcSeq ?? 0) + 1,
+      jalur: payload.jalur,
+      payload,
+      entries,
+    }));
 
     // Catat metrik anonim sesi selesai (fire-and-forget)
     trackMetric("sesi_selesai");
@@ -193,7 +205,13 @@ export function HomeCalculator() {
         detailLoading: detailsLoading,
         prediction: entry.prediction,
       }));
-      return <HasilKartu jalur={result.jalur} items={hasilItems} />;
+      return (
+        <HasilKartu
+          jalur={result.jalur}
+          items={hasilItems}
+          animationKey={result.calcSeq}
+        />
+      );
     }
 
     if (section === "tren") {
@@ -225,15 +243,23 @@ export function HomeCalculator() {
     }
 
     if (section === "paywall") {
-      if (unlockedData) {
-        return <UnlockedAnalysis jalur={result.jalur} data={unlockedData} />;
-      }
       return (
-        <PaywallPreview
-          payload={result.payload}
-          onUnlockClick={handleOpenPaywall}
-          onBetaSuccess={handleUnlockSuccess}
-        />
+        <AnimatePresence mode="wait">
+          {unlockedData ? (
+            <UnlockedAnalysis
+              key={`unlocked-${result.calcSeq}`}
+              jalur={result.jalur}
+              data={unlockedData}
+            />
+          ) : (
+            <PaywallPreview
+              key={`locked-${result.calcSeq}`}
+              payload={result.payload}
+              onUnlockClick={handleOpenPaywall}
+              onBetaSuccess={handleUnlockSuccess}
+            />
+          )}
+        </AnimatePresence>
       );
     }
 
@@ -242,51 +268,40 @@ export function HomeCalculator() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      {/* 1. Navbar Ringkas */}
-      <Navbar />
+      <Navbar activeRoute="kalkulator" />
 
-      <main className="flex-1">
-        {/* 2. Split Hero */}
-        <HeroSection />
+      <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+        <div className="mb-6 space-y-2 sm:mb-8">
+          <span className="inline-block rounded-lg border-2 border-line bg-accent-yellow px-3 py-1 font-display text-xs font-bold tracking-wider text-accent-yellow-fg shadow-pill">
+            {copy.calcSection.eyebrow}
+          </span>
+          <h1 className="font-display text-2xl font-bold tracking-tight text-fg sm:text-4xl">
+            {copy.calcSection.title}
+          </h1>
+          <p className="max-w-2xl text-sm font-medium text-fg-muted sm:text-base">
+            {copy.calcSection.subtitle}
+          </p>
+        </div>
 
-        {/* 3. Bento Grid 3 Kotak */}
-        <BentoBenefits />
-
-        {/* 4. Kalkulator & Kartu Hasil */}
-        <section
-          id="kalkulator"
-          className="mx-auto w-full max-w-6xl scroll-mt-20 px-4 py-8 sm:px-6 sm:py-12 lg:px-8"
-        >
-          <div className="mb-6 space-y-2 sm:mb-8">
-            <span className="inline-block rounded-lg border-2 border-line bg-accent-yellow px-3 py-1 font-display text-xs font-bold tracking-wider text-accent-yellow-fg shadow-pill">
-              {copy.calcSection.eyebrow}
-            </span>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-fg sm:text-3xl">
-              {copy.calcSection.title}
-            </h2>
-            <p className="max-w-2xl text-sm font-medium text-fg-muted sm:text-base">
-              {copy.calcSection.subtitle}
-            </p>
+        <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-12 lg:gap-8">
+          {/* Kolom Kiri: Form F1 */}
+          <div className="lg:col-span-5">
+            <PredictionForm onSubmit={handleSubmit} onReset={handleReset} />
           </div>
 
-          <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-12 lg:gap-8">
-            {/* Kolom Kiri: Form F1 */}
-            <div className="lg:col-span-5">
-              <PredictionForm onSubmit={handleSubmit} onReset={handleReset} />
-            </div>
-
-            {/* Kolom Kanan: Hasil sesuai THEME.resultLayoutOrder */}
-            <div
-              ref={resultSectionRef}
-              className="flex scroll-mt-24 flex-col gap-6 lg:col-span-7"
-            >
-              {result ? (
-                THEME.resultLayoutOrder.map((section) => (
-                  <Fragment key={section}>
-                    {renderResultSection(section)}
-                  </Fragment>
-                ))
-              ) : (
+          {/* Kolom Kanan: Hasil sesuai THEME.resultLayoutOrder */}
+          <div
+            ref={resultSectionRef}
+            className="flex scroll-mt-24 flex-col gap-6 lg:col-span-7"
+          >
+            {result ? (
+              THEME.resultLayoutOrder.map((section) => (
+                <Fragment key={section}>
+                  {renderResultSection(section)}
+                </Fragment>
+              ))
+            ) : (
+              <>
                 <Card
                   as="div"
                   variant="flat"
@@ -305,14 +320,51 @@ export function HomeCalculator() {
                     </span>
                   </div>
                 </Card>
-              )}
-            </div>
-          </div>
-        </section>
 
-        {/* 5. FAQ Accordion + Disclaimer + F7 + Footer */}
-        <FaqSection onOpenMetodologi={() => setMetodologiOpen(true)} />
+                {/* Kotak Disclaimer + Metodologi tetap tersedia sebelum menghitung */}
+                <Callout tone="warning" title={copy.disclaimer.title}>
+                  <p>{copy.disclaimer.body}</p>
+                  <p className="mt-2">
+                    <strong>{copy.disclaimer.privacyTitle}:</strong>{" "}
+                    {copy.disclaimer.privacy}
+                  </p>
+                  <div className="mt-3">
+                    <Button
+                      variant="secondary"
+                      onClick={() => setMetodologiOpen(true)}
+                    >
+                      {copy.hasil.lihatMetodologi}
+                    </Button>
+                  </div>
+                </Callout>
+              </>
+            )}
+
+            {/* F7: Laporan Hasil Seleksi Anonim */}
+            <Card
+              as="div"
+              variant="flat"
+              title={copy.feedback.title}
+              description={copy.feedback.body}
+            >
+              <a
+                href={APP_CONFIG.externalLinks.feedbackFormUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  "inline-flex min-h-11 items-center justify-center rounded-control border-2 border-line bg-surface px-4 text-sm font-bold text-fg hover:bg-surface-muted",
+                  tactileControlButton,
+                  focusRing
+                )}
+              >
+                {copy.feedback.cta}
+              </a>
+            </Card>
+          </div>
+        </div>
       </main>
+
+      <Footer />
 
       <MetodologiModal
         open={metodologiOpen}

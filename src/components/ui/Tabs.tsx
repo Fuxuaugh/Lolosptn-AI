@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, type KeyboardEvent } from "react";
+import { motion } from "framer-motion";
 import { cn, focusRing } from "./cn";
 
 export interface TabOption<T extends string = string> {
@@ -25,6 +26,7 @@ export function Tabs<T extends string = string>({
   className,
 }: TabsProps<T>) {
   const baseId = useId();
+  const indicatorLayoutId = `${baseId}-active-pill`;
 
   function handleKeyDown(e: KeyboardEvent<HTMLButtonElement>, index: number) {
     const enabledIndexes = options
@@ -80,16 +82,29 @@ export function Tabs<T extends string = string>({
             onClick={() => onChange(opt.value)}
             onKeyDown={(e) => handleKeyDown(e, idx)}
             className={cn(
-              "min-h-11 rounded-lg px-3 font-display text-sm font-bold",
-              "transition-all motion-reduce:transition-none",
+              "relative min-h-11 rounded-lg px-3 font-display text-sm font-bold",
+              "transition-colors duration-150 motion-reduce:transition-none",
               "disabled:cursor-not-allowed disabled:opacity-50",
               focusRing,
               isSelected
-                ? "border-2 border-line bg-accent-yellow text-accent-yellow-fg shadow-pill"
-                : "border-2 border-transparent text-fg-muted hover:text-fg"
+                ? "text-accent-yellow-fg"
+                : "text-fg-muted hover:text-fg"
             )}
           >
-            {opt.label}
+            {isSelected && (
+              <motion.span
+                layoutId={indicatorLayoutId}
+                aria-hidden="true"
+                transition={{
+                  type: "spring",
+                  stiffness: 520,
+                  damping: 36,
+                  mass: 0.7,
+                }}
+                className="absolute inset-0 rounded-lg border-2 border-line bg-accent-yellow shadow-pill"
+              />
+            )}
+            <span className="relative z-10">{opt.label}</span>
           </button>
         );
       })}

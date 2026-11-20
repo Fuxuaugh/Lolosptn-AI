@@ -1,5 +1,10 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { copy } from "@/config/copy";
 import { cn } from "@/components/ui";
+
+const EASE_SNAPPY = [0.22, 1, 0.36, 1] as const;
 
 const ACCENT_STYLES = {
   blue: {
@@ -61,7 +66,13 @@ export function BentoBenefits() {
       id="keunggulan"
       className="mx-auto w-full max-w-6xl scroll-mt-20 px-4 py-8 sm:px-6 sm:py-12 lg:px-8"
     >
-      <div className="mb-6 space-y-2 sm:mb-8">
+      <motion.div
+        initial={{ opacity: 0, y: 14 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.35, ease: EASE_SNAPPY }}
+        className="mb-6 space-y-2 sm:mb-8"
+      >
         <span className="inline-block rounded-lg border-2 border-line bg-surface px-3 py-1 font-display text-xs font-bold tracking-wider text-brand shadow-pill">
           {copy.bento.eyebrow}
         </span>
@@ -71,49 +82,61 @@ export function BentoBenefits() {
         <p className="max-w-2xl text-sm font-medium text-fg-muted sm:text-base">
           {copy.bento.subtitle}
         </p>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-        {copy.bento.items.map((item) => {
+        {copy.bento.items.map((item, idx) => {
           const style = ACCENT_STYLES[item.accent];
           return (
-            <article
+            <motion.div
               key={item.id}
-              className={cn(
-                "flex flex-col justify-between gap-5 rounded-card border-2 border-line p-6 shadow-card",
-                style.card
-              )}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                duration: 0.38,
+                delay: idx * 0.09,
+                ease: EASE_SNAPPY,
+              }}
+              className="h-full"
             >
-              <div className="space-y-3.5">
-                <div
-                  className={cn(
-                    "inline-flex size-12 items-center justify-center rounded-control border-2 border-line shadow-control",
-                    style.iconBox
-                  )}
-                >
-                  <BentoIcon id={item.id} />
+              <article
+                className={cn(
+                  "group flex h-full flex-col justify-between gap-5 rounded-card border-2 border-line p-6 shadow-card transition-transform duration-200 hover:-translate-x-[1px] hover:-translate-y-1 motion-reduce:transform-none motion-reduce:transition-none",
+                  style.card
+                )}
+              >
+                <div className="space-y-3.5">
+                  <div
+                    className={cn(
+                      "inline-flex size-12 items-center justify-center rounded-control border-2 border-line shadow-control transition-transform duration-200 ease-out group-hover:-translate-y-0.5 group-hover:-rotate-6 group-hover:scale-110 motion-reduce:transform-none motion-reduce:transition-none",
+                      style.iconBox
+                    )}
+                  >
+                    <BentoIcon id={item.id} />
+                  </div>
+
+                  <h3 className="font-display text-xl leading-snug font-bold tracking-tight text-fg">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-sm leading-relaxed font-medium text-fg-muted">
+                    {item.description}
+                  </p>
                 </div>
 
-                <h3 className="font-display text-xl leading-snug font-bold tracking-tight text-fg">
-                  {item.title}
-                </h3>
-
-                <p className="text-sm leading-relaxed font-medium text-fg-muted">
-                  {item.description}
-                </p>
-              </div>
-
-              <div>
-                <span
-                  className={cn(
-                    "inline-block rounded-full border-2 border-line bg-surface px-3 py-1 text-xs font-bold",
-                    style.tagText
-                  )}
-                >
-                  {item.tag}
-                </span>
-              </div>
-            </article>
+                <div>
+                  <span
+                    className={cn(
+                      "inline-block rounded-full border-2 border-line bg-surface px-3 py-1 text-xs font-bold",
+                      style.tagText
+                    )}
+                  >
+                    {item.tag}
+                  </span>
+                </div>
+              </article>
+            </motion.div>
           );
         })}
       </div>

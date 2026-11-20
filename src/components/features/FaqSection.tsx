@@ -2,7 +2,15 @@
 
 import { APP_CONFIG } from "@/config/app.config";
 import { copy } from "@/config/copy";
-import { Accordion, Button, Callout, Card, cn, focusRing } from "@/components/ui";
+import {
+  Accordion,
+  Button,
+  Callout,
+  Card,
+  cn,
+  focusRing,
+  tactileControlButton,
+} from "@/components/ui";
 
 export interface FaqSectionProps {
   onOpenMetodologi: () => void;
@@ -12,7 +20,7 @@ export function FaqSection({ onOpenMetodologi }: FaqSectionProps) {
   return (
     <section
       id="faq"
-      className="mx-auto w-full max-w-6xl scroll-mt-20 px-4 pt-8 pb-12 sm:px-6 sm:pt-12 sm:pb-16 lg:px-8"
+      className="mx-auto w-full max-w-6xl scroll-mt-20 px-4 py-8 sm:px-6 sm:py-12 lg:px-8"
     >
       <div className="space-y-6">
         <div className="space-y-2">
@@ -56,21 +64,14 @@ export function FaqSection({ onOpenMetodologi }: FaqSectionProps) {
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
-              "inline-flex min-h-11 items-center justify-center rounded-control border-2 border-line bg-surface px-4 text-sm font-bold text-fg shadow-control transition-all hover:bg-surface-muted active:translate-x-0.5 active:translate-y-0.5 active:shadow-none motion-reduce:transform-none motion-reduce:transition-none",
+              "inline-flex min-h-11 items-center justify-center rounded-control border-2 border-line bg-surface px-4 text-sm font-bold text-fg hover:bg-surface-muted",
+              tactileControlButton,
               focusRing
             )}
           >
             {copy.feedback.cta}
           </a>
         </Card>
-
-        {/* Footer ringkas */}
-        <footer className="flex flex-col items-center justify-between gap-2 border-t-2 border-line-soft pt-6 text-center text-xs sm:flex-row sm:text-left">
-          <p className="font-display font-bold text-fg-muted">
-            {copy.footer.brandNote}
-          </p>
-          <p className="font-medium text-fg-subtle">{copy.footer.tagline}</p>
-        </footer>
       </div>
     </section>
   );

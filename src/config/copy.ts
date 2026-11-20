@@ -8,6 +8,9 @@ export const copy = {
     title: "LolosPTN.AI — Hitung Peluang & Strategi SNBP/SNBT PTN Jawa Timur",
     description:
       "Simulasikan peluang lolos SNBP & SNBT di PTN Jawa Timur berbasis data historis SNPMB, lengkap dengan analisis strategi AI dan rekomendasi prodi alternatif aman.",
+    kalkulatorTitle: "Kalkulator Peluang SNBP & SNBT — LolosPTN.AI",
+    kalkulatorDescription:
+      "Hitung peluang diterima SNBP & SNBT di 17 PTN Jawa Timur lengkap dengan tren historis, rekomendasi prodi alternatif, dan Strategi Pilihan AI.",
   },
 
   /** Teks umum yang dipakai komponen primitif `ui/` */
@@ -43,8 +46,8 @@ export const copy = {
     subtitle:
       "Simulasikan peluang lolos SNBP & SNBT di 17 PTN Jawa Timur berbasis data daya tampung dan peminat resmi SNPMB — lengkap dengan analisis strategi AI & rekomendasi prodi aman.",
     cta: "Cek Peluang Gratis",
-    trustNote: "Tanpa login • Zero PII • 17 PTN Jatim & 740 Prodi",
-    badgeFree: "Gratis • Tanpa daftar • Tanpa data pribadi",
+    trustNote: "Tanpa login • Data pribadi tidak disimpan • 17 PTN Jatim & 740 Prodi",
+    badgeFree: "Gratis • Tanpa daftar • Data pribadi tidak disimpan",
     preview: {
       header: "CONTOH HASIL SIMULASI • SNBT",
       scoreChip: "Skor UTBK 618",
@@ -77,7 +80,7 @@ export const copy = {
       {
         id: "ai",
         accent: "yellow" as const,
-        title: "Strategi AI 3 Paragraf",
+        title: "Strategi Pilihan AI",
         description:
           "Evaluasi tajam atas urutan pilihan, risiko persaingan, target kenaikan skor, hingga catatan validasi nilai TKA untuk jalur SNBP terbaru.",
         tag: "Urutan • Risiko • Konteks TKA",
@@ -249,12 +252,12 @@ export const copy = {
   },
 
   disclaimer: {
-    title: "DISCLAIMER & PRIVASI (ZERO PII)",
+    title: "DISCLAIMER & PRIVASI",
     body:
       "SNPMB tidak mengumumkan passing grade resmi. Data ini adalah estimasi statistik berdasarkan tren daya tampung & peminat SNPMB dan dapat berubah. Gunakan sebagai acuan strategi, bukan patokan mutlak.",
     privacyTitle: "Privasi",
     privacy:
-      "Kami tidak menyimpan atau mengirim data identitas pribadi (tanpa nama, NISN, email, maupun asal sekolah); hanya angka nilai dan pilihan prodi yang diproses.",
+      "Data pribadimu tidak disimpan: kami tidak meminta nama, NISN, email, maupun asal sekolah; hanya angka nilai dan pilihan prodi yang diproses.",
   },
 
   metodologi: {
@@ -331,7 +334,7 @@ export const copy = {
     alternativesSubtitle:
       "Pilihan prodi di rumpun yang sama dengan Pilihan 1 yang paling realistis untuk posisimu.",
     aiTitle: "Strategi dari AI",
-    aiChip: "3 Paragraf Strategis",
+    aiChip: "Strategi Pilihan AI",
     aiSubtitle: "Ringkasan strategi berdasarkan angka hasil perhitunganmu.",
     refScoreShort: (jalur: "snbt" | "snbp", value: number) =>
       jalur === "snbt" ? `Skor acuan: ${value}` : `Nilai acuan: ${value}`,
@@ -366,15 +369,23 @@ export const copy = {
         question:
           "Apakah data rapor, skor UTBK, atau identitas pribadiku disimpan?",
         answer:
-          "Tidak. LolosPTN.AI menerapkan prinsip Zero PII: kami tidak meminta nama, NISN, email, maupun asal sekolah. Hanya angka skor/nilai dan pilihan prodi yang diproses sementara untuk menampilkan hasilmu.",
+          "Tidak. Privasi terjaga dan data pribadimu tidak disimpan: kami tidak meminta nama, NISN, email, maupun asal sekolah. Hanya angka skor/nilai dan pilihan prodi yang diproses sementara untuk menampilkan hasilmu.",
       },
       {
         id: "beta-gratis",
         question: "Bagaimana cara mendapatkan kode akses Beta gratis?",
         answer:
-          "Selama masa Beta, klik tombol \"Isi Kuesioner 1 Menit & Ambil Kode Akses Gratis\" di blok Mode Akses Beta Gratis. Setelah mengirim kuesioner, kode akses akan langsung tampil di pesan konfirmasi dan bisa langsung dipakai untuk membuka Strategi AI & alternatif prodi.",
+          "Selama masa Beta, klik tombol \"Isi Kuesioner 1 Menit & Ambil Kode Akses Gratis\" di blok Mode Akses Beta Gratis. Setelah mengirim kuesioner, kode akses akan langsung tampil di pesan konfirmasi dan bisa langsung dipakai untuk membuka Strategi Pilihan AI & alternatif prodi.",
       },
     ],
+  },
+
+  closingCta: {
+    eyebrow: "SIAP MULAI?",
+    title: "Siap cek peluangmu sekarang?",
+    subtitle:
+      "Hitung peluang Pilihan 1 & 2 di 17 PTN Jawa Timur secara gratis tanpa login, lengkap dengan tren historis dan Strategi Pilihan AI.",
+    button: "Buka Kalkulator Peluang",
   },
 
   feedback: {

@@ -1,6 +1,11 @@
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 import { copy } from "@/config/copy";
-import { cn, focusRing } from "./cn";
+import {
+  cn,
+  focusRing,
+  tactileCardButton,
+  tactileControlButton,
+} from "./cn";
 
 export type ButtonVariant = "primary" | "accent" | "secondary" | "ghost";
 export type ButtonSize = "md" | "lg";
@@ -15,14 +20,20 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const VARIANT: Record<ButtonVariant, string> = {
-  primary:
-    "border-2 border-line bg-brand text-brand-fg shadow-card hover:bg-brand-hover active:translate-x-0.5 active:translate-y-0.5 active:shadow-none",
-  accent:
-    "border-2 border-line bg-accent-yellow text-accent-yellow-fg shadow-control hover:bg-accent-yellow-hover active:translate-x-0.5 active:translate-y-0.5 active:shadow-none",
-  secondary:
-    "border-2 border-line bg-surface text-fg shadow-control hover:bg-surface-muted active:translate-x-0.5 active:translate-y-0.5 active:shadow-none",
+  primary: cn(
+    "border-2 border-line bg-brand text-brand-fg hover:bg-brand-hover",
+    tactileCardButton
+  ),
+  accent: cn(
+    "border-2 border-line bg-accent-yellow text-accent-yellow-fg hover:bg-accent-yellow-hover",
+    tactileControlButton
+  ),
+  secondary: cn(
+    "border-2 border-line bg-surface text-fg hover:bg-surface-muted",
+    tactileControlButton
+  ),
   ghost:
-    "border-2 border-transparent bg-transparent text-fg-muted hover:border-line hover:bg-surface hover:text-fg",
+    "border-2 border-transparent bg-transparent text-fg-muted transition-colors duration-150 hover:border-line hover:bg-surface hover:text-fg motion-reduce:transition-none",
 };
 
 const SIZE: Record<ButtonSize, string> = {
@@ -53,8 +64,7 @@ export function Button({
       aria-busy={isLoading || undefined}
       className={cn(
         "inline-flex items-center justify-center gap-2 rounded-control font-bold",
-        "transition-all motion-reduce:transform-none motion-reduce:transition-none",
-        "disabled:cursor-not-allowed disabled:opacity-60 disabled:shadow-none",
+        "disabled:translate-x-0 disabled:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60 disabled:shadow-none",
         focusRing,
         VARIANT[variant],
         SIZE[size],

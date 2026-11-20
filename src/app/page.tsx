@@ -1,5 +1,5 @@
-import { HomeCalculator } from "@/components/features";
+import { LandingPage } from "@/components/features";
 
 export default function HomePage() {
-  return <HomeCalculator />;
+  return <LandingPage />;
 }

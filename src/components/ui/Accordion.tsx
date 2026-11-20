@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { cn, focusRing } from "./cn";
 
 export interface AccordionItem {
@@ -47,8 +48,10 @@ export function Accordion({
           <div
             key={item.id}
             className={cn(
-              "rounded-card border-2 border-line bg-surface transition-shadow motion-reduce:transition-none",
-              isOpen ? "shadow-card" : "shadow-control"
+              "rounded-card border-2 border-line bg-surface transition-all duration-150 motion-reduce:transform-none motion-reduce:transition-none",
+              isOpen
+                ? "shadow-card"
+                : "shadow-control hover:-translate-x-[1px] hover:-translate-y-[1px]"
             )}
           >
             <button
@@ -63,29 +66,49 @@ export function Accordion({
               )}
             >
               <span className="text-sm sm:text-base">{item.question}</span>
-              <span
+              <motion.span
                 aria-hidden="true"
+                animate={{ rotate: isOpen ? 180 : 0 }}
+                transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
                 className={cn(
-                  "inline-flex size-8 shrink-0 items-center justify-center rounded-lg border-2 border-line font-display text-base font-bold",
+                  "inline-flex size-8 shrink-0 items-center justify-center rounded-lg border-2 border-line transition-colors duration-150",
                   isOpen
                     ? "bg-accent-yellow text-accent-yellow-fg"
                     : "bg-surface-muted text-fg"
                 )}
               >
-                {isOpen ? "−" : "+"}
-              </span>
+                <svg
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2.4}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="size-4"
+                >
+                  <path d="M5 7.5l5 5 5-5" />
+                </svg>
+              </motion.span>
             </button>
 
-            {isOpen && (
-              <div
-                id={panelId}
-                role="region"
-                aria-labelledby={triggerId}
-                className="border-t-2 border-line-soft px-5 pt-3.5 pb-5 text-sm leading-relaxed text-fg-muted"
-              >
-                {item.answer}
-              </div>
-            )}
+            <AnimatePresence initial={false}>
+              {isOpen && (
+                <motion.div
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={triggerId}
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+                  className="overflow-hidden"
+                >
+                  <div className="border-t-2 border-line-soft px-5 pt-3.5 pb-5 text-sm leading-relaxed text-fg-muted">
+                    {item.answer}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         );
       })}
