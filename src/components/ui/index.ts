@@ -1,3 +1,4 @@
+export { Accordion, type AccordionItem, type AccordionProps } from "./Accordion";
 export { Badge, type BadgeProps } from "./Badge";
 export { Button, type ButtonProps, type ButtonSize, type ButtonVariant } from "./Button";
 export { Callout, type CalloutProps, type CalloutTone } from "./Callout";

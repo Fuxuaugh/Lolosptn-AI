@@ -57,7 +57,7 @@ function BarChartSvg({ historis }: { historis: readonly HistorisTahun[] }) {
           x2={chartWidth - padX}
           y2={padTop + plotHeight}
           stroke="var(--color-line-strong)"
-          strokeWidth={1}
+          strokeWidth={2}
         />
 
         {historis.map((row, idx) => {
@@ -86,6 +86,8 @@ function BarChartSvg({ historis }: { historis: readonly HistorisTahun[] }) {
                 height={peminatHeight}
                 rx={4}
                 fill="var(--color-brand)"
+                stroke="var(--color-line)"
+                strokeWidth={1.5}
               />
               <text
                 x={peminatX + barWidth / 2}
@@ -104,7 +106,9 @@ function BarChartSvg({ historis }: { historis: readonly HistorisTahun[] }) {
                 width={barWidth}
                 height={kuotaHeight}
                 rx={4}
-                fill="var(--color-status-safe)"
+                fill="var(--color-status-safe-soft)"
+                stroke="var(--color-line)"
+                strokeWidth={1.5}
               />
               <text
                 x={kuotaX + barWidth / 2}
@@ -133,18 +137,18 @@ function BarChartSvg({ historis }: { historis: readonly HistorisTahun[] }) {
       </svg>
 
       {/* Legenda memakai token CSS */}
-      <div className="mt-2 flex flex-wrap items-center justify-center gap-4 text-xs text-fg-muted">
+      <div className="mt-2 flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-fg-muted">
         <span className="inline-flex items-center gap-1.5">
           <span
             aria-hidden="true"
-            className="inline-block size-3 rounded-xs bg-brand"
+            className="inline-block size-3 rounded-xs border border-line bg-brand"
           />
           {copy.tren.peminat}
         </span>
         <span className="inline-flex items-center gap-1.5">
           <span
             aria-hidden="true"
-            className="inline-block size-3 rounded-xs bg-status-safe"
+            className="inline-block size-3 rounded-xs border border-line bg-status-safe-soft"
           />
           {copy.tren.dayaTampung}
         </span>

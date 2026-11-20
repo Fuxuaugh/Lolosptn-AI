@@ -3,22 +3,34 @@
 
 /*
  * Pemetaan token (src/styles/tokens.css) ke utilitas Tailwind v4.
- * `inline` membuat utilitas langsung memakai var(--token), sehingga nilai
- * yang berlaku selalu berasal dari tokens.css (termasuk override [data-theme]).
  */
 @theme inline {
   --color-brand: var(--color-brand);
   --color-brand-hover: var(--color-brand-hover);
   --color-brand-fg: var(--color-brand-fg);
+  --color-accent-yellow: var(--color-accent-yellow);
+  --color-accent-yellow-hover: var(--color-accent-yellow-hover);
+  --color-accent-yellow-fg: var(--color-accent-yellow-fg);
 
+  --color-canvas: var(--color-canvas);
   --color-surface: var(--color-surface);
   --color-surface-muted: var(--color-surface-muted);
+  --color-surface-warm: var(--color-surface-warm);
   --color-fg: var(--color-fg);
   --color-fg-muted: var(--color-fg-muted);
+  --color-fg-subtle: var(--color-fg-subtle);
   --color-line: var(--color-line);
+  --color-line-soft: var(--color-line-soft);
   --color-line-strong: var(--color-line-strong);
   --color-focus: var(--color-focus);
   --color-overlay: var(--color-overlay);
+
+  --color-bento-blue: var(--color-bento-blue);
+  --color-bento-blue-icon: var(--color-bento-blue-icon);
+  --color-bento-blue-fg: var(--color-bento-blue-fg);
+  --color-bento-yellow: var(--color-bento-yellow);
+  --color-bento-green: var(--color-bento-green);
+  --color-ai-header: var(--color-ai-header);
 
   --color-status-safe: var(--color-status-safe);
   --color-status-target: var(--color-status-target);
@@ -39,16 +51,25 @@
   --radius-card: var(--radius-card);
   --radius-control: var(--radius-control);
   --shadow-card: var(--shadow-card);
+  --shadow-control: var(--shadow-control);
+  --shadow-pill: var(--shadow-pill);
   --shadow-popover: var(--shadow-popover);
 
+  --font-display: var(--font-display);
   --font-sans: var(--font-sans);
 
   --spacing-section: var(--space-section);
   --spacing-card: var(--space-card);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: var(--color-surface);
+  background-color: var(--color-canvas);
+  background-image: radial-gradient(var(--color-dot) 1.25px, transparent 1.25px);
+  background-size: 28px 28px;
   color: var(--color-fg);
   font-family: var(--font-sans);
 }

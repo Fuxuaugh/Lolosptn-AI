@@ -62,7 +62,7 @@ export function Tabs<T extends string = string>({
       role="tablist"
       aria-label={ariaLabel}
       className={cn(
-        "grid auto-cols-fr grid-flow-col gap-1 rounded-control bg-surface-muted p-1",
+        "grid auto-cols-fr grid-flow-col gap-1.5 rounded-control border-2 border-line bg-surface-muted p-1",
         className
       )}
     >
@@ -80,13 +80,13 @@ export function Tabs<T extends string = string>({
             onClick={() => onChange(opt.value)}
             onKeyDown={(e) => handleKeyDown(e, idx)}
             className={cn(
-              "min-h-11 rounded-control px-3 text-sm font-semibold",
-              "transition-colors motion-reduce:transition-none",
+              "min-h-11 rounded-lg px-3 font-display text-sm font-bold",
+              "transition-all motion-reduce:transition-none",
               "disabled:cursor-not-allowed disabled:opacity-50",
               focusRing,
               isSelected
-                ? "bg-surface text-fg shadow-card"
-                : "text-fg-muted hover:text-fg"
+                ? "border-2 border-line bg-accent-yellow text-accent-yellow-fg shadow-pill"
+                : "border-2 border-transparent text-fg-muted hover:text-fg"
             )}
           >
             {opt.label}

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { copy } from "@/config/copy";
 import {
+  Accordion,
   Badge,
   Button,
   Callout,
@@ -178,6 +179,13 @@ export function DesignGallery() {
           <Skeleton className="h-4 w-4/5" />
           <Skeleton className="h-11 w-full" rounded="control" />
         </div>
+      </Card>
+
+      <Card title={copy.faq.title}>
+        <Accordion
+          items={copy.faq.items.slice(0, 2)}
+          defaultOpenIds={[copy.faq.items[0].id]}
+        />
       </Card>
     </main>
   );

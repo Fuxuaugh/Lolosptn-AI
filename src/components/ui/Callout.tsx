@@ -11,8 +11,8 @@ export interface CalloutProps {
 }
 
 const TONE: Record<CalloutTone, string> = {
-  warning: "border-callout-border bg-callout-bg text-callout-fg",
-  info: "border-line bg-surface-muted text-fg",
+  warning: "border-callout-border bg-callout-bg text-callout-fg shadow-card",
+  info: "border-line bg-ai-header text-fg shadow-control",
 };
 
 function CalloutIcon({ tone }: { tone: CalloutTone }) {
@@ -22,7 +22,7 @@ function CalloutIcon({ tone }: { tone: CalloutTone }) {
       viewBox="0 0 20 20"
       fill="none"
       stroke="currentColor"
-      strokeWidth={2}
+      strokeWidth={2.2}
       strokeLinecap="round"
       strokeLinejoin="round"
       className="mt-0.5 size-5 shrink-0"
@@ -44,15 +44,26 @@ function CalloutIcon({ tone }: { tone: CalloutTone }) {
   );
 }
 
-export function Callout({ tone = "warning", title, children, className }: CalloutProps) {
+export function Callout({
+  tone = "warning",
+  title,
+  children,
+  className,
+}: CalloutProps) {
   return (
     <aside
       role="note"
-      className={cn("flex gap-3 rounded-card border p-card text-sm", TONE[tone], className)}
+      className={cn(
+        "flex gap-3 rounded-card border-2 p-card text-sm",
+        TONE[tone],
+        className
+      )}
     >
       <CalloutIcon tone={tone} />
       <div className="min-w-0 space-y-1 leading-relaxed">
-        {title && <p className="font-semibold">{title}</p>}
+        {title && (
+          <p className="font-display text-sm font-bold tracking-wide">{title}</p>
+        )}
         <div>{children}</div>
       </div>
     </aside>

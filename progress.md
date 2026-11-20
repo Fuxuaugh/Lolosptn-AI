@@ -114,3 +114,10 @@
 **Ringkasan Akhir MVP (Siap Konfigurasi & Deploy Vercel):**
 - Seluruh Milestone M1–M6 selesai sesuai PRD v1.2.1.
 - Sebelum deploy publik, perbarui: (1) environment variables di Vercel dari `.env.example` (`GEMINI_API_KEY`, `ACCESS_CODES`, `IP_HASH_SALT`, `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`), (2) gambar QRIS asli (`public/qris.png`), dan (3) tautan nyata `whatsappAdminUrl` & `feedbackFormUrl` di `src/config/app.config.ts`.
+
+### Pembaruan Pasca-MVP (2026-11-20) — Desain Soft Neo-Brutalism + Bento Grid & Mode Beta Gratis
+- **Gemini & Prompting:** migrasi ke `gemini-3.5-flash-lite` (`thinkingLevel: "low"`, `maxOutputTokens: 3072`, tanpa `temperature < 1.0`), perapian `systemInstruction` (sapaan "kamu", 3 paragraf teks polos tanpa Markdown, istilah status Bahasa Indonesia, konteks validasi TKA untuk SNBP).
+- **Mode Beta Gratis:** penambahan flag `paywall.isBetaMode: true` dan `feedbackFormUrl` nyata di `src/config/app.config.ts`.
+- **Prototipe FigCraft & Implementasi UI Soft Neo-Brutalism + Bento Grid:**
+  - Prototipe Desktop (1440px) & Mobile (390px) dibuat via MCP FigCraft dan disimpan di `design/lolosptn-prototype.figcraft`.
+  - Implementasi penuh ke Next.js melalui token CSS (`src/styles/tokens.css`, `src/app/globals.css`, font `Space Grotesk` + `Plus Jakarta Sans` di `src/app/layout.tsx`, `src/config/copy.ts`), upgrade seluruh primitif `src/components/ui/` + komponen baru `Accordion.tsx`, serta 5 bagian utama halaman (`Navbar`, `HeroSection`, `BentoBenefits`, `PredictionForm` + `HasilKartu` shareable + `UnlockedAnalysis` header `#EEF2FF` + `PaywallPreview` Mode Beta inline, dan `FaqSection` 5 pertanyaan + Disclaimer Zero-PII).

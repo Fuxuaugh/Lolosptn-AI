@@ -146,8 +146,14 @@ export function Select({
       .join(" ") || undefined;
 
   return (
-    <div ref={containerRef} className={cn("relative flex flex-col gap-1.5", className)}>
-      <label htmlFor={triggerId} className="text-sm font-medium text-fg">
+    <div
+      ref={containerRef}
+      className={cn("relative flex flex-col gap-1.5", className)}
+    >
+      <label
+        htmlFor={triggerId}
+        className="text-xs font-bold tracking-wide text-fg uppercase"
+      >
         <span>{label}</span>
         {required && (
           <span aria-hidden="true" className="ml-0.5 text-danger">
@@ -156,7 +162,7 @@ export function Select({
         )}
       </label>
 
-      <div className="relative flex items-center">
+      <div className="relative flex items-center gap-1.5">
         <button
           ref={triggerRef}
           id={triggerId}
@@ -177,17 +183,17 @@ export function Select({
             }
           }}
           className={cn(
-            "flex min-h-11 w-full items-center justify-between gap-2 rounded-control border bg-surface px-3.5 text-left text-base",
+            "flex min-h-12 w-full items-center justify-between gap-2 rounded-control border-2 bg-surface px-3.5 text-left text-sm font-semibold",
             "transition-colors motion-reduce:transition-none",
-            "disabled:cursor-not-allowed disabled:bg-surface-muted disabled:opacity-70",
-            error ? "border-danger" : "border-line-strong",
+            "disabled:cursor-not-allowed disabled:bg-surface-muted disabled:opacity-65",
+            error ? "border-danger" : "border-line",
             focusRing
           )}
         >
           <span
             className={cn(
               "min-w-0 truncate",
-              selectedOption ? "text-fg" : "text-fg-muted"
+              selectedOption ? "text-fg" : "font-normal text-fg-subtle"
             )}
           >
             {selectedOption ? selectedOption.label : placeholder}
@@ -197,11 +203,11 @@ export function Select({
             viewBox="0 0 20 20"
             fill="none"
             stroke="currentColor"
-            strokeWidth={2}
+            strokeWidth={2.2}
             strokeLinecap="round"
             strokeLinejoin="round"
             className={cn(
-              "size-4 shrink-0 text-fg-muted transition-transform motion-reduce:transition-none",
+              "size-4 shrink-0 text-fg transition-transform motion-reduce:transition-none",
               open && "rotate-180"
             )}
           >
@@ -215,7 +221,7 @@ export function Select({
             aria-label={copy.common.clearSelection}
             onClick={() => onChange("")}
             className={cn(
-              "ml-1 inline-flex size-11 shrink-0 items-center justify-center rounded-control border border-line text-fg-muted hover:bg-surface-muted hover:text-fg",
+              "inline-flex size-12 shrink-0 items-center justify-center rounded-control border-2 border-line bg-surface text-fg hover:bg-surface-muted",
               focusRing
             )}
           >
@@ -224,7 +230,7 @@ export function Select({
               viewBox="0 0 20 20"
               fill="none"
               stroke="currentColor"
-              strokeWidth={2}
+              strokeWidth={2.2}
               strokeLinecap="round"
               className="size-4"
             >
@@ -235,8 +241,8 @@ export function Select({
       </div>
 
       {open && (
-        <div className="absolute top-full right-0 left-0 z-40 mt-1.5 overflow-hidden rounded-control border border-line bg-surface shadow-popover">
-          <div className="border-b border-line p-2">
+        <div className="absolute top-full right-0 left-0 z-40 mt-1.5 overflow-hidden rounded-control border-2 border-line bg-surface shadow-popover">
+          <div className="border-b-2 border-line bg-surface-warm p-2">
             <input
               ref={searchRef}
               type="search"
@@ -249,7 +255,7 @@ export function Select({
               placeholder={searchPlaceholder}
               aria-label={searchPlaceholder}
               className={cn(
-                "min-h-11 w-full rounded-control border border-line bg-surface-muted px-3 text-sm text-fg placeholder:text-fg-muted",
+                "min-h-11 w-full rounded-lg border-2 border-line bg-surface px-3 text-sm font-medium text-fg placeholder:text-fg-subtle",
                 focusRing
               )}
             />
@@ -259,7 +265,7 @@ export function Select({
             id={listboxId}
             role="listbox"
             aria-label={label}
-            className="max-h-60 overflow-y-auto p-1"
+            className="max-h-60 overflow-y-auto p-1.5"
           >
             {filtered.length === 0 ? (
               <li className="px-3 py-3 text-center text-sm text-fg-muted">
@@ -276,13 +282,13 @@ export function Select({
                       onMouseEnter={() => setActiveIndex(idx)}
                       onClick={() => selectValue(opt.value)}
                       className={cn(
-                        "flex min-h-11 w-full flex-col items-start justify-center rounded-control px-3 py-2 text-left text-sm",
+                        "flex min-h-11 w-full flex-col items-start justify-center rounded-lg px-3 py-2 text-left text-sm",
                         "transition-colors motion-reduce:transition-none",
                         isSelected
-                          ? "bg-brand text-brand-fg font-semibold"
+                          ? "bg-brand font-bold text-brand-fg"
                           : isActive
-                            ? "bg-surface-muted text-fg"
-                            : "text-fg hover:bg-surface-muted"
+                            ? "bg-surface-muted font-medium text-fg"
+                            : "font-medium text-fg hover:bg-surface-muted"
                       )}
                     >
                       <span className="w-full truncate">{opt.label}</span>
@@ -308,12 +314,12 @@ export function Select({
       )}
 
       {error && (
-        <p id={errorId} role="alert" className="text-xs font-medium text-danger">
+        <p id={errorId} role="alert" className="text-xs font-bold text-danger">
           {error}
         </p>
       )}
       {helperText && (
-        <p id={helperId} className="text-xs text-fg-muted">
+        <p id={helperId} className="text-xs font-medium text-fg-muted">
           {helperText}
         </p>
       )}

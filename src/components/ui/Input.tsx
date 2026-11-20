@@ -24,18 +24,16 @@ export function Input({
   const helperId = `${inputId}-helper`;
   const errorId = `${inputId}-error`;
 
-  const describedBy = [
-    error ? errorId : null,
-    helperText ? helperId : null,
-  ]
-    .filter(Boolean)
-    .join(" ") || undefined;
+  const describedBy =
+    [error ? errorId : null, helperText ? helperId : null]
+      .filter(Boolean)
+      .join(" ") || undefined;
 
   return (
     <div className={cn("flex flex-col gap-1.5", containerClassName)}>
       <label
         htmlFor={inputId}
-        className="text-sm font-medium text-fg"
+        className="text-xs font-bold tracking-wide text-fg uppercase"
       >
         <span>{label}</span>
         {required && (
@@ -52,10 +50,10 @@ export function Input({
         aria-invalid={error ? true : undefined}
         aria-describedby={describedBy}
         className={cn(
-          "min-h-11 w-full rounded-control border bg-surface px-3.5 text-base text-fg placeholder:text-fg-muted",
+          "min-h-12 w-full rounded-control border-2 bg-surface px-3.5 text-base font-semibold text-fg placeholder:font-normal placeholder:text-fg-subtle",
           "transition-colors motion-reduce:transition-none",
           "disabled:cursor-not-allowed disabled:bg-surface-muted disabled:opacity-70",
-          error ? "border-danger" : "border-line-strong",
+          error ? "border-danger" : "border-line",
           focusRing,
           className
         )}
@@ -63,12 +61,12 @@ export function Input({
       />
 
       {error && (
-        <p id={errorId} role="alert" className="text-xs font-medium text-danger">
+        <p id={errorId} role="alert" className="text-xs font-bold text-danger">
           {error}
         </p>
       )}
       {helperText && (
-        <p id={helperId} className="text-xs text-fg-muted">
+        <p id={helperId} className="text-xs font-medium text-fg-muted">
           {helperText}
         </p>
       )}

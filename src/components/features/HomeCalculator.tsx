@@ -2,7 +2,7 @@
 
 import { Fragment, useEffect, useRef, useState } from "react";
 import type { AnalyzeResponseBody } from "@/app/api/analyze/route";
-import { APP_CONFIG, type Jalur } from "@/config/app.config";
+import { type Jalur } from "@/config/app.config";
 import { copy } from "@/config/copy";
 import { THEME, type ResultSection } from "@/config/theme";
 import {
@@ -18,9 +18,13 @@ import {
   toSnbtTarget,
   type PredictionResult,
 } from "@/lib/prediction";
-import { Button, Callout, Card, cn, focusRing } from "@/components/ui";
+import { Button, Callout, Card } from "@/components/ui";
+import { BentoBenefits } from "./BentoBenefits";
+import { FaqSection } from "./FaqSection";
 import { HasilKartu, type HasilPilihanItem } from "./HasilKartu";
+import { HeroSection } from "./HeroSection";
 import { MetodologiModal } from "./MetodologiModal";
+import { Navbar } from "./Navbar";
 import { PaywallModal } from "./PaywallModal";
 import { PaywallPreview } from "./PaywallPreview";
 import {
@@ -224,69 +228,91 @@ export function HomeCalculator() {
       if (unlockedData) {
         return <UnlockedAnalysis jalur={result.jalur} data={unlockedData} />;
       }
-      return <PaywallPreview onUnlockClick={handleOpenPaywall} />;
+      return (
+        <PaywallPreview
+          payload={result.payload}
+          onUnlockClick={handleOpenPaywall}
+          onBetaSuccess={handleUnlockSuccess}
+        />
+      );
     }
 
     return null;
   }
 
   return (
-    <main className="mx-auto flex w-full max-w-2xl flex-col gap-section px-4 py-6 sm:py-10">
-      {/* Hero section */}
-      <header className="space-y-3 text-center">
-        <p className="inline-block rounded-full border border-line bg-surface-muted px-3 py-1 text-xs font-semibold text-fg-muted">
-          {copy.hero.badgeFree}
-        </p>
-        <div className="space-y-2">
-          <p className="text-sm font-bold tracking-wide text-brand">
-            {copy.hero.brand}
-          </p>
-          <h1 className="text-2xl font-bold tracking-tight text-fg sm:text-3xl">
-            {copy.hero.title}
-          </h1>
-          <p className="mx-auto max-w-xl text-sm leading-relaxed text-fg-muted sm:text-base">
-            {copy.hero.subtitle}
-          </p>
-        </div>
-      </header>
+    <div className="flex min-h-screen flex-col">
+      {/* 1. Navbar Ringkas */}
+      <Navbar />
 
-      {/* Form F1 */}
-      <PredictionForm onSubmit={handleSubmit} onReset={handleReset} />
+      <main className="flex-1">
+        {/* 2. Split Hero */}
+        <HeroSection />
 
-      {/* Hasil mengikuti urutan THEME.resultLayoutOrder */}
-      {result && (
-        <div
-          ref={resultSectionRef}
-          className="flex flex-col gap-section scroll-mt-4"
+        {/* 3. Bento Grid 3 Kotak */}
+        <BentoBenefits />
+
+        {/* 4. Kalkulator & Kartu Hasil */}
+        <section
+          id="kalkulator"
+          className="mx-auto w-full max-w-6xl scroll-mt-20 px-4 py-8 sm:px-6 sm:py-12 lg:px-8"
         >
-          {THEME.resultLayoutOrder.map((section) => (
-            <Fragment key={section}>{renderResultSection(section)}</Fragment>
-          ))}
-        </div>
-      )}
+          <div className="mb-6 space-y-2 sm:mb-8">
+            <span className="inline-block rounded-lg border-2 border-line bg-accent-yellow px-3 py-1 font-display text-xs font-bold tracking-wider text-accent-yellow-fg shadow-pill">
+              {copy.calcSection.eyebrow}
+            </span>
+            <h2 className="font-display text-2xl font-bold tracking-tight text-fg sm:text-3xl">
+              {copy.calcSection.title}
+            </h2>
+            <p className="max-w-2xl text-sm font-medium text-fg-muted sm:text-base">
+              {copy.calcSection.subtitle}
+            </p>
+          </div>
 
-      {/* F7: Laporan Hasil Seleksi Anonim (Google Form) */}
-      <footer className="pt-2">
-        <Card
-          as="div"
-          variant="flat"
-          title={copy.feedback.title}
-          description={copy.feedback.body}
-        >
-          <a
-            href={APP_CONFIG.externalLinks.feedbackFormUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(
-              "inline-flex min-h-11 items-center justify-center rounded-control border border-line-strong bg-surface px-4 text-sm font-semibold text-fg hover:bg-surface-muted",
-              "transition-colors motion-reduce:transition-none",
-              focusRing
-            )}
-          >
-            {copy.feedback.cta}
-          </a>
-        </Card>
-      </footer>
+          <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-12 lg:gap-8">
+            {/* Kolom Kiri: Form F1 */}
+            <div className="lg:col-span-5">
+              <PredictionForm onSubmit={handleSubmit} onReset={handleReset} />
+            </div>
+
+            {/* Kolom Kanan: Hasil sesuai THEME.resultLayoutOrder */}
+            <div
+              ref={resultSectionRef}
+              className="flex scroll-mt-24 flex-col gap-6 lg:col-span-7"
+            >
+              {result ? (
+                THEME.resultLayoutOrder.map((section) => (
+                  <Fragment key={section}>
+                    {renderResultSection(section)}
+                  </Fragment>
+                ))
+              ) : (
+                <Card
+                  as="div"
+                  variant="flat"
+                  title={copy.calcSection.emptyStateTitle}
+                  description={copy.calcSection.emptyStateBody}
+                >
+                  <div className="flex flex-wrap gap-2">
+                    <span className="rounded-full border-2 border-line bg-status-safe-soft px-3 py-1 text-xs font-bold text-status-safe-fg">
+                      {copy.hasil.legend.safe}
+                    </span>
+                    <span className="rounded-full border-2 border-line bg-status-target-soft px-3 py-1 text-xs font-bold text-status-target-fg">
+                      {copy.hasil.legend.target}
+                    </span>
+                    <span className="rounded-full border-2 border-line bg-status-reach-soft px-3 py-1 text-xs font-bold text-status-reach-fg">
+                      {copy.hasil.legend.reach}
+                    </span>
+                  </div>
+                </Card>
+              )}
+            </div>
+          </div>
+        </section>
+
+        {/* 5. FAQ Accordion + Disclaimer + F7 + Footer */}
+        <FaqSection onOpenMetodologi={() => setMetodologiOpen(true)} />
+      </main>
 
       <MetodologiModal
         open={metodologiOpen}
@@ -301,6 +327,6 @@ export function HomeCalculator() {
           onSuccess={handleUnlockSuccess}
         />
       )}
-    </main>
+    </div>
   );
 }

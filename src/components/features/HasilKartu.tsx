@@ -1,10 +1,10 @@
 "use client";
 
-import type { Jalur } from "@/config/app.config";
+import type { Jalur, StatusKategori } from "@/config/app.config";
 import { copy } from "@/config/copy";
 import type { ProdiDetail, ProdiIndexItem } from "@/lib/dataset";
 import type { PredictionResult } from "@/lib/prediction";
-import { Badge, Card, Skeleton } from "@/components/ui";
+import { Badge, Card, Skeleton, cn } from "@/components/ui";
 
 export interface HasilPilihanItem {
   slot: 1 | 2;
@@ -19,7 +19,20 @@ export interface HasilKartuProps {
   items: readonly HasilPilihanItem[];
 }
 
+const BAR_FILL: Record<StatusKategori, string> = {
+  safe: "bg-status-safe-soft",
+  target: "bg-status-target-soft",
+  reach: "bg-status-reach-soft",
+};
+
 function formatPercent(value: number): string {
+  return value.toLocaleString("id-ID", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 2,
+  });
+}
+
+function formatRoundedPercent(value: number): string {
   return String(Math.round(value));
 }
 
@@ -33,86 +46,134 @@ export function HasilKartu({ jalur, items }: HasilKartuProps) {
     jalur === "snbt" ? copy.hasil.skorKamu : copy.hasil.raporKamu;
   const refScoreLabel =
     jalur === "snbt" ? copy.hasil.skorAcuan : copy.hasil.raporAcuan;
+  const jalurUpper = jalur.toUpperCase();
+  const primaryScore = items[0]?.prediction.userScore;
 
   return (
-    <section aria-label={copy.hasil.title} className="space-y-4">
-      <h2 className="text-lg font-bold text-fg">{copy.hasil.title}</h2>
+    <Card
+      as="section"
+      aria-label={copy.hasil.title}
+      title={
+        <span>
+          {copy.hasil.title} • {jalurUpper}
+          {primaryScore !== undefined ? ` (${primaryScore})` : ""}
+        </span>
+      }
+      actions={
+        <span className="inline-block rounded-lg border-2 border-line bg-accent-yellow px-2.5 py-1 font-display text-[11px] font-bold text-accent-yellow-fg">
+          {copy.hasil.shareableTag}
+        </span>
+      }
+    >
+      <div className="space-y-4">
+        <div
+          className={cn(
+            "grid grid-cols-1 gap-4",
+            items.length > 1 && "sm:grid-cols-2"
+          )}
+        >
+          {items.map(({ slot, prodi, detail, detailLoading, prediction }) => {
+            const jalurDetail = detail ? detail[jalur] : null;
+            const kuotaTerbaru =
+              jalurDetail && jalurDetail.tersedia
+                ? jalurDetail.kuota_terbaru
+                : null;
+            const fillPct = Math.max(4, Math.min(100, prediction.probability));
 
-      <div className="flex flex-col gap-4">
-        {items.map(({ slot, prodi, detail, detailLoading, prediction }) => {
-          const jalurDetail = detail ? detail[jalur] : null;
-          const kuotaTerbaru =
-            jalurDetail && jalurDetail.tersedia
-              ? jalurDetail.kuota_terbaru
-              : null;
+            return (
+              <article
+                key={`${slot}-${prodi.kode_prodi}`}
+                className="flex flex-col justify-between gap-3.5 rounded-control border-2 border-line bg-surface-warm p-4"
+              >
+                <div className="space-y-2.5">
+                  {/* Top Bar: Slot & Status Badge */}
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="font-display text-[11px] font-bold tracking-wider text-fg-subtle">
+                      {copy.hasil.pilihanBadge(slot)}
+                    </span>
+                    <Badge status={prediction.status} size="sm" />
+                  </div>
 
-          return (
-            <Card
-              key={`${slot}-${prodi.kode_prodi}`}
-              as="article"
-              title={
-                <span className="flex flex-wrap items-center gap-2">
-                  <span className="rounded-control bg-surface-muted px-2 py-0.5 text-xs font-semibold text-fg-muted">
-                    {copy.hasil.pilihanBadge(slot)}
-                  </span>
-                  <span>
-                    {prodi.nama} ({prodi.jenjang})
-                  </span>
-                </span>
-              }
-              description={prodi.nama_ptn}
-              actions={<Badge status={prediction.status} showEnglish />}
-            >
-              <div className="space-y-4">
-                {/* Probabilitas utama + rentang sensitivitas */}
-                <div className="rounded-control bg-surface-muted p-4">
-                  <p className="text-xs font-medium text-fg-muted">
-                    {copy.hasil.peluangLabel}
-                  </p>
-                  <p className="mt-1 text-4xl font-bold tracking-tight text-fg">
-                    {copy.hasil.peluang(formatPercent(prediction.probability))}
-                  </p>
-                  <p className="mt-1 text-sm font-medium text-fg">
-                    {copy.hasil.rentangSensitivitas(
-                      formatPercent(prediction.pLow),
-                      formatPercent(prediction.pHigh)
-                    )}
-                  </p>
-                  <p className="mt-1.5 text-xs leading-relaxed text-fg-muted">
-                    {copy.hasil.rentangSensitivitasNote}
-                  </p>
-                  {prediction.isUncertain && (
-                    <p className="mt-1.5 text-xs font-medium text-callout-fg">
-                      {copy.hasil.uncertainNote}
+                  {/* Nama Prodi & PTN */}
+                  <div>
+                    <h4 className="text-base leading-snug font-bold text-fg">
+                      {prodi.nama} ({prodi.jenjang})
+                    </h4>
+                    <p className="mt-0.5 text-xs font-medium text-fg-muted">
+                      {prodi.nama_ptn}
                     </p>
-                  )}
+                  </div>
+
+                  {/* Angka Probabilitas Besar + Progress Bar 2px */}
+                  <div className="space-y-2 pt-1">
+                    <p className="font-display text-4xl leading-none font-bold tracking-tight text-fg">
+                      {copy.hasil.peluang(
+                        formatPercent(prediction.probability)
+                      )}
+                    </p>
+
+                    <div
+                      role="progressbar"
+                      aria-label={copy.hasil.peluangLabel}
+                      aria-valuenow={Math.round(prediction.probability)}
+                      aria-valuemin={0}
+                      aria-valuemax={100}
+                      className="h-3.5 w-full overflow-hidden rounded-full border-2 border-line bg-surface"
+                    >
+                      <div
+                        className={cn(
+                          "h-full border-r-2 border-line transition-all motion-reduce:transition-none",
+                          BAR_FILL[prediction.status]
+                        )}
+                        style={{ width: `${fillPct}%` }}
+                      />
+                    </div>
+
+                    <p className="text-xs font-semibold text-fg">
+                      {copy.hasil.rentangSensitivitas(
+                        formatRoundedPercent(prediction.pLow),
+                        formatRoundedPercent(prediction.pHigh)
+                      )}
+                    </p>
+                    <p className="text-[11px] leading-relaxed text-fg-muted">
+                      {copy.hasil.rentangSensitivitasNote}
+                    </p>
+                    {prediction.isUncertain && (
+                      <p className="rounded-lg border border-line bg-callout-bg px-2.5 py-1.5 text-[11px] font-semibold text-callout-fg">
+                        {copy.hasil.uncertainNote}
+                      </p>
+                    )}
+                  </div>
                 </div>
 
-                {/* Ringkasan angka skor & info prodi */}
-                <dl className="grid grid-cols-2 gap-3 text-sm">
-                  <div className="rounded-control border border-line p-3">
-                    <dt className="text-xs text-fg-muted">{userScoreLabel}</dt>
-                    <dd className="mt-0.5 font-semibold text-fg">
+                {/* Meta Grid: Skor, Acuan, Kuota, Portofolio */}
+                <dl className="grid grid-cols-2 gap-2 border-t-2 border-line-soft pt-3 text-xs">
+                  <div>
+                    <dt className="text-[11px] text-fg-subtle">
+                      {userScoreLabel}
+                    </dt>
+                    <dd className="font-display font-bold text-fg">
                       {prediction.userScore}
                     </dd>
                   </div>
-                  <div className="rounded-control border border-line p-3">
-                    <dt className="text-xs text-fg-muted">{refScoreLabel}</dt>
-                    <dd className="mt-0.5 font-semibold text-fg">
+                  <div>
+                    <dt className="text-[11px] text-fg-subtle">
+                      {refScoreLabel}
+                    </dt>
+                    <dd className="font-display font-bold text-fg">
                       {prediction.referenceScore}{" "}
-                      <span className="text-xs font-normal text-fg-muted">
-                        ({copy.hasil.selisih}{" "}
-                        {formatSignedDelta(prediction.delta)})
+                      <span className="font-sans text-[11px] font-medium text-fg-muted">
+                        ({formatSignedDelta(prediction.delta)})
                       </span>
                     </dd>
                   </div>
-                  <div className="rounded-control border border-line p-3">
-                    <dt className="text-xs text-fg-muted">
+                  <div>
+                    <dt className="text-[11px] text-fg-subtle">
                       {copy.hasil.kuotaTerbaru}
                     </dt>
-                    <dd className="mt-0.5 font-semibold text-fg">
+                    <dd className="font-bold text-fg">
                       {detailLoading ? (
-                        <Skeleton className="mt-1 h-4 w-16" />
+                        <Skeleton className="mt-1 h-3.5 w-14" />
                       ) : kuotaTerbaru !== null ? (
                         kuotaTerbaru.toLocaleString("id-ID")
                       ) : (
@@ -120,24 +181,37 @@ export function HasilKartu({ jalur, items }: HasilKartuProps) {
                       )}
                     </dd>
                   </div>
-                  <div className="rounded-control border border-line p-3">
-                    <dt className="text-xs text-fg-muted">
+                  <div>
+                    <dt className="text-[11px] text-fg-subtle">
                       {copy.hasil.portofolio}
                     </dt>
-                    <dd className="mt-0.5 font-semibold text-fg">
+                    <dd className="truncate font-bold text-fg">
                       {detailLoading ? (
-                        <Skeleton className="mt-1 h-4 w-24" />
+                        <Skeleton className="mt-1 h-3.5 w-20" />
                       ) : (
                         detail?.nama_portofolio ?? copy.hasil.kuotaUnavailable
                       )}
                     </dd>
                   </div>
                 </dl>
-              </div>
-            </Card>
-          );
-        })}
+              </article>
+            );
+          })}
+        </div>
+
+        {/* Legenda 3 Status Warna */}
+        <div className="flex flex-wrap items-center gap-2 pt-1">
+          <span className="rounded-full border-2 border-line bg-status-safe-soft px-2.5 py-0.5 text-[11px] font-bold text-status-safe-fg">
+            {copy.hasil.legend.safe}
+          </span>
+          <span className="rounded-full border-2 border-line bg-status-target-soft px-2.5 py-0.5 text-[11px] font-bold text-status-target-fg">
+            {copy.hasil.legend.target}
+          </span>
+          <span className="rounded-full border-2 border-line bg-status-reach-soft px-2.5 py-0.5 text-[11px] font-bold text-status-reach-fg">
+            {copy.hasil.legend.reach}
+          </span>
+        </div>
       </div>
-    </section>
+    </Card>
   );
 }

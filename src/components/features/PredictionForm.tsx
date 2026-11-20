@@ -68,13 +68,13 @@ interface FormErrors {
 }
 
 const JALUR_TABS: readonly TabOption<Jalur>[] = [
-  { value: "snbt", label: copy.form.jalur.snbt },
   { value: "snbp", label: copy.form.jalur.snbp },
+  { value: "snbt", label: copy.form.jalur.snbt },
 ];
 
 const SNBT_MODE_TABS: readonly TabOption<SnbtInputMode>[] = [
-  { value: "subtests", label: copy.form.snbt.modeSubtests },
   { value: "average", label: copy.form.snbt.modeAverage },
+  { value: "subtests", label: copy.form.snbt.modeSubtests },
 ];
 
 const AKREDITASI_OPTIONS: readonly TabOption<Akreditasi>[] = [
@@ -129,7 +129,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
   const [prodi2, setProdi2] = useState<string>("");
 
   // SNBT state
-  const [snbtMode, setSnbtMode] = useState<SnbtInputMode>("subtests");
+  const [snbtMode, setSnbtMode] = useState<SnbtInputMode>("average");
   const [snbtAverage, setSnbtAverage] = useState<string>("");
   const [snbtSubtests, setSnbtSubtests] = useState<string[]>(INITIAL_SUBTESTS);
 
@@ -341,9 +341,11 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
   return (
     <Card title={copy.form.title}>
       <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
-        {/* Tab switcher SNBT / SNBP */}
+        {/* Tab switcher SNBP / SNBT */}
         <div className="space-y-1.5">
-          <p className="text-sm font-medium text-fg">{copy.form.jalurLabel}</p>
+          <p className="text-xs font-bold tracking-wide text-fg uppercase">
+            {copy.form.jalurLabel}
+          </p>
           <Tabs
             options={JALUR_TABS}
             value={jalur}
@@ -354,8 +356,8 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
 
         {/* Cek eligibilitas SNBP */}
         {jalur === "snbp" && (
-          <div className="space-y-2.5 rounded-control border border-line bg-surface-muted p-3.5">
-            <p className="text-sm font-medium text-fg">
+          <div className="space-y-2.5 rounded-control border-2 border-line bg-surface-warm p-3.5">
+            <p className="text-sm font-bold text-fg">
               {copy.form.snbp.eligibility.question}
             </p>
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
@@ -367,11 +369,11 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                   setErrors((prev) => ({ ...prev, eligibility: undefined }));
                 }}
                 className={cn(
-                  "min-h-11 rounded-control border px-3 text-sm font-semibold transition-colors motion-reduce:transition-none",
+                  "min-h-11 rounded-control border-2 border-line px-3 text-sm font-bold transition-all motion-reduce:transition-none",
                   focusRing,
                   eligibility === "yes"
-                    ? "border-brand bg-brand text-brand-fg"
-                    : "border-line-strong bg-surface text-fg hover:bg-surface-muted"
+                    ? "bg-brand text-brand-fg shadow-pill"
+                    : "bg-surface text-fg hover:bg-surface-muted"
                 )}
               >
                 {copy.form.snbp.eligibility.yes}
@@ -384,18 +386,18 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                   setErrors((prev) => ({ ...prev, eligibility: undefined }));
                 }}
                 className={cn(
-                  "min-h-11 rounded-control border px-3 text-sm font-semibold transition-colors motion-reduce:transition-none",
+                  "min-h-11 rounded-control border-2 border-line px-3 text-sm font-bold transition-all motion-reduce:transition-none",
                   focusRing,
                   eligibility === "no"
-                    ? "border-brand bg-brand text-brand-fg"
-                    : "border-line-strong bg-surface text-fg hover:bg-surface-muted"
+                    ? "bg-brand text-brand-fg shadow-pill"
+                    : "bg-surface text-fg hover:bg-surface-muted"
                 )}
               >
                 {copy.form.snbp.eligibility.no}
               </button>
             </div>
             {errors.eligibility && (
-              <p role="alert" className="text-xs font-medium text-danger">
+              <p role="alert" className="text-xs font-bold text-danger">
                 {errors.eligibility}
               </p>
             )}
@@ -410,7 +412,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={cn(
-                    "mt-2 inline-flex min-h-11 items-center font-semibold underline",
+                    "mt-2 inline-flex min-h-11 items-center font-bold underline",
                     focusRing
                   )}
                 >
@@ -422,8 +424,8 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
         )}
 
         {/* Pilihan 1 (wajib) */}
-        <fieldset className="space-y-3 rounded-control border border-line p-3.5">
-          <legend className="px-1 text-sm font-semibold text-fg">
+        <fieldset className="space-y-3 rounded-control border-2 border-line bg-surface-warm p-3.5">
+          <legend className="rounded-md border-2 border-line bg-surface px-2 py-0.5 font-display text-xs font-bold tracking-wide text-brand uppercase">
             {copy.form.pilihan1} ({copy.common.required})
           </legend>
           <Select
@@ -462,7 +464,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
 
           {jalur === "snbp" && (
             <div className="space-y-1.5 pt-1">
-              <p className="text-sm font-medium text-fg">
+              <p className="text-xs font-bold tracking-wide text-fg uppercase">
                 {copy.form.snbp.alumniLabel(copy.form.pilihan1)}
               </p>
               <Tabs
@@ -471,7 +473,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                 onChange={setAlumni1}
                 ariaLabel={copy.form.snbp.alumniLabel(copy.form.pilihan1)}
               />
-              <p className="text-xs text-fg-muted">
+              <p className="text-xs font-medium text-fg-muted">
                 {copy.form.snbp.alumniHelper}
               </p>
             </div>
@@ -479,11 +481,11 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
         </fieldset>
 
         {/* Pilihan 2 (opsional) */}
-        <fieldset className="space-y-3 rounded-control border border-line p-3.5">
-          <legend className="px-1 text-sm font-semibold text-fg">
+        <fieldset className="space-y-3 rounded-control border-2 border-line bg-surface-warm p-3.5">
+          <legend className="rounded-md border-2 border-line bg-surface px-2 py-0.5 font-display text-xs font-bold tracking-wide text-fg-muted uppercase">
             {copy.form.pilihan2} ({copy.common.optional})
           </legend>
-          <p className="text-xs text-fg-muted">
+          <p className="text-xs font-medium text-fg-muted">
             {copy.form.pilihan2OptionalHint}
           </p>
           <Select
@@ -517,7 +519,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
 
           {jalur === "snbp" && ptn2 && (
             <div className="space-y-1.5 pt-1">
-              <p className="text-sm font-medium text-fg">
+              <p className="text-xs font-bold tracking-wide text-fg uppercase">
                 {copy.form.snbp.alumniLabel(copy.form.pilihan2)}
               </p>
               <Tabs
@@ -533,7 +535,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
         {/* Input Nilai SNBT */}
         {jalur === "snbt" ? (
           <div className="space-y-3.5">
-            <p className="text-sm font-semibold text-fg">
+            <p className="font-display text-sm font-bold tracking-wide text-fg uppercase">
               {copy.form.snbt.sectionTitle}
             </p>
             <Tabs
@@ -558,6 +560,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                 step="0.1"
                 min={APP_CONFIG.inputBounds.snbt.min}
                 max={APP_CONFIG.inputBounds.snbt.max}
+                placeholder="618"
                 value={snbtAverage}
                 onChange={(e) => {
                   setSnbtAverage(e.target.value);
@@ -565,11 +568,12 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                 }}
                 helperText={copy.form.snbt.averageHelper}
                 error={errors.snbtAverage}
+                className="font-display text-xl font-bold"
                 required
               />
             ) : (
               <div className="space-y-3">
-                <p className="text-xs text-fg-muted">
+                <p className="text-xs font-medium text-fg-muted">
                   {copy.form.snbt.subtestsHelper}
                 </p>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -602,7 +606,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                   ))}
                 </div>
                 {subtestAveragePreview !== null && (
-                  <p className="rounded-control bg-surface-muted px-3 py-2 text-sm font-semibold text-fg">
+                  <p className="rounded-control border-2 border-line bg-ai-header px-3.5 py-2.5 font-display text-sm font-bold text-fg">
                     {copy.form.snbt.averagePreview(
                       String(subtestAveragePreview)
                     )}
@@ -610,11 +614,15 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                 )}
               </div>
             )}
+
+            <p className="text-xs font-medium text-fg-muted">
+              {copy.form.snbt.switchSnbpHint}
+            </p>
           </div>
         ) : (
           /* Input Nilai SNBP */
           <div className="space-y-3.5">
-            <p className="text-sm font-semibold text-fg">
+            <p className="font-display text-sm font-bold tracking-wide text-fg uppercase">
               {copy.form.snbp.sectionTitle}
             </p>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -625,6 +633,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                 step="0.01"
                 min={APP_CONFIG.inputBounds.snbp.min}
                 max={APP_CONFIG.inputBounds.snbp.max}
+                placeholder="89.5"
                 value={rapor}
                 onChange={(e) => {
                   setRapor(e.target.value);
@@ -641,6 +650,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                 step="0.01"
                 min={APP_CONFIG.inputBounds.snbp.min}
                 max={APP_CONFIG.inputBounds.snbp.max}
+                placeholder="90"
                 value={mapel}
                 onChange={(e) => {
                   setMapel(e.target.value);
@@ -653,7 +663,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
             </div>
 
             <div className="space-y-1.5">
-              <p className="text-sm font-medium text-fg">
+              <p className="text-xs font-bold tracking-wide text-fg uppercase">
                 {copy.form.snbp.akreditasiLabel}
               </p>
               <Tabs
@@ -674,7 +684,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
         )}
 
         {/* Aksi Submit & Reset */}
-        <div className="flex flex-col gap-2 pt-1 sm:flex-row">
+        <div className="flex flex-col gap-2.5 pt-1 sm:flex-row">
           <Button type="submit" size="lg" fullWidth>
             {copy.form.submit}
           </Button>

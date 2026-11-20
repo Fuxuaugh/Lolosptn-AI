@@ -68,12 +68,15 @@ export function Modal({
         aria-labelledby={titleId}
         tabIndex={-1}
         className={cn(
-          "flex max-h-[90dvh] w-full max-w-lg flex-col rounded-t-card border border-line bg-surface shadow-popover outline-none sm:rounded-card",
+          "flex max-h-[90dvh] w-full max-w-lg flex-col rounded-t-card border-2 border-line bg-surface shadow-popover outline-none sm:rounded-card",
           className
         )}
       >
-        <div className="flex items-center justify-between gap-3 border-b border-line px-card py-3">
-          <h2 id={titleId} className="text-base font-semibold text-fg">
+        <div className="flex items-center justify-between gap-3 border-b-2 border-line bg-surface-warm px-card py-3.5 sm:rounded-t-[14px]">
+          <h2
+            id={titleId}
+            className="font-display text-lg font-bold tracking-tight text-fg"
+          >
             {title}
           </h2>
           <button
@@ -81,7 +84,7 @@ export function Modal({
             onClick={onClose}
             aria-label={closeLabel}
             className={cn(
-              "inline-flex size-11 shrink-0 items-center justify-center rounded-control text-fg-muted hover:bg-surface-muted hover:text-fg",
+              "inline-flex size-11 shrink-0 items-center justify-center rounded-control border-2 border-line bg-surface text-fg hover:bg-surface-muted",
               "transition-colors motion-reduce:transition-none",
               focusRing
             )}
@@ -91,7 +94,7 @@ export function Modal({
               viewBox="0 0 20 20"
               fill="none"
               stroke="currentColor"
-              strokeWidth={2}
+              strokeWidth={2.2}
               strokeLinecap="round"
               className="size-5"
             >
@@ -103,7 +106,7 @@ export function Modal({
         <div className="overflow-y-auto p-card text-sm text-fg">{children}</div>
 
         {footer && (
-          <div className="flex items-center justify-end gap-2 border-t border-line px-card py-3">
+          <div className="flex items-center justify-end gap-2 border-t-2 border-line px-card py-3">
             {footer}
           </div>
         )}

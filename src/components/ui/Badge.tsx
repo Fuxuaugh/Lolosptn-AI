@@ -13,9 +13,9 @@ export interface BadgeProps {
 }
 
 const STYLE: Record<StatusKategori, string> = {
-  safe: "bg-status-safe-soft text-status-safe-fg border-status-safe",
-  target: "bg-status-target-soft text-status-target-fg border-status-target",
-  reach: "bg-status-reach-soft text-status-reach-fg border-status-reach",
+  safe: "bg-status-safe-soft text-status-safe-fg border-line",
+  target: "bg-status-target-soft text-status-target-fg border-line",
+  reach: "bg-status-reach-soft text-status-reach-fg border-line",
 };
 
 /** Ikon berbeda per status: status tidak hanya dibedakan warna. */
@@ -25,10 +25,10 @@ function StatusIcon({ status }: { status: StatusKategori }) {
     viewBox: "0 0 20 20",
     fill: "none",
     stroke: "currentColor",
-    strokeWidth: 2,
+    strokeWidth: 2.2,
     strokeLinecap: "round" as const,
     strokeLinejoin: "round" as const,
-    className: "size-4 shrink-0",
+    className: "size-3.5 shrink-0",
   };
 
   if (status === "safe") {
@@ -68,8 +68,8 @@ export function Badge({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-full border font-semibold",
-        size === "sm" ? "px-2 py-0.5 text-xs" : "px-3 py-1 text-sm",
+        "inline-flex items-center gap-1.5 rounded-full border-2 font-display font-bold tracking-wide uppercase",
+        size === "sm" ? "px-2.5 py-0.5 text-xs" : "px-3 py-1 text-xs",
         STYLE[status],
         className
       )}
@@ -77,7 +77,9 @@ export function Badge({
       <StatusIcon status={status} />
       <span>{text}</span>
       {showEnglish && (
-        <span className="font-normal opacity-90">({copy.status[status].english})</span>
+        <span className="font-sans font-semibold normal-case opacity-90">
+          ({copy.status[status].english})
+        </span>
       )}
     </span>
   );
