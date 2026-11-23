@@ -1,11 +1,11 @@
 "use client";
 
-import { Fragment, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import type { AnalyzeResponseBody } from "@/app/api/analyze/route";
+import type { RecommendResponseBody } from "@/app/api/recommend/route";
 import { APP_CONFIG, type Jalur } from "@/config/app.config";
 import { copy } from "@/config/copy";
-import { THEME, type ResultSection } from "@/config/theme";
 import {
   fetchPtnDetail,
   type ProdiDetail,
@@ -23,11 +23,14 @@ import {
   Button,
   Callout,
   Card,
+  Tabs,
   cn,
   focusRing,
   tactileControlButton,
+  type TabOption,
 } from "@/components/ui";
 import { Footer } from "./Footer";
+import { FreeInsightsCard } from "./FreeInsightsCard";
 import { HasilKartu, type HasilPilihanItem } from "./HasilKartu";
 import { MetodologiModal } from "./MetodologiModal";
 import { Navbar } from "./Navbar";
@@ -53,6 +56,13 @@ interface CalculationState {
   entries: ComputedEntry[];
 }
 
+type DetailTabKey = "insights" | "tren";
+
+const DETAIL_TABS: readonly TabOption<DetailTabKey>[] = [
+  { value: "insights", label: copy.calcSection.detailTabs.insights },
+  { value: "tren", label: copy.calcSection.detailTabs.tren },
+];
+
 export function HomeCalculator() {
   const [result, setResult] = useState<CalculationState | null>(null);
   const [detailsByKode, setDetailsByKode] = useState<
@@ -60,14 +70,69 @@ export function HomeCalculator() {
   >({});
   const [detailsLoading, setDetailsLoading] = useState(false);
   const [metodologiOpen, setMetodologiOpen] = useState(false);
+  const [activeDetailTab, setActiveDetailTab] =
+    useState<DetailTabKey>("insights");
 
-  // State paywall & hasil F5/F6 hanya hidup di memori halaman (React state)
+  // State hasil gratis (/api/recommend: 3 alternatif + ringkasan otomatis)
+  const [freeInsights, setFreeInsights] =
+    useState<RecommendResponseBody | null>(null);
+  const [freeInsightsLoading, setFreeInsightsLoading] = useState(false);
+  const [freeInsightsError, setFreeInsightsError] = useState(false);
+  const [insightsRetrySeq, setInsightsRetrySeq] = useState(0);
+
+  // State paywall & hasil F6 hanya hidup di memori halaman (React state)
   const [paywallOpen, setPaywallOpen] = useState(false);
   const [unlockedData, setUnlockedData] = useState<AnalyzeResponseBody | null>(
     null
   );
 
   const resultSectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!result) return;
+
+    const controller = new AbortController();
+    const payload = result.payload;
+    const body =
+      payload.jalur === "snbt"
+        ? {
+            jalur: "snbt" as const,
+            pilihan1Kode: payload.pilihan1.kode_prodi,
+            pilihan2Kode: payload.pilihan2?.kode_prodi ?? null,
+            snbtInput: payload.snbtInput,
+          }
+        : {
+            jalur: "snbp" as const,
+            pilihan1Kode: payload.pilihan1.kode_prodi,
+            pilihan2Kode: payload.pilihan2?.kode_prodi ?? null,
+            snbpProfile: payload.snbpProfile,
+            pilihan1HasAlumni: payload.pilihan1HasAlumni,
+            pilihan2HasAlumni: payload.pilihan2HasAlumni,
+          };
+
+    fetch("/api/recommend", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    })
+      .then(async (res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return (await res.json()) as RecommendResponseBody;
+      })
+      .then((data) => {
+        setFreeInsights(data);
+        setFreeInsightsError(false);
+        setFreeInsightsLoading(false);
+      })
+      .catch((err) => {
+        if (err instanceof DOMException && err.name === "AbortError") return;
+        setFreeInsightsError(true);
+        setFreeInsightsLoading(false);
+      });
+
+    return () => controller.abort();
+  }, [result, insightsRetrySeq]);
 
   useEffect(() => {
     if (!result) return;
@@ -151,10 +216,14 @@ export function HomeCalculator() {
 
     if (entries.length === 0) return;
 
-    // Reset hasil F5/F6 lama jika pengguna mengubah input & menghitung ulang
+    // Reset hasil lama jika pengguna mengubah input & menghitung ulang
     setUnlockedData(null);
     setPaywallOpen(false);
+    setFreeInsights(null);
+    setFreeInsightsError(false);
+    setFreeInsightsLoading(true);
     setDetailsLoading(true);
+    setActiveDetailTab("insights");
     setResult((prev) => ({
       calcSeq: (prev?.calcSeq ?? 0) + 1,
       jalur: payload.jalur,
@@ -180,8 +249,17 @@ export function HomeCalculator() {
     setResult(null);
     setDetailsByKode({});
     setDetailsLoading(false);
+    setFreeInsights(null);
+    setFreeInsightsLoading(false);
+    setFreeInsightsError(false);
     setUnlockedData(null);
     setPaywallOpen(false);
+  }
+
+  function handleRetryInsights() {
+    setFreeInsightsError(false);
+    setFreeInsightsLoading(true);
+    setInsightsRetrySeq((seq) => seq + 1);
   }
 
   function handleOpenPaywall() {
@@ -194,83 +272,32 @@ export function HomeCalculator() {
     setUnlockedData(data);
   }
 
-  function renderResultSection(section: ResultSection) {
-    if (!result) return null;
-
-    if (section === "hasil") {
-      const hasilItems: HasilPilihanItem[] = result.entries.map((entry) => ({
+  const hasilItems: HasilPilihanItem[] = result
+    ? result.entries.map((entry) => ({
         slot: entry.slot,
         prodi: entry.prodi,
         detail: detailsByKode[entry.prodi.kode_prodi] ?? null,
         detailLoading: detailsLoading,
         prediction: entry.prediction,
-      }));
-      return (
-        <HasilKartu
-          jalur={result.jalur}
-          items={hasilItems}
-          animationKey={result.calcSeq}
-        />
-      );
-    }
+      }))
+    : [];
 
-    if (section === "tren") {
-      const trenItems: TrenTargetItem[] = result.entries.map((entry) => ({
+  const trenItems: TrenTargetItem[] = result
+    ? result.entries.map((entry) => ({
         slot: entry.slot,
         prodi: entry.prodi,
-      }));
-      return <TrenChart jalur={result.jalur} items={trenItems} />;
-    }
-
-    if (section === "callout") {
-      return (
-        <Callout tone="warning" title={copy.disclaimer.title}>
-          <p>{copy.disclaimer.body}</p>
-          <p className="mt-2">
-            <strong>{copy.disclaimer.privacyTitle}:</strong>{" "}
-            {copy.disclaimer.privacy}
-          </p>
-          <div className="mt-3">
-            <Button
-              variant="secondary"
-              onClick={() => setMetodologiOpen(true)}
-            >
-              {copy.hasil.lihatMetodologi}
-            </Button>
-          </div>
-        </Callout>
-      );
-    }
-
-    if (section === "paywall") {
-      return (
-        <AnimatePresence mode="wait">
-          {unlockedData ? (
-            <UnlockedAnalysis
-              key={`unlocked-${result.calcSeq}`}
-              jalur={result.jalur}
-              data={unlockedData}
-            />
-          ) : (
-            <PaywallPreview
-              key={`locked-${result.calcSeq}`}
-              payload={result.payload}
-              onUnlockClick={handleOpenPaywall}
-              onBetaSuccess={handleUnlockSuccess}
-            />
-          )}
-        </AnimatePresence>
-      );
-    }
-
-    return null;
-  }
+      }))
+    : [];
 
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar activeRoute="kalkulator" />
 
-      <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+      <main
+        id="main-content"
+        tabIndex={-1}
+        className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 focus:outline-none sm:px-6 sm:py-10 lg:px-8"
+      >
         <div className="mb-6 space-y-2 sm:mb-8">
           <span className="inline-block rounded-lg border-2 border-line bg-accent-yellow px-3 py-1 font-display text-xs font-bold tracking-wider text-accent-yellow-fg shadow-pill">
             {copy.calcSection.eyebrow}
@@ -283,28 +310,49 @@ export function HomeCalculator() {
           </p>
         </div>
 
+        {/* Baris 1 (Seimbang 2 Kolom): Form di Kiri | Hasil Peluang + Strategi AI di Kanan */}
         <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-12 lg:gap-8">
-          {/* Kolom Kiri: Form F1 */}
-          <div className="lg:col-span-5">
+          <div className="min-w-0 lg:col-span-5">
             <PredictionForm onSubmit={handleSubmit} onReset={handleReset} />
           </div>
 
-          {/* Kolom Kanan: Hasil sesuai THEME.resultLayoutOrder */}
           <div
             ref={resultSectionRef}
-            className="flex scroll-mt-24 flex-col gap-6 lg:col-span-7"
+            className="flex min-w-0 scroll-mt-24 flex-col gap-5 lg:col-span-7"
           >
             {result ? (
-              THEME.resultLayoutOrder.map((section) => (
-                <Fragment key={section}>
-                  {renderResultSection(section)}
-                </Fragment>
-              ))
+              <>
+                <HasilKartu
+                  jalur={result.jalur}
+                  items={hasilItems}
+                  animationKey={result.calcSeq}
+                />
+
+                {/* Fitur Andalan: Strategi Pilihan AI langsung terlihat tepat di bawah hasil */}
+                <AnimatePresence mode="wait">
+                  {unlockedData ? (
+                    <UnlockedAnalysis
+                      key={`unlocked-${result.calcSeq}`}
+                      jalur={result.jalur}
+                      data={unlockedData}
+                      hideAlternatives
+                    />
+                  ) : (
+                    <PaywallPreview
+                      key={`locked-${result.calcSeq}`}
+                      payload={result.payload}
+                      onUnlockClick={handleOpenPaywall}
+                      onBetaSuccess={handleUnlockSuccess}
+                    />
+                  )}
+                </AnimatePresence>
+              </>
             ) : (
               <>
                 <Card
                   as="div"
                   variant="flat"
+                  titleAs="h2"
                   title={copy.calcSection.emptyStateTitle}
                   description={copy.calcSection.emptyStateBody}
                 >
@@ -321,7 +369,6 @@ export function HomeCalculator() {
                   </div>
                 </Card>
 
-                {/* Kotak Disclaimer + Metodologi tetap tersedia sebelum menghitung */}
                 <Callout tone="warning" title={copy.disclaimer.title}>
                   <p>{copy.disclaimer.body}</p>
                   <p className="mt-2">
@@ -337,31 +384,118 @@ export function HomeCalculator() {
                     </Button>
                   </div>
                 </Callout>
+
+                <Card
+                  as="div"
+                  variant="flat"
+                  titleAs="h2"
+                  title={copy.feedback.title}
+                  description={copy.feedback.body}
+                >
+                  <a
+                    href={APP_CONFIG.externalLinks.feedbackFormUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cn(
+                      "inline-flex min-h-11 w-full items-center justify-center rounded-control border-2 border-line bg-surface px-4 text-center text-sm font-bold text-fg hover:bg-surface-muted sm:w-auto",
+                      tactileControlButton,
+                      focusRing
+                    )}
+                  >
+                    {copy.feedback.cta}
+                  </a>
+                </Card>
               </>
             )}
-
-            {/* F7: Laporan Hasil Seleksi Anonim */}
-            <Card
-              as="div"
-              variant="flat"
-              title={copy.feedback.title}
-              description={copy.feedback.body}
-            >
-              <a
-                href={APP_CONFIG.externalLinks.feedbackFormUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cn(
-                  "inline-flex min-h-11 items-center justify-center rounded-control border-2 border-line bg-surface px-4 text-sm font-bold text-fg hover:bg-surface-muted",
-                  tactileControlButton,
-                  focusRing
-                )}
-              >
-                {copy.feedback.cta}
-              </a>
-            </Card>
           </div>
         </div>
+
+        {/* Baris 2 & 3 (Lebar Penuh, Ringkas): Detail Tab (Ringkasan & 3 Alternatif | Tren) + Footer 2 Kolom */}
+        {result && (
+          <div className="mt-6 space-y-6">
+            <Card as="section" aria-label={copy.calcSection.detailTabsLabel}>
+              <h2 className="sr-only">{copy.calcSection.detailTabsLabel}</h2>
+              <div className="space-y-5">
+                <Tabs
+                  options={DETAIL_TABS}
+                  value={activeDetailTab}
+                  onChange={setActiveDetailTab}
+                  ariaLabel={copy.calcSection.detailTabsLabel}
+                />
+
+                <div
+                  role="tabpanel"
+                  aria-label={
+                    activeDetailTab === "insights"
+                      ? copy.calcSection.detailTabs.insights
+                      : copy.calcSection.detailTabs.tren
+                  }
+                >
+                  {activeDetailTab === "insights" ? (
+                    <FreeInsightsCard
+                      jalur={result.jalur}
+                      data={freeInsights}
+                      loading={freeInsightsLoading}
+                      error={freeInsightsError}
+                      onRetry={handleRetryInsights}
+                      embedded
+                    />
+                  ) : (
+                    <TrenChart
+                      jalur={result.jalur}
+                      items={trenItems}
+                      embedded
+                    />
+                  )}
+                </div>
+              </div>
+            </Card>
+
+            <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
+              <div className="min-w-0 lg:col-span-7">
+                <Callout tone="warning" title={copy.disclaimer.title}>
+                  <p>{copy.disclaimer.body}</p>
+                  <p className="mt-2">
+                    <strong>{copy.disclaimer.privacyTitle}:</strong>{" "}
+                    {copy.disclaimer.privacy}
+                  </p>
+                  <div className="mt-3">
+                    <Button
+                      variant="secondary"
+                      onClick={() => setMetodologiOpen(true)}
+                    >
+                      {copy.hasil.lihatMetodologi}
+                    </Button>
+                  </div>
+                </Callout>
+              </div>
+
+              <div className="min-w-0 lg:col-span-5">
+                <Card
+                  as="div"
+                  variant="flat"
+                  titleAs="h2"
+                  title={copy.feedback.title}
+                  description={copy.feedback.body}
+                  className="h-full"
+                >
+                  <a
+                    href={APP_CONFIG.externalLinks.feedbackFormUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cn(
+                      "inline-flex min-h-11 w-full items-center justify-center rounded-control border-2 border-line bg-surface px-4 text-center text-sm font-bold text-fg hover:bg-surface-muted sm:w-auto",
+                      tactileControlButton,
+                      focusRing
+                    )}
+                  >
+                    {copy.feedback.cta}
+                  </a>
+                </Card>
+              </div>
+            </div>
+          </div>
+        )}
       </main>
 
       <Footer />

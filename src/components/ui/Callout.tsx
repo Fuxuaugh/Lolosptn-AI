@@ -51,21 +51,21 @@ export function Callout({
   className,
 }: CalloutProps) {
   return (
-    <aside
+    <div
       role="note"
       className={cn(
-        "flex gap-3 rounded-card border-2 p-card text-sm",
+        "flex min-w-0 gap-3 rounded-card border-2 p-4 text-sm sm:p-card",
         TONE[tone],
         className
       )}
     >
       <CalloutIcon tone={tone} />
-      <div className="min-w-0 space-y-1 leading-relaxed">
+      <div className="min-w-0 flex-1 space-y-1 leading-relaxed break-words">
         {title && (
           <p className="font-display text-sm font-bold tracking-wide">{title}</p>
         )}
         <div>{children}</div>
       </div>
-    </aside>
+    </div>
   );
 }

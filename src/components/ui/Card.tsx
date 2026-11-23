@@ -5,6 +5,7 @@ import { cn } from "./cn";
 export interface CardProps extends Omit<HTMLAttributes<HTMLElement>, "title"> {
   as?: "section" | "article" | "div";
   title?: ReactNode;
+  titleAs?: "h2" | "h3" | "h4";
   description?: ReactNode;
   actions?: ReactNode;
   variant?: CardStyle;
@@ -21,6 +22,7 @@ const VARIANT: Record<CardStyle, string> = {
 export function Card({
   as: Tag = "section",
   title,
+  titleAs: TitleTag = "h3",
   description,
   actions,
   variant = THEME.cardStyle,
@@ -34,27 +36,27 @@ export function Card({
   return (
     <Tag
       className={cn(
-        "rounded-card",
-        !noPadding && "p-card",
+        "min-w-0 rounded-card",
+        !noPadding && "p-4 sm:p-card",
         VARIANT[variant],
         className
       )}
       {...rest}
     >
       {hasHeader && (
-        <header className="mb-4 flex items-start justify-between gap-3">
-          <div className="min-w-0">
+        <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
+          <div className="min-w-0 flex-1">
             {title && (
-              <h3 className="font-display text-lg font-bold tracking-tight text-fg">
+              <TitleTag className="font-display text-lg font-bold tracking-tight text-fg">
                 {title}
-              </h3>
+              </TitleTag>
             )}
             {description && (
               <p className="mt-1 text-sm text-fg-muted">{description}</p>
             )}
           </div>
           {actions && <div className="shrink-0">{actions}</div>}
-        </header>
+        </div>
       )}
       {children}
     </Tag>

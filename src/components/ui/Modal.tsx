@@ -4,6 +4,26 @@ import { useEffect, useId, useRef, type ReactNode } from "react";
 import { copy } from "@/config/copy";
 import { cn, focusRing } from "./cn";
 
+const FOCUSABLE_SELECTOR = [
+  "a[href]",
+  "button:not([disabled])",
+  "textarea:not([disabled])",
+  "input:not([disabled]):not([type='hidden'])",
+  "select:not([disabled])",
+  "[tabindex]:not([tabindex='-1'])",
+].join(", ");
+
+function getFocusableElements(container: HTMLElement): HTMLElement[] {
+  return Array.from(
+    container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)
+  ).filter((el) => {
+    if (el.hasAttribute("inert")) return false;
+    if (el.getClientRects().length === 0) return false;
+    const style = window.getComputedStyle(el);
+    return style.visibility !== "hidden" && style.display !== "none";
+  });
+}
+
 export interface ModalProps {
   open: boolean;
   onClose: () => void;
@@ -25,6 +45,12 @@ export function Modal({
 }: ModalProps) {
   const titleId = useId();
   const dialogRef = useRef<HTMLDivElement>(null);
+  const onCloseRef = useRef(onClose);
+  const backdropMouseDownRef = useRef(false);
+
+  useEffect(() => {
+    onCloseRef.current = onClose;
+  }, [onClose]);
 
   useEffect(() => {
     if (!open) return;
@@ -38,7 +64,39 @@ export function Modal({
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") {
         e.preventDefault();
-        onClose();
+        onCloseRef.current();
+        return;
+      }
+
+      if (e.key === "Tab") {
+        const dialog = dialogRef.current;
+        if (!dialog) return;
+
+        const focusables = getFocusableElements(dialog);
+        if (focusables.length === 0) {
+          e.preventDefault();
+          dialog.focus();
+          return;
+        }
+
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        const active = document.activeElement as HTMLElement | null;
+
+        if (e.shiftKey) {
+          if (
+            !active ||
+            active === first ||
+            active === dialog ||
+            !dialog.contains(active)
+          ) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else if (!active || active === last || !dialog.contains(active)) {
+          e.preventDefault();
+          first.focus();
+        }
       }
     }
 
@@ -46,19 +104,25 @@ export function Modal({
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = prevOverflow;
-      previouslyFocused?.focus?.();
+      if (previouslyFocused?.isConnected) {
+        previouslyFocused.focus();
+      }
     };
-  }, [open, onClose]);
+  }, [open]);
 
   if (!open) return null;
 
   return (
     <div
       className="fixed inset-0 z-50 flex items-end justify-center bg-overlay p-0 sm:items-center sm:p-4"
+      onMouseDown={(e) => {
+        backdropMouseDownRef.current = e.target === e.currentTarget;
+      }}
       onClick={(e) => {
-        if (e.target === e.currentTarget) {
+        if (e.target === e.currentTarget && backdropMouseDownRef.current) {
           onClose();
         }
+        backdropMouseDownRef.current = false;
       }}
     >
       <div
@@ -68,14 +132,14 @@ export function Modal({
         aria-labelledby={titleId}
         tabIndex={-1}
         className={cn(
-          "flex max-h-[90dvh] w-full max-w-lg flex-col rounded-t-card border-2 border-line bg-surface shadow-popover outline-none sm:rounded-card",
+          "flex max-h-[90dvh] w-full max-w-lg flex-col overflow-hidden rounded-t-card border-2 border-line bg-surface shadow-popover outline-none sm:rounded-card",
           className
         )}
       >
-        <div className="flex items-center justify-between gap-3 border-b-2 border-line bg-surface-warm px-card py-3.5 sm:rounded-t-[14px]">
+        <div className="flex items-center justify-between gap-3 border-b-2 border-line bg-surface-warm px-4 py-3.5 sm:px-card">
           <h2
             id={titleId}
-            className="font-display text-lg font-bold tracking-tight text-fg"
+            className="min-w-0 font-display text-lg font-bold tracking-tight text-fg"
           >
             {title}
           </h2>
@@ -84,7 +148,7 @@ export function Modal({
             onClick={onClose}
             aria-label={closeLabel}
             className={cn(
-              "inline-flex size-11 shrink-0 items-center justify-center rounded-control border-2 border-line bg-surface text-fg hover:bg-surface-muted",
+              "inline-flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-control border-2 border-line bg-surface text-fg hover:bg-surface-muted",
               "transition-colors motion-reduce:transition-none",
               focusRing
             )}
@@ -103,10 +167,12 @@ export function Modal({
           </button>
         </div>
 
-        <div className="overflow-y-auto p-card text-sm text-fg">{children}</div>
+        <div className="overflow-y-auto overscroll-contain p-4 text-sm text-fg sm:p-card">
+          {children}
+        </div>
 
         {footer && (
-          <div className="flex items-center justify-end gap-2 border-t-2 border-line px-card py-3">
+          <div className="flex flex-wrap items-center justify-end gap-2 border-t-2 border-line px-4 py-3 sm:px-card">
             {footer}
           </div>
         )}

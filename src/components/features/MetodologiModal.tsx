@@ -14,18 +14,29 @@ export function MetodologiModal({ open, onClose }: MetodologiModalProps) {
       open={open}
       onClose={onClose}
       title={copy.metodologi.title}
-      footer={<Button onClick={onClose}>{copy.common.close}</Button>}
+      footer={
+        <Button onClick={onClose} className="w-full sm:w-auto">
+          {copy.common.close}
+        </Button>
+      }
     >
       <div className="space-y-4 leading-relaxed">
-        <p className="text-fg-muted">{copy.metodologi.intro}</p>
-        <div className="space-y-3">
+        <p className="text-sm font-medium text-fg-muted">
+          {copy.metodologi.intro}
+        </p>
+        <div className="space-y-2.5">
           {copy.metodologi.sections.map((section) => (
-            <div key={section.heading} className="space-y-1">
-              <h3 className="text-sm font-semibold text-fg">
+            <section
+              key={section.heading}
+              className="space-y-1 rounded-control border-2 border-line bg-surface-warm p-3.5"
+            >
+              <h3 className="font-display text-sm font-bold text-fg">
                 {section.heading}
               </h3>
-              <p className="text-sm text-fg-muted">{section.body}</p>
-            </div>
+              <p className="text-sm leading-relaxed text-fg-muted">
+                {section.body}
+              </p>
+            </section>
           ))}
         </div>
       </div>

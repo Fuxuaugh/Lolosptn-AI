@@ -38,8 +38,8 @@ const VARIANT: Record<ButtonVariant, string> = {
 
 const SIZE: Record<ButtonSize, string> = {
   // min-h-11 = 44px: target sentuh minimal
-  md: "min-h-11 px-4 text-sm",
-  lg: "min-h-13 px-6 text-base",
+  md: "min-h-11 px-4 py-2 text-sm",
+  lg: "min-h-13 px-5 py-2.5 text-base sm:px-6",
 };
 
 export function Button({
@@ -63,7 +63,7 @@ export function Button({
       disabled={isDisabled}
       aria-busy={isLoading || undefined}
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-control font-bold",
+        "inline-flex cursor-pointer items-center justify-center gap-2 rounded-control text-center font-bold",
         "disabled:translate-x-0 disabled:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60 disabled:shadow-none",
         focusRing,
         VARIANT[variant],
@@ -76,12 +76,12 @@ export function Button({
       {isLoading ? (
         <span
           aria-hidden="true"
-          className="size-4 rounded-full border-2 border-current border-t-transparent motion-safe:animate-spin"
+          className="size-4 shrink-0 rounded-full border-2 border-current border-t-transparent motion-safe:animate-spin"
         />
       ) : (
         leadingIcon
       )}
-      <span>{children}</span>
+      <span className="min-w-0">{children}</span>
       {!isLoading && trailingIcon}
       {isLoading && <span className="sr-only">{copy.common.loading}</span>}
     </button>

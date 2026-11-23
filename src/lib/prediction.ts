@@ -7,11 +7,13 @@
 import {
   APP_CONFIG,
   type Akreditasi,
+  type Jalur,
   type PrestasiLevel,
   type StatusKategori,
 } from "@/config/app.config";
 import {
   DATASET_ITEMS,
+  type AcuanDibatasi,
   type ProdiDetail,
   type ProdiIndexItem,
 } from "@/lib/dataset";
@@ -28,6 +30,7 @@ export interface SnbtTarget {
   skor_acuan: number;
   is_new: 0 | 1;
   jumlah_tahun_histori: number;
+  acuan_dibatasi?: AcuanDibatasi;
 }
 
 export interface SnbpProfileInput {
@@ -43,6 +46,18 @@ export interface SnbpTarget {
   rapor_acuan: number;
   is_new: 0 | 1;
   jumlah_tahun_histori: number;
+  acuan_dibatasi?: AcuanDibatasi;
+}
+
+export interface TargetScoreResult {
+  targetProbability: number;
+  requiredScore: number;
+  /** Selisih positif yang dibutuhkan dari skor/nilai saat ini (0 jika sudah terpenuhi). */
+  gap: number;
+  /** True jika skor target melebihi skala maksimum (SNBT > 1000, SNBP > 100). */
+  isOutOfScale: boolean;
+  /** Status pembatasan (clamp) acuan pada pipeline data. */
+  acuanDibatasi: AcuanDibatasi;
 }
 
 export interface PredictionResult {
@@ -97,6 +112,52 @@ function round2(value: number): number {
 }
 
 /**
+ * Menghitung skor/nilai target untuk mencapai probabilitas `targetProbability`
+ * (0 < P < 100) berdasarkan invers kurva sigmoid:
+ *   S_target = acuan + ln(P / (1 - P)) / k
+ */
+export function calculateRequiredScore(params: {
+  jalur: Jalur;
+  referenceScore: number;
+  userScore: number;
+  targetProbability?: number;
+  acuanDibatasi?: AcuanDibatasi;
+}): TargetScoreResult {
+  const targetProbability =
+    params.targetProbability ?? APP_CONFIG.statusThresholds.safe;
+  if (
+    !Number.isFinite(targetProbability) ||
+    targetProbability <= 0 ||
+    targetProbability >= 100
+  ) {
+    throw new Error("targetProbability must be between 0 and 100 (exclusive)");
+  }
+
+  const k =
+    params.jalur === "snbt"
+      ? APP_CONFIG.sigmoid.k_snbt
+      : APP_CONFIG.sigmoid.k_snbp;
+  const maxBound =
+    params.jalur === "snbt"
+      ? APP_CONFIG.inputBounds.snbt.max
+      : APP_CONFIG.inputBounds.snbp.max;
+
+  const ratio = targetProbability / 100;
+  const requiredDelta = Math.log(ratio / (1 - ratio)) / k;
+  const requiredScore = round2(params.referenceScore + requiredDelta);
+  const gap = round2(Math.max(0, requiredScore - params.userScore));
+  const isOutOfScale = requiredScore > maxBound;
+
+  return {
+    targetProbability,
+    requiredScore,
+    gap,
+    isOutOfScale,
+    acuanDibatasi: params.acuanDibatasi ?? null,
+  };
+}
+
+/**
  * Kurva sigmoid: P = 100 / (1 + exp(-k * delta))
  */
 export function calculateSigmoidProbability(delta: number, k: number): number {
@@ -143,6 +204,7 @@ export function toSnbtTarget(
     skor_acuan: prodi.snbt.skor_acuan,
     is_new: prodi.is_new,
     jumlah_tahun_histori: jumlahTahunHistori,
+    acuan_dibatasi: prodi.snbt.acuan_dibatasi ?? null,
   };
 }
 
@@ -159,6 +221,7 @@ export function toSnbpTarget(
     rapor_acuan: prodi.snbp.rapor_acuan,
     is_new: prodi.is_new,
     jumlah_tahun_histori: jumlahTahunHistori,
+    acuan_dibatasi: prodi.snbp.acuan_dibatasi ?? null,
   };
 }
 

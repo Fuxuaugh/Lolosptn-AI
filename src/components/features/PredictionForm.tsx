@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, type FormEvent } from "react";
+import { useId, useMemo, useRef, useState, type FormEvent } from "react";
 import {
   APP_CONFIG,
   type Akreditasi,
@@ -135,6 +135,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
 
   // SNBP state
   const [eligibility, setEligibility] = useState<EligibilityAnswer>("");
+  const [tkaConfirmed, setTkaConfirmed] = useState(false);
   const [rapor, setRapor] = useState<string>("");
   const [mapel, setMapel] = useState<string>("");
   const [akreditasi, setAkreditasi] = useState<Akreditasi>("A");
@@ -143,6 +144,35 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
   const [alumni2, setAlumni2] = useState<"ada" | "tidak">("tidak");
 
   const [errors, setErrors] = useState<FormErrors>({});
+
+  const formRef = useRef<HTMLFormElement>(null);
+  const eligibilityGroupId = useId();
+  const eligibilityErrorId = useId();
+
+  function focusFirstInvalidField() {
+    requestAnimationFrame(() => {
+      const formEl = formRef.current;
+      if (!formEl) return;
+
+      const invalidTarget = formEl.querySelector<HTMLElement>(
+        '[aria-invalid="true"], [data-invalid="true"] button, [data-invalid="true"] input, [role="alert"]'
+      );
+      if (!invalidTarget) return;
+
+      const prefersReduced =
+        typeof window !== "undefined" &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      invalidTarget.scrollIntoView({
+        behavior: prefersReduced ? "auto" : "smooth",
+        block: "center",
+      });
+
+      if (typeof invalidTarget.focus === "function" && invalidTarget.tabIndex >= 0) {
+        invalidTarget.focus({ preventScroll: true });
+      }
+    });
+  }
 
   const ptnOptions: readonly SelectOption[] = useMemo(
     () =>
@@ -208,6 +238,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
     setSnbtAverage("");
     setSnbtSubtests(INITIAL_SUBTESTS);
     setEligibility("");
+    setTkaConfirmed(false);
     setRapor("");
     setMapel("");
     setAkreditasi("A");
@@ -256,6 +287,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
 
         if (Object.keys(nextErrors).length > 0 || !item1 || res.value === null) {
           setErrors(nextErrors);
+          focusFirstInvalidField();
           return;
         }
 
@@ -287,6 +319,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
 
       if (Object.keys(nextErrors).length > 0 || !item1) {
         setErrors(nextErrors);
+        focusFirstInvalidField();
         return;
       }
 
@@ -319,6 +352,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
       mapelRes.value === null
     ) {
       setErrors(nextErrors);
+      focusFirstInvalidField();
       return;
     }
 
@@ -339,8 +373,13 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
   }
 
   return (
-    <Card title={copy.form.title}>
-      <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
+    <Card title={copy.form.title} titleAs="h2">
+      <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        noValidate
+        className="flex min-w-0 flex-col gap-5"
+      >
         {/* Tab switcher SNBP / SNBT */}
         <div className="space-y-1.5">
           <p className="text-xs font-bold tracking-wide text-fg uppercase">
@@ -356,11 +395,27 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
 
         {/* Cek eligibilitas SNBP */}
         {jalur === "snbp" && (
-          <div className="space-y-2.5 rounded-control border-2 border-line bg-surface-warm p-3.5">
-            <p className="text-sm font-bold text-fg">
+          <div
+            data-invalid={errors.eligibility ? "true" : undefined}
+            className={cn(
+              "space-y-3 rounded-control border-2 bg-surface-warm p-3.5 transition-colors motion-reduce:transition-none",
+              errors.eligibility ? "border-danger" : "border-line"
+            )}
+          >
+            <p
+              id={eligibilityGroupId}
+              className="text-sm leading-snug font-bold text-fg"
+            >
               {copy.form.snbp.eligibility.question}
             </p>
-            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+            <div
+              role="group"
+              aria-labelledby={eligibilityGroupId}
+              aria-describedby={
+                errors.eligibility ? eligibilityErrorId : undefined
+              }
+              className="grid grid-cols-1 gap-2 sm:grid-cols-2"
+            >
               <button
                 type="button"
                 aria-pressed={eligibility === "yes"}
@@ -369,7 +424,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                   setErrors((prev) => ({ ...prev, eligibility: undefined }));
                 }}
                 className={cn(
-                  "min-h-11 rounded-control border-2 border-line px-3 text-sm font-bold transition-all motion-reduce:transition-none",
+                  "min-h-11 rounded-control border-2 border-line px-3 py-2 text-sm leading-snug font-bold transition-all motion-reduce:transition-none",
                   focusRing,
                   eligibility === "yes"
                     ? "bg-brand text-brand-fg shadow-pill"
@@ -386,7 +441,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                   setErrors((prev) => ({ ...prev, eligibility: undefined }));
                 }}
                 className={cn(
-                  "min-h-11 rounded-control border-2 border-line px-3 text-sm font-bold transition-all motion-reduce:transition-none",
+                  "min-h-11 rounded-control border-2 border-line px-3 py-2 text-sm leading-snug font-bold transition-all motion-reduce:transition-none",
                   focusRing,
                   eligibility === "no"
                     ? "bg-brand text-brand-fg shadow-pill"
@@ -397,7 +452,11 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
               </button>
             </div>
             {errors.eligibility && (
-              <p role="alert" className="text-xs font-bold text-danger">
+              <p
+                id={eligibilityErrorId}
+                role="alert"
+                className="text-xs font-bold text-danger"
+              >
                 {errors.eligibility}
               </p>
             )}
@@ -412,7 +471,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={cn(
-                    "mt-2 inline-flex min-h-11 items-center font-bold underline",
+                    "mt-2 inline-flex min-h-11 items-center rounded-md font-bold underline",
                     focusRing
                   )}
                 >
@@ -420,47 +479,72 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                 </a>
               </Callout>
             )}
+
+            <div className="space-y-1.5 border-t border-line-soft pt-2.5 text-xs text-fg-muted">
+              <p className="font-bold text-fg">
+                {copy.form.snbp.eligibility.tkaReminderTitle}
+              </p>
+              <label className="flex min-h-11 cursor-pointer items-start gap-2.5 py-1 leading-relaxed">
+                <input
+                  type="checkbox"
+                  checked={tkaConfirmed}
+                  onChange={(e) => setTkaConfirmed(e.target.checked)}
+                  className={cn(
+                    "mt-0.5 size-5 shrink-0 rounded border-2 border-line accent-brand",
+                    focusRing
+                  )}
+                />
+                <span>{copy.form.snbp.eligibility.tkaCheckboxLabel}</span>
+              </label>
+              <p className="text-xs leading-relaxed text-fg-muted">
+                {copy.form.snbp.eligibility.juknis2027Note}
+              </p>
+            </div>
           </div>
         )}
 
         {/* Pilihan 1 (wajib) */}
-        <fieldset className="space-y-3 rounded-control border-2 border-line bg-surface-warm p-3.5">
+        <fieldset className="min-w-0 space-y-3 rounded-control border-2 border-line bg-surface-warm p-3.5">
           <legend className="rounded-md border-2 border-line bg-surface px-2 py-0.5 font-display text-xs font-bold tracking-wide text-brand uppercase">
             {copy.form.pilihan1} ({copy.common.required})
           </legend>
-          <Select
-            label={copy.form.ptnLabel}
-            options={ptnOptions}
-            value={ptn1}
-            onChange={(val) => {
-              setPtn1(val);
-              setProdi1("");
-              setErrors((prev) => ({
-                ...prev,
-                ptn1: undefined,
-                prodi1: undefined,
-              }));
-            }}
-            placeholder={copy.form.ptnPlaceholder}
-            searchPlaceholder={copy.form.ptnSearch}
-            error={errors.ptn1}
-            required
-          />
-          <Select
-            label={copy.form.prodiLabel}
-            options={prodi1Options}
-            value={prodi1}
-            onChange={(val) => {
-              setProdi1(val);
-              setErrors((prev) => ({ ...prev, prodi1: undefined }));
-            }}
-            placeholder={copy.form.prodiPlaceholder}
-            searchPlaceholder={copy.form.prodiSearch}
-            helperText={!ptn1 ? copy.form.prodiDisabledHint : undefined}
-            error={errors.prodi1}
-            disabled={!ptn1}
-            required
-          />
+          <div data-invalid={errors.ptn1 ? "true" : undefined}>
+            <Select
+              label={copy.form.ptnLabel}
+              options={ptnOptions}
+              value={ptn1}
+              onChange={(val) => {
+                setPtn1(val);
+                setProdi1("");
+                setErrors((prev) => ({
+                  ...prev,
+                  ptn1: undefined,
+                  prodi1: undefined,
+                }));
+              }}
+              placeholder={copy.form.ptnPlaceholder}
+              searchPlaceholder={copy.form.ptnSearch}
+              error={errors.ptn1}
+              required
+            />
+          </div>
+          <div data-invalid={errors.prodi1 ? "true" : undefined}>
+            <Select
+              label={copy.form.prodiLabel}
+              options={prodi1Options}
+              value={prodi1}
+              onChange={(val) => {
+                setProdi1(val);
+                setErrors((prev) => ({ ...prev, prodi1: undefined }));
+              }}
+              placeholder={copy.form.prodiPlaceholder}
+              searchPlaceholder={copy.form.prodiSearch}
+              helperText={!ptn1 ? copy.form.prodiDisabledHint : undefined}
+              error={errors.prodi1}
+              disabled={!ptn1}
+              required
+            />
+          </div>
 
           {jalur === "snbp" && (
             <div className="space-y-1.5 pt-1">
@@ -481,7 +565,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
         </fieldset>
 
         {/* Pilihan 2 (opsional) */}
-        <fieldset className="space-y-3 rounded-control border-2 border-line bg-surface-warm p-3.5">
+        <fieldset className="min-w-0 space-y-3 rounded-control border-2 border-line bg-surface-warm p-3.5">
           <legend className="rounded-md border-2 border-line bg-surface px-2 py-0.5 font-display text-xs font-bold tracking-wide text-fg-muted uppercase">
             {copy.form.pilihan2} ({copy.common.optional})
           </legend>
@@ -501,21 +585,23 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
             searchPlaceholder={copy.form.ptnSearch}
             clearable
           />
-          <Select
-            label={copy.form.prodiLabel}
-            options={prodi2Options}
-            value={prodi2}
-            onChange={(val) => {
-              setProdi2(val);
-              setErrors((prev) => ({ ...prev, prodi2: undefined }));
-            }}
-            placeholder={copy.form.prodiPlaceholder}
-            searchPlaceholder={copy.form.prodiSearch}
-            helperText={!ptn2 ? copy.form.prodiDisabledHint : undefined}
-            error={errors.prodi2}
-            disabled={!ptn2}
-            clearable
-          />
+          <div data-invalid={errors.prodi2 ? "true" : undefined}>
+            <Select
+              label={copy.form.prodiLabel}
+              options={prodi2Options}
+              value={prodi2}
+              onChange={(val) => {
+                setProdi2(val);
+                setErrors((prev) => ({ ...prev, prodi2: undefined }));
+              }}
+              placeholder={copy.form.prodiPlaceholder}
+              searchPlaceholder={copy.form.prodiSearch}
+              helperText={!ptn2 ? copy.form.prodiDisabledHint : undefined}
+              error={errors.prodi2}
+              disabled={!ptn2}
+              clearable
+            />
+          </div>
 
           {jalur === "snbp" && ptn2 && (
             <div className="space-y-1.5 pt-1">
@@ -568,7 +654,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                 }}
                 helperText={copy.form.snbt.averageHelper}
                 error={errors.snbtAverage}
-                className="font-display text-xl font-bold"
+                className="font-display text-xl font-bold tabular-nums"
                 required
               />
             ) : (
@@ -586,6 +672,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                       step="0.1"
                       min={APP_CONFIG.inputBounds.snbt.min}
                       max={APP_CONFIG.inputBounds.snbt.max}
+                      placeholder="600"
                       value={snbtSubtests[idx]}
                       onChange={(e) => {
                         const next = [...snbtSubtests];
@@ -601,14 +688,27 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                         }
                       }}
                       error={errors.snbtSubtests?.[idx]}
+                      className="tabular-nums"
+                      containerClassName={cn(
+                        "justify-between",
+                        idx === copy.form.snbt.subtests.length - 1 &&
+                          "sm:col-span-2"
+                      )}
                       required
                     />
                   ))}
                 </div>
                 {subtestAveragePreview !== null && (
-                  <p className="rounded-control border-2 border-line bg-ai-header px-3.5 py-2.5 font-display text-sm font-bold text-fg">
+                  <p
+                    role="status"
+                    aria-live="polite"
+                    className="rounded-control border-2 border-line bg-ai-header px-3.5 py-2.5 font-display text-sm font-bold text-fg tabular-nums"
+                  >
                     {copy.form.snbt.averagePreview(
-                      String(subtestAveragePreview)
+                      subtestAveragePreview.toLocaleString("id-ID", {
+                        minimumFractionDigits: 0,
+                        maximumFractionDigits: 2,
+                      })
                     )}
                   </p>
                 )}
@@ -641,6 +741,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                 }}
                 helperText={copy.form.snbp.raporHelper}
                 error={errors.rapor}
+                className="tabular-nums"
                 required
               />
               <Input
@@ -658,6 +759,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
                 }}
                 helperText={copy.form.snbp.mapelHelper}
                 error={errors.mapel}
+                className="tabular-nums"
                 required
               />
             </div>
@@ -693,7 +795,7 @@ export function PredictionForm({ onSubmit, onReset }: PredictionFormProps) {
             variant="ghost"
             size="lg"
             onClick={handleReset}
-            className="sm:w-auto"
+            className="border-line-soft whitespace-nowrap sm:w-auto sm:shrink-0 sm:border-transparent"
           >
             {copy.form.reset}
           </Button>

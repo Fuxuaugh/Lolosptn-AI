@@ -94,13 +94,23 @@ class TestZScoreProxy(unittest.TestCase):
         self.assertEqual(p["rapor_acuan"], p["rapor_acuan_mentah"])
 
     def test_clamp_skor_acuan(self):
-        self.assertEqual(s.proxy_snbt(0.95)["skor_acuan"], 460.0)    # 515-85*1.645 = 375
-        self.assertEqual(s.proxy_snbt(0.005)["skor_acuan"], 733.9)   # belum menyentuh 760
-        self.assertEqual(s.proxy_snbt(0.005, offset=100)["skor_acuan"], 760.0)
-        self.assertEqual(s.proxy_snbp(0.95)["rapor_acuan"], 78.0)
-        self.assertEqual(s.proxy_snbp(0.005, offset=10)["rapor_acuan"], 96.0)
+        snbt_low = s.proxy_snbt(0.95)
+        self.assertEqual(snbt_low["skor_acuan"], 460.0)    # 515-85*1.645 = 375
+        self.assertEqual(snbt_low["acuan_dibatasi"], "bawah")
+        snbt_mid = s.proxy_snbt(0.005)
+        self.assertEqual(snbt_mid["skor_acuan"], 733.9)   # belum menyentuh 760
+        self.assertIsNone(snbt_mid["acuan_dibatasi"])
+        snbt_high = s.proxy_snbt(0.005, offset=100)
+        self.assertEqual(snbt_high["skor_acuan"], 760.0)
+        self.assertEqual(snbt_high["acuan_dibatasi"], "atas")
+        snbp_low = s.proxy_snbp(0.95)
+        self.assertEqual(snbp_low["rapor_acuan"], 78.0)
+        self.assertEqual(snbp_low["acuan_dibatasi"], "bawah")
+        snbp_high = s.proxy_snbp(0.005, offset=10)
+        self.assertEqual(snbp_high["rapor_acuan"], 96.0)
+        self.assertEqual(snbp_high["acuan_dibatasi"], "atas")
         # nilai mentah tidak di-clamp
-        self.assertLess(s.proxy_snbt(0.95)["skor_acuan_mentah"], 460)
+        self.assertLess(snbt_low["skor_acuan_mentah"], 460)
 
     def test_offset_butuh_n_laporan_minimal_10(self):
         self.assertEqual(s.offset_aktif(-10, 0), 0)

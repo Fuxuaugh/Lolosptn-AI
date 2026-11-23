@@ -14,37 +14,41 @@ export function HeroSection() {
   return (
     <section
       id="top"
+      aria-labelledby="hero-heading"
       className="mx-auto w-full max-w-6xl px-4 pt-8 pb-10 sm:px-6 sm:pt-14 sm:pb-16 lg:px-8"
     >
       <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-12">
         {/* Kolom Kiri: Pitch & CTA dengan animasi masuk singkat */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={prefersReduced ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: EASE_SNAPPY }}
-          className="flex flex-col items-start gap-5 lg:col-span-6"
+          className="flex min-w-0 flex-col items-start gap-5 lg:col-span-6"
         >
-          <p className="inline-flex items-center gap-2 rounded-full border-2 border-line bg-callout-bg px-3.5 py-1.5 text-xs font-bold text-fg shadow-pill sm:text-sm">
+          <p className="inline-flex max-w-full items-center gap-2 rounded-full border-2 border-line bg-callout-bg px-3.5 py-1.5 text-xs font-bold text-fg shadow-pill sm:text-sm">
             <span
               aria-hidden="true"
-              className="size-2 rounded-full border border-line bg-brand"
+              className="size-2 shrink-0 rounded-full border border-line bg-brand"
             />
             <span>{copy.hero.pill}</span>
           </p>
 
-          <h1 className="font-display text-3xl leading-[1.12] font-bold tracking-tight text-fg sm:text-5xl">
+          <h1
+            id="hero-heading"
+            className="font-display text-[32px] leading-[1.12] font-bold tracking-tight text-balance text-fg sm:text-5xl sm:leading-[1.08]"
+          >
             {copy.hero.title}
           </h1>
 
-          <p className="text-sm leading-relaxed font-medium text-fg-muted sm:text-base lg:text-lg">
+          <p className="max-w-xl text-sm leading-relaxed font-medium text-fg-muted sm:text-base lg:text-lg">
             {copy.hero.subtitle}
           </p>
 
-          <div className="flex w-full flex-col items-stretch gap-3 pt-1 sm:w-auto sm:flex-row sm:items-center sm:gap-4">
+          <div className="flex w-full flex-col items-stretch gap-3 pt-1 sm:items-start">
             <Link
               href="/kalkulator"
               className={cn(
-                "group inline-flex min-h-13 items-center justify-center gap-2 rounded-control border-2 border-line bg-brand px-6 text-base font-bold text-brand-fg hover:bg-brand-hover",
+                "group inline-flex min-h-13 w-full shrink-0 items-center justify-center gap-2 rounded-control border-2 border-line bg-brand px-6 text-base font-bold whitespace-nowrap text-brand-fg hover:bg-brand-hover sm:w-auto sm:px-7",
                 tactileCardButton,
                 focusRing
               )}
@@ -58,13 +62,13 @@ export function HeroSection() {
                 strokeWidth={2.4}
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="size-4 transition-transform duration-150 group-hover:translate-x-1 motion-reduce:transform-none motion-reduce:transition-none"
+                className="size-4 shrink-0 transition-transform duration-150 group-hover:translate-x-1 motion-reduce:transform-none motion-reduce:transition-none"
               >
                 <path d="M4 10h12M11 5l5 5-5 5" />
               </svg>
             </Link>
 
-            <p className="text-center text-xs font-semibold text-fg-muted sm:text-left">
+            <p className="text-center text-xs leading-relaxed font-semibold text-balance text-fg-muted sm:text-left">
               {copy.hero.trustNote}
             </p>
           </div>
@@ -72,40 +76,40 @@ export function HeroSection() {
 
         {/* Kolom Kanan: Kartu Preview Hasil Realistis dengan progress bar terisi otomatis */}
         <motion.div
-          initial={{ opacity: 0, y: 18 }}
+          initial={prefersReduced ? false : { opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, delay: 0.08, ease: EASE_SNAPPY }}
-          className="lg:col-span-6"
+          className="min-w-0 lg:col-span-6"
         >
-          <Card as="div" className="space-y-4">
+          <Card as="div" noPadding className="space-y-3.5 p-4 sm:space-y-4 sm:p-card">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <p className="font-display text-xs font-bold tracking-wide text-fg-muted">
                 {preview.header}
               </p>
-              <span className="rounded-lg border-2 border-line bg-surface-muted px-2.5 py-0.5 font-display text-xs font-bold text-fg">
+              <span className="shrink-0 rounded-lg border-2 border-line bg-surface-muted px-2.5 py-0.5 font-display text-xs font-bold text-fg shadow-pill">
                 {preview.scoreChip}
               </span>
             </div>
 
             {/* Pilihan 1 Preview */}
-            <div className="space-y-2.5 rounded-control border-2 border-line bg-surface-warm p-4">
+            <div className="space-y-2.5 rounded-control border-2 border-line bg-surface-warm p-3.5 sm:p-4">
               <div className="flex items-start justify-between gap-2">
                 <div className="min-w-0">
-                  <p className="text-[11px] font-bold tracking-wider text-fg-subtle">
+                  <p className="text-[11px] font-bold tracking-wider text-fg-muted">
                     {preview.choice1Eyebrow}
                   </p>
-                  <p className="text-sm font-bold text-fg sm:text-base">
+                  <p className="text-sm leading-snug font-bold text-fg sm:text-base">
                     {preview.choice1Name}
                   </p>
                 </div>
-                <Badge status="target" size="sm" />
+                <Badge status="target" size="sm" className="shrink-0" />
               </div>
 
               <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <p className="font-display text-3xl font-bold tracking-tight text-fg">
+                <p className="font-display text-3xl leading-none font-bold tracking-tight tabular-nums text-fg">
                   {preview.choice1Percent}
                 </p>
-                <p className="text-xs font-medium text-fg-muted">
+                <p className="text-xs font-semibold tabular-nums text-fg-muted">
                   {preview.choice1Range}
                 </p>
               </div>
@@ -128,24 +132,24 @@ export function HeroSection() {
             </div>
 
             {/* Pilihan 2 Preview */}
-            <div className="space-y-2.5 rounded-control border-2 border-line bg-surface-warm p-4">
+            <div className="space-y-2.5 rounded-control border-2 border-line bg-surface-warm p-3.5 sm:p-4">
               <div className="flex items-start justify-between gap-2">
                 <div className="min-w-0">
-                  <p className="text-[11px] font-bold tracking-wider text-fg-subtle">
+                  <p className="text-[11px] font-bold tracking-wider text-fg-muted">
                     {preview.choice2Eyebrow}
                   </p>
-                  <p className="text-sm font-bold text-fg sm:text-base">
+                  <p className="text-sm leading-snug font-bold text-fg sm:text-base">
                     {preview.choice2Name}
                   </p>
                 </div>
-                <Badge status="safe" size="sm" />
+                <Badge status="safe" size="sm" className="shrink-0" />
               </div>
 
               <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <p className="font-display text-3xl font-bold tracking-tight text-fg">
+                <p className="font-display text-3xl leading-none font-bold tracking-tight tabular-nums text-fg">
                   {preview.choice2Percent}
                 </p>
-                <p className="text-xs font-medium text-fg-muted">
+                <p className="text-xs font-semibold tabular-nums text-fg-muted">
                   {preview.choice2Range}
                 </p>
               </div>
@@ -171,7 +175,7 @@ export function HeroSection() {
             <div className="flex items-center gap-3 rounded-control border-2 border-line bg-ai-header px-3.5 py-3">
               <span
                 aria-hidden="true"
-                className="inline-flex size-7 shrink-0 items-center justify-center rounded-lg border-2 border-line bg-brand text-brand-fg"
+                className="inline-flex size-8 shrink-0 items-center justify-center rounded-lg border-2 border-line bg-brand text-brand-fg shadow-pill"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -185,7 +189,7 @@ export function HeroSection() {
                   <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                 </svg>
               </span>
-              <p className="text-xs font-bold text-fg sm:text-sm">
+              <p className="min-w-0 text-xs leading-snug font-bold text-fg sm:text-sm">
                 {preview.footerStrip}
               </p>
             </div>

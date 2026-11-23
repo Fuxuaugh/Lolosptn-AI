@@ -9,6 +9,7 @@ import {
   type ProdiIndexItem,
 } from "@/lib/dataset";
 import {
+  calculateRequiredScore,
   calculateSnbtUserScore,
   calculateSnbpCompositeScore,
   getStatusFromProbability,
@@ -429,5 +430,64 @@ describe("Smart Alternative Recommender (F5)", () => {
           r.prodi.kode_prodi !== "13851007"
       )
     ).toBe(true);
+  });
+});
+
+describe("Target Score Calculator (calculateRequiredScore)", () => {
+  it("menghitung skor target SNBT 75% (+43.94 poin di atas acuan) dan gap dengan akurat", () => {
+    const res = calculateRequiredScore({
+      jalur: "snbt",
+      referenceScore: 584.1,
+      userScore: 600,
+      targetProbability: 75,
+    });
+    expect(res.targetProbability).toBe(75);
+    expect(res.requiredScore).toBeCloseTo(584.1 + Math.log(3) / 0.025, 1);
+    expect(res.gap).toBeCloseTo(res.requiredScore - 600, 1);
+    expect(res.isOutOfScale).toBe(false);
+    expect(res.acuanDibatasi).toBeNull();
+  });
+
+  it("menghasilkan gap = 0 ketika skor pengguna sudah memenuhi target", () => {
+    const res = calculateRequiredScore({
+      jalur: "snbt",
+      referenceScore: 584.1,
+      userScore: 650,
+      targetProbability: 75,
+    });
+    expect(res.gap).toBe(0);
+    expect(res.isOutOfScale).toBe(false);
+  });
+
+  it("menandai isOutOfScale = true jika target melewati skala maksimum dan meneruskan acuanDibatasi", () => {
+    const snbtOver = calculateRequiredScore({
+      jalur: "snbt",
+      referenceScore: 980,
+      userScore: 700,
+      targetProbability: 75,
+      acuanDibatasi: "atas",
+    });
+    expect(snbtOver.isOutOfScale).toBe(true);
+    expect(snbtOver.acuanDibatasi).toBe("atas");
+
+    const snbpOver = calculateRequiredScore({
+      jalur: "snbp",
+      referenceScore: 96,
+      userScore: 90,
+      targetProbability: 90,
+      acuanDibatasi: "atas",
+    });
+    expect(snbpOver.isOutOfScale).toBe(true);
+    expect(snbpOver.acuanDibatasi).toBe("atas");
+
+    const snbtLowerClamp = calculateRequiredScore({
+      jalur: "snbt",
+      referenceScore: 460,
+      userScore: 470,
+      targetProbability: 75,
+      acuanDibatasi: "bawah",
+    });
+    expect(snbtLowerClamp.isOutOfScale).toBe(false);
+    expect(snbtLowerClamp.acuanDibatasi).toBe("bawah");
   });
 });

@@ -17,6 +17,9 @@ export const ALLOWED_METRIC_EVENTS: readonly MetricEvent[] = [
   "sesi_selesai",
   "klik_paywall",
   "klik_wa",
+  "klik_fd_tabel",
+  "klik_fd_simulator",
+  "klik_fd_ai",
 ] as const;
 
 export type { MetricEvent };

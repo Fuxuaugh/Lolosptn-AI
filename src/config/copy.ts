@@ -7,10 +7,10 @@ export const copy = {
   meta: {
     title: "LolosPTN.AI — Hitung Peluang & Strategi SNBP/SNBT PTN Jawa Timur",
     description:
-      "Simulasikan peluang lolos SNBP & SNBT di PTN Jawa Timur berbasis data historis SNPMB, lengkap dengan analisis strategi AI dan rekomendasi prodi alternatif aman.",
+      "Simulasikan peluang SNBP & SNBT di 17 PTN Jawa Timur berbasis data historis SNPMB — gratis dengan tren, target skor, ringkasan otomatis, dan 3 alternatif prodi. Strategi AI tersedia di mode Beta.",
     kalkulatorTitle: "Kalkulator Peluang SNBP & SNBT — LolosPTN.AI",
     kalkulatorDescription:
-      "Hitung peluang diterima SNBP & SNBT di 17 PTN Jawa Timur lengkap dengan tren historis, rekomendasi prodi alternatif, dan Strategi Pilihan AI.",
+      "Hitung peluang diterima SNBP & SNBT di 17 PTN Jawa Timur gratis dengan tren historis, target skor 75%, ringkasan otomatis, dan 3 alternatif prodi.",
   },
 
   /** Teks umum yang dipakai komponen primitif `ui/` */
@@ -31,6 +31,8 @@ export const copy = {
   nav: {
     brandInitial: "L",
     betaBadge: "BETA",
+    skipToContent: "Lewati ke konten utama",
+    ariaLabel: "Navigasi utama",
     links: {
       keunggulan: "Keunggulan",
       kalkulator: "Kalkulator",
@@ -44,7 +46,7 @@ export const copy = {
     pill: "Data Historis SNPMB • SNBP & SNBT",
     title: "Jangan Asal Pilih PTN. Hitung Peluang & Strategimu.",
     subtitle:
-      "Simulasikan peluang lolos SNBP & SNBT di 17 PTN Jawa Timur berbasis data daya tampung dan peminat resmi SNPMB — lengkap dengan analisis strategi AI & rekomendasi prodi aman.",
+      "Simulasikan peluang SNBP & SNBT di 17 PTN Jawa Timur berbasis data daya tampung dan peminat resmi SNPMB — gratis dengan tren historis, target skor, dan 3 alternatif prodi. Strategi AI tersedia di mode Beta.",
     cta: "Cek Peluang Gratis",
     trustNote: "Tanpa login • Data pribadi tidak disimpan • 17 PTN Jatim & 740 Prodi",
     badgeFree: "Gratis • Tanpa daftar • Data pribadi tidak disimpan",
@@ -59,7 +61,7 @@ export const copy = {
       choice2Name: "Informatika — UPN Jatim",
       choice2Percent: "89,51%",
       choice2Range: "Rentang 84% – 93%",
-      footerStrip: "Termasuk Strategi AI & Alternatif Prodi",
+      footerStrip: "Gratis: Tren Historis, Target Skor & 3 Alternatif Prodi",
     },
   },
 
@@ -67,31 +69,34 @@ export const copy = {
     eyebrow: "KEUNGGULAN UTAMA",
     title: "Kenapa Pakai LolosPTN.AI?",
     subtitle:
-      "Dirancang agar kamu menentukan pilihan PTN dengan data terukur, bukan sekadar ikut-ikutan.",
+      "Alat bantu pengambilan keputusan berbasis data historis — transparan tentang rumus, batasan, dan status tiap fitur.",
     items: [
       {
         id: "data",
         accent: "blue" as const,
+        statusLabel: "Tersedia Gratis",
         title: "Berbasis Data Historis SNPMB",
         description:
-          "Peluang dihitung deterministik dari rasio daya tampung & peminat tertimbang 3 tahun terakhir — transparan beserta rentang sensitivitasnya.",
+          "Peluang dan target skor dihitung deterministik dari rasio daya tampung & peminat tertimbang 3 tahun terakhir — transparan beserta rentang sensitivitasnya.",
         tag: "17 PTN Jatim • 740 Prodi",
-      },
-      {
-        id: "ai",
-        accent: "yellow" as const,
-        title: "Strategi Pilihan AI",
-        description:
-          "Evaluasi tajam atas urutan pilihan, risiko persaingan, target kenaikan skor, hingga catatan validasi nilai TKA untuk jalur SNBP terbaru.",
-        tag: "Urutan • Risiko • Konteks TKA",
       },
       {
         id: "alt",
         accent: "green" as const,
-        title: "Rekomendasi Prodi Alternatif Aman",
+        statusLabel: "Tersedia Gratis",
+        title: "3 Alternatif Prodi & Ringkasan Otomatis",
         description:
-          "Otomatis menemukan hingga 3 prodi serumpun berstatus Aman atau Moderat di PTN Jawa Timur agar strategi pilihanmu punya jaring pengaman.",
-        tag: "3 Opsi Pengaman Serumpun",
+          "Otomatis menemukan hingga 3 prodi serumpun berstatus Aman atau Moderat di PTN Jawa Timur disertai ringkasan strategi deterministik tanpa login.",
+        tag: "3 Opsi Serumpun Gratis",
+      },
+      {
+        id: "ai",
+        accent: "yellow" as const,
+        statusLabel: "Beta • Kode Kuesioner",
+        title: "Strategi Pilihan AI",
+        description:
+          "Narasi strategi personal dari AI untuk mengevaluasi kombinasi pilihan, risiko persaingan, dan pengingat persiapan jalur SNBP/SNBT.",
+        tag: "Fitur Lanjutan • Beta",
       },
     ],
   },
@@ -100,10 +105,15 @@ export const copy = {
     eyebrow: "SIMULASI & STRATEGI",
     title: "Kalkulator Peluang & Kartu Hasil",
     subtitle:
-      "Pilih jalur seleksi, masukkan skor atau rapor, lalu cek peluang beserta analisis strategi AI.",
+      "Pilih jalur seleksi, masukkan skor atau rapor, lalu lihat peluang, target skor, ringkasan otomatis, dan 3 alternatif prodi secara gratis.",
     emptyStateTitle: "Siap Menghitung Peluangmu?",
     emptyStateBody:
       "Isi Pilihan 1 (dan Pilihan 2 opsional) beserta skor UTBK atau nilai rapormu di samping, lalu klik \"Hitung Peluang Saya\". Kartu hasil siap screenshot akan langsung muncul di sini.",
+    detailTabsLabel: "Detail analisis gratis",
+    detailTabs: {
+      insights: "Ringkasan & 3 Alternatif (Gratis)",
+      tren: "Tren Peminat vs Daya Tampung",
+    },
   },
 
   form: {
@@ -159,6 +169,11 @@ export const copy = {
         warningTitle: "Pastikan status eligibilitasmu",
         warningBody:
           "Hanya siswa eligible yang dapat mendaftar SNBP. Tanyakan ke guru BK atau cek informasi resmi di situs SNPMB sebelum memakai hasil perhitungan ini.",
+        tkaReminderTitle: "Konfirmasi nilai TKA & juknis resmi",
+        tkaCheckboxLabel:
+          "Saya memahami bahwa kepemilikan nilai TKA perlu dikonfirmasi sesuai ketentuan SNPMB terbaru.",
+        juknis2027Note:
+          "Catatan: Aturan SNBP 2027 menunggu juknis resmi SNPMB. Selalu cek info resmi sebelum mendaftar.",
         officialLinkLabel: "Buka info resmi SNPMB",
         officialUrl: "https://snpmb.id",
       },
@@ -212,6 +227,18 @@ export const copy = {
     kuotaTerbaru: "Kuota tahun ini",
     kuotaUnavailable: "Belum tersedia",
     portofolio: "Portofolio",
+    targetSafeLabel: "Target skor Aman (75%)",
+    targetSafeAlready: (score: string) => `${score} (Sudah memenuhi)`,
+    targetSafeGap: (score: string, gap: string) =>
+      `${score} (+${gap} dari skormu)`,
+    targetSafeOutOfScale: "Di luar skala (> 1000)",
+    acuanClampedHigh: (max: number) =>
+      `Acuan dibatasi ${max}. Persaingan sebenarnya bisa lebih ketat, sehingga target ini kemungkinan terlalu rendah.`,
+    acuanClampedLow: (min: number) =>
+      `Acuan dibatasi ${min}. Target ini kemungkinan terlalu tinggi.`,
+    dataSource: "Sumber: Data historis publik SNPMB",
+    dataSourceWithYears: (years: string) =>
+      `Sumber: Data historis publik SNPMB (${years})`,
     pilihanBadge: (slot: number) => `PILIHAN ${slot}`,
     lihatMetodologi: "Lihat Metodologi",
     hitungUlang: "Hitung Ulang",
@@ -293,49 +320,91 @@ export const copy = {
     ],
   },
 
+  freeInsights: {
+    title: "Ringkasan Otomatis & 3 Alternatif Prodi",
+    chip: "Gratis • Tanpa AI",
+    summaryTitle: "Ringkasan Otomatis",
+    summarySubtitle:
+      "Disusun deterministik dari angka hasil perhitunganmu (bukan dihasilkan oleh AI).",
+    alternativesTitle: "3 Rekomendasi Prodi Alternatif Serumpun",
+    alternativesSubtitle:
+      "Pilihan prodi di rumpun yang sama dengan Pilihan 1 yang paling realistis untuk posisimu.",
+    loading: "Menyiapkan ringkasan otomatis & 3 alternatif prodi…",
+    error: "Gagal memuat ringkasan & alternatif gratis. Silakan coba lagi.",
+  },
+
   paywall: {
-    lockedTitle: "Analisis Lengkap",
+    lockedTitle: "Fitur Premium & Beta",
     lockedBody:
-      "Dapatkan 3 alternatif prodi yang realistis dan strategi personal dari AI berdasarkan hasilmu.",
-    unlockButton: "Buka Analisis Lengkap (Rp10.000)",
-    modalTitle: "Buka Analisis Lengkap",
-    step1: "1. Scan QRIS di bawah dan bayar Rp10.000.",
-    step2: "2. Kirim bukti pembayaran ke admin via WhatsApp.",
+      "Buka analisis Strategi Pilihan AI personal dan lihat fitur lanjutan yang sedang kami siapkan.",
+    unlockButton: "Buka Strategi AI (Beta)",
+    modalTitle: "Buka Strategi Pilihan AI",
+    step1: "1. Ikuti petunjuk akses yang tersedia di bawah.",
+    step2: "2. Hubungi admin via WhatsApp jika perlu bantuan.",
     step3: "3. Masukkan kode akses yang kamu terima.",
     beta: {
-      headerTitle: "MODE AKSES BETA GRATIS",
-      headerChip: "Tanpa Biaya • 1 Menit",
-      unlockButton: "Buka Analisis Lengkap (Gratis Beta)",
-      modalTitle: "Mode Akses Beta Gratis",
+      headerTitle: "FITUR PREMIUM & BETA",
+      headerChip: "Beta & Uji Minat",
+      unlockButton: "Buka Strategi AI (Gratis Beta)",
+      modalTitle: "Fitur Premium & Beta",
       intro:
-        "Selama masa Beta, kamu bisa membuka 3 rekomendasi prodi alternatif dan Strategi dari AI secara gratis cukup dengan mengisi kuesioner singkat 1 menit.",
+        "Cek peluang, target skor 75%, ringkasan otomatis, dan 3 alternatif prodi sudah gratis. Di bawah ini adalah fitur lanjutan yang sedang diuji minatnya.",
+      aiCardTitle: "Strategi Pilihan AI",
+      aiCardBadge: "Beta Gratis",
+      aiCardBody:
+        "Narasi strategi personal dari AI untuk mengevaluasi susunan pilihanmu. Selama masa Beta, kamu bisa membukanya gratis dengan mengisi kuesioner 1 menit.",
       step1:
         "1. Isi kuesioner 1 menit berikut untuk mendapatkan kode akses di pesan konfirmasi setelah submit.",
-      questionnaireButton: "Isi Kuesioner 1 Menit & Ambil Kode Akses Gratis",
+      questionnaireButton: "Isi Kuesioner 1 Menit & Ambil Kode Beta AI",
       step2:
         "2. Masukkan kode akses yang muncul di pesan konfirmasi kuesioner di bawah ini.",
     },
+    fakeDoor: {
+      sectionTitle: "Fitur Lanjutan (Segera Hadir)",
+      upcomingBadge: "Segera Hadir",
+      interestButton: "Minat Fitur Ini",
+      items: [
+        {
+          id: "tabel" as const,
+          event: "klik_fd_tabel" as const,
+          title: "Tabel 10 Alternatif + Target Skor 60/75/90%",
+          description:
+            "Bandingkan hingga 10 prodi serumpun dari Pilihan 1 & 2 lengkap dengan target skor 60%, 75%, dan 90%, filter kota/PTN, serta tren peminat.",
+        },
+        {
+          id: "simulator" as const,
+          event: "klik_fd_simulator" as const,
+          title: "Simulator Susunan Pilihan",
+          description:
+            "Simulasikan penggantian Pilihan 1 atau 2 dan lihat rentang estimasi peluang gabungan beserta asumsi perhitungannya.",
+        },
+      ],
+      modalTitle: "Fitur Sedang Disiapkan",
+      modalBody: (featureName: string) =>
+        `Terima kasih atas minatmu! Fitur "${featureName}" sedang kami siapkan dan belum dijual saat ini. Bantu kami menentukan prioritas fitur serta kisaran harga yang sesuai lewat kuesioner 1 menit (sekaligus dapatkan kode akses Beta AI gratis).`,
+      modalCta: "Isi Kuesioner 1 Menit",
+    },
     qrisAlt: "Kode QRIS pembayaran",
-    qrisPlaceholderTitle: "Placeholder QRIS Rp10.000",
-    qrisPlaceholderNote: "Ganti di public/qris.png",
-    whatsappButton: "Konfirmasi via WhatsApp Admin",
-    codeLabel: "Kode akses",
+    qrisPlaceholderTitle: "Pembayaran Belum Dibuka",
+    qrisPlaceholderNote: "Saat ini dalam masa Beta & uji minat",
+    whatsappButton: "Hubungi WhatsApp Admin",
+    codeLabel: "Kode akses Beta AI",
     codePlaceholder: "Masukkan kode akses Beta…",
     codeHelper: "Kode akses hanya disimpan di memori halaman selama sesi ini.",
     codeRequired: "Masukkan kode akses terlebih dahulu.",
-    codeSubmit: "Buka Analisis",
-    submitting: "Memverifikasi kode & menyiapkan analisis…",
+    codeSubmit: "Buka Strategi AI",
+    submitting: "Memverifikasi kode & menyiapkan strategi AI…",
     screenshotReminderTitle: "Pengingat",
     screenshotReminder:
-      "Simpan atau screenshot hasil analisis ini sebelum menutup halaman.",
-    unlockedTitle: "Analisis Lengkap",
+      "Simpan atau screenshot hasil strategi AI ini sebelum menutup halaman.",
+    unlockedTitle: "Strategi Pilihan AI",
     cachedBadge: "Dimuat dari cache (kuota kode tidak berkurang)",
     alternativesTitle: "Rekomendasi Prodi Alternatif Serumpun",
     alternativesSubtitle:
       "Pilihan prodi di rumpun yang sama dengan Pilihan 1 yang paling realistis untuk posisimu.",
     aiTitle: "Strategi dari AI",
-    aiChip: "Strategi Pilihan AI",
-    aiSubtitle: "Ringkasan strategi berdasarkan angka hasil perhitunganmu.",
+    aiChip: "Beta • Strategi AI",
+    aiSubtitle: "Narasi strategi personal berdasarkan angka hasil perhitunganmu.",
     refScoreShort: (jalur: "snbt" | "snbp", value: number) =>
       jalur === "snbt" ? `Skor acuan: ${value}` : `Nilai acuan: ${value}`,
   },
@@ -355,7 +424,7 @@ export const copy = {
         question:
           "Bagaimana pengaruh TKA (Tes Kemampuan Akademik) pada jalur SNBP terbaru?",
         answer:
-          "Sesuai ketentuan SNPMB terbaru, selain konsistensi nilai rapor, pengisian PDSS, indeks sekolah, dan rekam jejak alumni, kelulusan SNBP juga dipengaruhi validasi nilai TKA (Tes Kemampuan Akademik). Analisis Strategi AI untuk SNBP akan menyoroti hal ini sebagai pengingat persiapanmu.",
+          "Selain konsistensi nilai rapor, pengisian PDSS, indeks sekolah, dan rekam jejak alumni, kepemilikan nilai TKA (Tes Kemampuan Akademik) perlu dikonfirmasi sesuai ketentuan SNPMB terbaru. Catatan: aturan SNBP 2027 menunggu juknis resmi SNPMB, jadi selalu cek info resmi sebelum mendaftar.",
       },
       {
         id: "bukan-snpmb",
@@ -373,9 +442,9 @@ export const copy = {
       },
       {
         id: "beta-gratis",
-        question: "Bagaimana cara mendapatkan kode akses Beta gratis?",
+        question: "Apa yang gratis dan bagaimana cara membuka Strategi AI Beta?",
         answer:
-          "Selama masa Beta, klik tombol \"Isi Kuesioner 1 Menit & Ambil Kode Akses Gratis\" di blok Mode Akses Beta Gratis. Setelah mengirim kuesioner, kode akses akan langsung tampil di pesan konfirmasi dan bisa langsung dipakai untuk membuka Strategi Pilihan AI & alternatif prodi.",
+          "Perhitungan peluang, target skor 75%, tren historis, ringkasan otomatis, dan 3 alternatif prodi sudah gratis tanpa kode. Untuk membuka Strategi Pilihan AI selama masa Beta, klik \"Isi Kuesioner 1 Menit & Ambil Kode Beta AI\" di blok Fitur Premium & Beta, lalu masukkan kode yang muncul di pesan konfirmasi.",
       },
     ],
   },
@@ -384,7 +453,7 @@ export const copy = {
     eyebrow: "SIAP MULAI?",
     title: "Siap cek peluangmu sekarang?",
     subtitle:
-      "Hitung peluang Pilihan 1 & 2 di 17 PTN Jawa Timur secara gratis tanpa login, lengkap dengan tren historis dan Strategi Pilihan AI.",
+      "Hitung peluang Pilihan 1 & 2 di 17 PTN Jawa Timur gratis tanpa login — lengkap dengan tren historis, target skor, ringkasan otomatis, dan 3 alternatif prodi. Strategi AI tersedia di mode Beta.",
     button: "Buka Kalkulator Peluang",
   },
 
@@ -398,6 +467,7 @@ export const copy = {
   footer: {
     brandNote: "LolosPTN.AI • Beta MVP (17 PTN Jawa Timur)",
     tagline: "Dibuat untuk siswa SMA & gap year Indonesia",
+    navLabel: "Navigasi footer",
   },
 
   fallback: {

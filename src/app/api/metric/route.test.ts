@@ -44,7 +44,14 @@ describe("POST /api/metric", () => {
   });
 
   it("menerima seluruh event whitelist dan menaikkan counter", async () => {
-    for (const event of ["sesi_selesai", "klik_paywall", "klik_wa"] as const) {
+    for (const event of [
+      "sesi_selesai",
+      "klik_paywall",
+      "klik_wa",
+      "klik_fd_tabel",
+      "klik_fd_simulator",
+      "klik_fd_ai",
+    ] as const) {
       const res = await POST(makeMetricRequest({ event }));
       expect(res.status).toBe(200);
       const data = (await res.json()) as { ok: boolean; event: string };

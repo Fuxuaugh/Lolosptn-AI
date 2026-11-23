@@ -1,6 +1,7 @@
 export { BentoBenefits } from "./BentoBenefits";
 export { FaqSection, type FaqSectionProps } from "./FaqSection";
 export { Footer } from "./Footer";
+export { FreeInsightsCard, type FreeInsightsCardProps } from "./FreeInsightsCard";
 export { HasilKartu, type HasilKartuProps, type HasilPilihanItem } from "./HasilKartu";
 export { HeroSection } from "./HeroSection";
 export { HomeCalculator } from "./HomeCalculator";

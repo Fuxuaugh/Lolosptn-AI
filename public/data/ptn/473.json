@@ -33,7 +33,8 @@
             "daya_tampung": 50,
             "peminat": 1374
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       },
       "snbp": {
         "tersedia": true,
@@ -58,7 +59,8 @@
             "daya_tampung": 36,
             "peminat": 582
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       }
     },
     {
@@ -91,7 +93,8 @@
             "daya_tampung": 50,
             "peminat": 497
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       },
       "snbp": {
         "tersedia": true,
@@ -116,7 +119,8 @@
             "daya_tampung": 36,
             "peminat": 249
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       }
     },
     {
@@ -149,7 +153,8 @@
             "daya_tampung": 52,
             "peminat": 184
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       },
       "snbp": {
         "tersedia": true,
@@ -174,7 +179,8 @@
             "daya_tampung": 36,
             "peminat": 138
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       }
     },
     {
@@ -202,7 +208,8 @@
             "daya_tampung": 24,
             "peminat": 147
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       },
       "snbp": {
         "tersedia": true,
@@ -222,7 +229,8 @@
             "daya_tampung": 18,
             "peminat": 83
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       }
     },
     {
@@ -250,7 +258,8 @@
             "daya_tampung": 37,
             "peminat": 302
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       },
       "snbp": {
         "tersedia": true,
@@ -270,7 +279,8 @@
             "daya_tampung": 27,
             "peminat": 134
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       }
     },
     {
@@ -298,7 +308,8 @@
             "daya_tampung": 26,
             "peminat": 276
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       },
       "snbp": {
         "tersedia": true,
@@ -318,7 +329,8 @@
             "daya_tampung": 18,
             "peminat": 134
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       }
     },
     {
@@ -346,7 +358,8 @@
             "daya_tampung": 24,
             "peminat": 87
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       },
       "snbp": {
         "tersedia": true,
@@ -366,7 +379,8 @@
             "daya_tampung": 18,
             "peminat": 57
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       }
     },
     {
@@ -389,7 +403,8 @@
             "daya_tampung": 25,
             "peminat": 48
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       },
       "snbp": {
         "tersedia": true,
@@ -404,7 +419,8 @@
             "daya_tampung": 18,
             "peminat": 35
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       }
     },
     {
@@ -427,7 +443,8 @@
             "daya_tampung": 26,
             "peminat": 136
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       },
       "snbp": {
         "tersedia": true,
@@ -442,7 +459,8 @@
             "daya_tampung": 18,
             "peminat": 70
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       }
     },
     {
@@ -475,7 +493,8 @@
             "daya_tampung": 48,
             "peminat": 481
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       },
       "snbp": {
         "tersedia": true,
@@ -500,7 +519,8 @@
             "daya_tampung": 36,
             "peminat": 136
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       }
     },
     {
@@ -533,7 +553,8 @@
             "daya_tampung": 51,
             "peminat": 438
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       },
       "snbp": {
         "tersedia": true,
@@ -558,7 +579,8 @@
             "daya_tampung": 36,
             "peminat": 120
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       }
     },
     {
@@ -591,7 +613,8 @@
             "daya_tampung": 48,
             "peminat": 195
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       },
       "snbp": {
         "tersedia": true,
@@ -616,7 +639,8 @@
             "daya_tampung": 36,
             "peminat": 65
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       }
     },
     {
@@ -649,7 +673,8 @@
             "daya_tampung": 42,
             "peminat": 211
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       },
       "snbp": {
         "tersedia": true,
@@ -674,7 +699,8 @@
             "daya_tampung": 27,
             "peminat": 43
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       }
     },
     {
@@ -707,7 +733,8 @@
             "daya_tampung": 49,
             "peminat": 277
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       },
       "snbp": {
         "tersedia": true,
@@ -732,7 +759,8 @@
             "daya_tampung": 36,
             "peminat": 100
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       }
     },
     {
@@ -765,7 +793,8 @@
             "daya_tampung": 49,
             "peminat": 907
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       },
       "snbp": {
         "tersedia": true,
@@ -790,7 +819,8 @@
             "daya_tampung": 36,
             "peminat": 243
           }
-        ]
+        ],
+        "acuan_dibatasi": null
       }
     }
   ]

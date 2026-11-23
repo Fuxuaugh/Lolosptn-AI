@@ -5,7 +5,15 @@ import type { AnalyzeResponseBody } from "@/app/api/analyze/route";
 import { APP_CONFIG } from "@/config/app.config";
 import { copy } from "@/config/copy";
 import { trackMetric } from "@/lib/metrics";
-import { Button, Input, Modal, cn, focusRing } from "@/components/ui";
+import {
+  Button,
+  Input,
+  Modal,
+  cn,
+  focusRing,
+  tactileCardButton,
+  tactileControlButton,
+} from "@/components/ui";
 import type { PredictionFormPayload } from "./PredictionForm";
 
 export interface PaywallModalProps {
@@ -45,7 +53,7 @@ function QrisPlaceholder() {
     <div
       role="img"
       aria-label={copy.paywall.qrisAlt}
-      className="mx-auto flex w-full max-w-xs flex-col items-center gap-2 rounded-card border border-dashed border-line-strong bg-surface-muted p-4 text-center"
+      className="mx-auto flex w-full max-w-xs flex-col items-center gap-2 rounded-card border-2 border-dashed border-line bg-surface-muted p-4 text-center"
     >
       <svg
         aria-hidden="true"
@@ -195,8 +203,8 @@ export function PaywallModal({
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
-                "inline-flex min-h-12 w-full items-center justify-center rounded-control bg-brand px-5 text-center text-base font-semibold text-brand-fg hover:bg-brand-hover",
-                "transition-colors motion-reduce:transition-none",
+                "inline-flex min-h-12 w-full items-center justify-center rounded-control border-2 border-line bg-brand px-5 py-2.5 text-center text-sm leading-snug font-bold text-brand-fg hover:bg-brand-hover sm:text-base",
+                tactileCardButton,
                 focusRing
               )}
             >
@@ -223,8 +231,8 @@ export function PaywallModal({
                 rel="noopener noreferrer"
                 onClick={() => trackMetric("klik_wa")}
                 className={cn(
-                  "inline-flex min-h-11 w-full items-center justify-center rounded-control border border-line-strong bg-surface px-4 text-sm font-semibold text-fg hover:bg-surface-muted",
-                  "transition-colors motion-reduce:transition-none",
+                  "inline-flex min-h-11 w-full items-center justify-center rounded-control border-2 border-line bg-surface px-4 py-2 text-center text-sm font-bold text-fg hover:bg-surface-muted",
+                  tactileControlButton,
                   focusRing
                 )}
               >
@@ -238,7 +246,7 @@ export function PaywallModal({
         <form
           onSubmit={handleSubmit}
           noValidate
-          className="space-y-3 border-t border-line pt-4"
+          className="space-y-3 border-t-2 border-line-soft pt-4"
         >
           <p className="text-sm font-medium text-fg">
             {isBetaMode ? copy.paywall.beta.step2 : copy.paywall.step3}

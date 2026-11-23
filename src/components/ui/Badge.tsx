@@ -68,7 +68,7 @@ export function Badge({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-full border-2 font-display font-bold tracking-wide uppercase",
+        "inline-flex max-w-full items-center gap-1.5 rounded-full border-2 font-display font-bold tracking-wide uppercase",
         size === "sm" ? "px-2.5 py-0.5 text-xs" : "px-3 py-1 text-xs",
         STYLE[status],
         className
@@ -77,7 +77,7 @@ export function Badge({
       <StatusIcon status={status} />
       <span>{text}</span>
       {showEnglish && (
-        <span className="font-sans font-semibold normal-case opacity-90">
+        <span className="font-sans font-semibold normal-case">
           ({copy.status[status].english})
         </span>
       )}

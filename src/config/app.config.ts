@@ -12,7 +12,13 @@ export type Akreditasi = "A" | "B" | "C";
 
 export type PrestasiLevel = "nasional" | "provinsi" | "kabupaten" | "tidak_ada";
 
-export type MetricEvent = "sesi_selesai" | "klik_paywall" | "klik_wa";
+export type MetricEvent =
+  | "sesi_selesai"
+  | "klik_paywall"
+  | "klik_wa"
+  | "klik_fd_tabel"
+  | "klik_fd_simulator"
+  | "klik_fd_ai";
 
 export const APP_CONFIG = {
   /** Koefisien kurva sigmoid P = 100 / (1 + exp(-k * delta)) */
@@ -64,10 +70,17 @@ export const APP_CONFIG = {
     maxAlternatives: 3,
   },
 
-  /** Konfigurasi default rate limit server (F4) */
+  /** Konfigurasi default rate limit server (F4 & /api/recommend) */
   rateLimit: {
     maxRequests: 5,
     windowSeconds: 600,
+    recommendMaxRequests: 20,
+  },
+
+  /** Batas clamp skor/rapor acuan dari pipeline sync_snpmb.py */
+  acuanClamp: {
+    snbt: { min: 460, max: 760 },
+    snbp: { min: 78, max: 96 },
   },
 
   /** Batas validasi input pengguna (F1) */

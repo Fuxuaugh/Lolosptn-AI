@@ -121,3 +121,23 @@
 - **Prototipe FigCraft & Implementasi UI Soft Neo-Brutalism + Bento Grid:**
   - Prototipe Desktop (1440px) & Mobile (390px) dibuat via MCP FigCraft dan disimpan di `design/lolosptn-prototype.figcraft`.
   - Implementasi penuh ke Next.js melalui token CSS (`src/styles/tokens.css`, `src/app/globals.css`, font `Space Grotesk` + `Plus Jakarta Sans` di `src/app/layout.tsx`, `src/config/copy.ts`), upgrade seluruh primitif `src/components/ui/` + komponen baru `Accordion.tsx`, serta 5 bagian utama halaman (`Navbar`, `HeroSection`, `BentoBenefits`, `PredictionForm` + `HasilKartu` shareable + `UnlockedAnalysis` header `#EEF2FF` + `PaywallPreview` Mode Beta inline, dan `FaqSection` 5 pertanyaan + Disclaimer Zero-PII).
+
+### Pembaruan Rencana v4 — Tahap 1, 2, & 3 (2026-11-23)
+- **Tahap 1 (Sinkronisasi Copy, Status, & PRD):**
+  - Salinan rencana v4 disimpan di `docs/rencana_fitur_berbayar.md` (bersih dari tautan lokal & catatan kompetitor).
+  - Seluruh copy publik di `src/config/copy.ts` diselaraskan (membedakan fitur gratis vs Beta AI, menghapus klaim AI menjanjikan target kenaikan skor, menambahkan catatan juknis SNBP 2027, dan menghapus angka harga Rp10.000 sebelum transaksi siap).
+  - Label status (`Tersedia Gratis` / `Beta • Kode Kuesioner`) ditambahkan di `BentoBenefits.tsx`, dan `PRD.md` diperbarui ke v1.3 (termasuk Prinsip Netralitas).
+- **Tahap 2 (Fake-Door Test menyatu dengan Alur Beta):**
+  - Event metrik baru `klik_fd_tabel`, `klik_fd_simulator`, `klik_fd_ai` ditambahkan ke `app.config.ts`, `redis.ts`, `/api/metric`, dan unit testnya.
+  - `PaywallPreview.tsx` diubah menjadi blok terpadu **Fitur Premium & Beta**: Strategi AI (Beta Gratis via kode kuesioner) + 2 kartu **Segera Hadir** (*Tabel 10 Alternatif + Target 60/75/90%* dan *Simulator Susunan Pilihan*) dengan modal jujur tanpa menerima pembayaran.
+- **Tahap 3 (Perbaikan Fitur Gratis):**
+  - Pipeline `scripts/sync_snpmb.py` + `data/index.json` + `public/data/ptn/*.json` + `src/lib/dataset.ts` menambahkan flag `acuan_dibatasi: "atas" | "bawah" | null`.
+  - `src/lib/prediction.ts` menambahkan `calculateRequiredScore` (+ unit test); `HasilKartu.tsx` menampilkan **Target skor Aman (75%)** untuk SNBT lengkap dengan catatan batas skala (`acuan_dibatasi` & "Di luar skala") serta tahun & sumber data SNPMB.
+  - `src/lib/fallback.ts` diperbaiki agar akurat sebagai **Ringkasan Otomatis** (tanpa saran tukar urutan untuk naikkan peluang total, tanpa saran menaikkan rapor di SNBP).
+  - Endpoint gratis baru `POST /api/recommend` (+ unit test) mengembalikan maksimal 3 alternatif + Ringkasan Otomatis tanpa kode dan tanpa Gemini, ditampilkan via `FreeInsightsCard.tsx` (`THEME.resultLayoutOrder`).
+  - `PredictionForm.tsx` menambahkan konfirmasi kepemilikan nilai TKA dan catatan juknis SNBP 2027 di blok eligibilitas SNBP.
+- **Perapian Tata Letak `/kalkulator` (Anti-Memanjang & AI di Atas):**
+  - Baris atas 2 kolom seimbang (`PredictionForm` di kiri, `HasilKartu` + `Strategi Pilihan AI` di kanan) sehingga fitur andalan AI langsung terlihat tanpa harus menggulir melewati grafik panjang, dan tidak ada duplikasi daftar 3 alternatif di `UnlockedAnalysis`.
+  - Baris bawah lebar penuh berisi panel tab ringkas (`Ringkasan & 3 Alternatif` 2 kolom side-by-side | `Tren Peminat vs Daya Tampung` 2 kolom side-by-side) diikuti baris 2 kolom `Disclaimer & Metodologi` + `Kalibrasi F7`.
+  - Perbaikan overflow dropdown `clearable` pada `Select.tsx` (`min-w-0 flex-1`) dan `<fieldset className="min-w-0">` di `PredictionForm.tsx`.
+- **Tahap 4–7** (10 alternatif, simulator rentang, sistem kode Redis, transaksi, kerja sama) ditunda hingga hasil fake-door test memenuhi kriteria validasi.

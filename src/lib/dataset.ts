@@ -12,6 +12,8 @@ import type { Jalur } from "@/config/app.config";
 // Tipe skema `data/index.json`
 // ---------------------------------------------------------------------------
 
+export type AcuanDibatasi = "atas" | "bawah" | null;
+
 export interface JalurUnavailable {
   tersedia: false;
 }
@@ -20,12 +22,14 @@ export interface IndexSnbtAvailable {
   tersedia: true;
   skor_acuan: number;
   jumlah_tahun_histori: number;
+  acuan_dibatasi?: AcuanDibatasi;
 }
 
 export interface IndexSnbpAvailable {
   tersedia: true;
   rapor_acuan: number;
   jumlah_tahun_histori: number;
+  acuan_dibatasi?: AcuanDibatasi;
 }
 
 export type IndexSnbt = IndexSnbtAvailable | JalurUnavailable;
@@ -65,6 +69,7 @@ export interface DetailSnbtAvailable {
   skor_acuan_mentah: number;
   offset_diterapkan: number;
   skor_acuan: number;
+  acuan_dibatasi?: AcuanDibatasi;
   historis: HistorisTahun[];
 }
 
@@ -75,6 +80,7 @@ export interface DetailSnbpAvailable {
   rapor_acuan_mentah: number;
   offset_diterapkan: number;
   rapor_acuan: number;
+  acuan_dibatasi?: AcuanDibatasi;
   historis: HistorisTahun[];
 }
 

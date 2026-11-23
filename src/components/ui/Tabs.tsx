@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, type KeyboardEvent } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { cn, focusRing } from "./cn";
 
 export interface TabOption<T extends string = string> {
@@ -15,6 +15,7 @@ export interface TabsProps<T extends string = string> {
   value: T;
   onChange: (value: T) => void;
   ariaLabel: string;
+  getPanelId?: (value: T) => string;
   className?: string;
 }
 
@@ -23,10 +24,17 @@ export function Tabs<T extends string = string>({
   value,
   onChange,
   ariaLabel,
+  getPanelId,
   className,
 }: TabsProps<T>) {
   const baseId = useId();
   const indicatorLayoutId = `${baseId}-active-pill`;
+  const prefersReduced = useReducedMotion();
+
+  const hasSelectedEnabled = options.some(
+    (opt) => opt.value === value && !opt.disabled
+  );
+  const firstEnabledIndex = options.findIndex((opt) => !opt.disabled);
 
   function handleKeyDown(e: KeyboardEvent<HTMLButtonElement>, index: number) {
     const enabledIndexes = options
@@ -64,12 +72,16 @@ export function Tabs<T extends string = string>({
       role="tablist"
       aria-label={ariaLabel}
       className={cn(
-        "grid auto-cols-fr grid-flow-col gap-1.5 rounded-control border-2 border-line bg-surface-muted p-1",
+        "flex min-w-0 flex-wrap gap-1.5 rounded-control border-2 border-line bg-surface-muted p-1",
         className
       )}
     >
       {options.map((opt, idx) => {
         const isSelected = opt.value === value;
+        const isTabbable =
+          !opt.disabled &&
+          (isSelected || (!hasSelectedEnabled && idx === firstEnabledIndex));
+
         return (
           <button
             key={opt.value}
@@ -77,12 +89,13 @@ export function Tabs<T extends string = string>({
             type="button"
             role="tab"
             aria-selected={isSelected}
-            tabIndex={isSelected ? 0 : -1}
+            aria-controls={getPanelId ? getPanelId(opt.value) : undefined}
+            tabIndex={isTabbable ? 0 : -1}
             disabled={opt.disabled}
             onClick={() => onChange(opt.value)}
             onKeyDown={(e) => handleKeyDown(e, idx)}
             className={cn(
-              "relative min-h-11 rounded-lg px-3 font-display text-sm font-bold",
+              "relative inline-flex min-h-11 min-w-[min(100%,4.5rem)] flex-1 cursor-pointer items-center justify-center rounded-lg px-2.5 py-2 text-center font-display text-xs leading-snug font-bold sm:px-3 sm:text-sm",
               "transition-colors duration-150 motion-reduce:transition-none",
               "disabled:cursor-not-allowed disabled:opacity-50",
               focusRing,
@@ -95,16 +108,22 @@ export function Tabs<T extends string = string>({
               <motion.span
                 layoutId={indicatorLayoutId}
                 aria-hidden="true"
-                transition={{
-                  type: "spring",
-                  stiffness: 520,
-                  damping: 36,
-                  mass: 0.7,
-                }}
+                transition={
+                  prefersReduced
+                    ? { duration: 0 }
+                    : {
+                        type: "spring",
+                        stiffness: 520,
+                        damping: 36,
+                        mass: 0.7,
+                      }
+                }
                 className="absolute inset-0 rounded-lg border-2 border-line bg-accent-yellow shadow-pill"
               />
             )}
-            <span className="relative z-10">{opt.label}</span>
+            <span className="relative z-10 min-w-0 break-words">
+              {opt.label}
+            </span>
           </button>
         );
       })}

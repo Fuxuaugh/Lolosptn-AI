@@ -203,23 +203,35 @@ def offset_aktif(offset: Any, n_laporan: Any) -> float:
         return 0
 
 
+def _clamp_flag(raw_value: float, lo: float, hi: float) -> str | None:
+    if raw_value > hi:
+        return "atas"
+    if raw_value < lo:
+        return "bawah"
+    return None
+
+
 def proxy_snbt(rasio: float, offset: float = 0) -> dict:
     mentah = SNBT_MEAN + SNBT_SD * z_score(rasio)
-    acuan = clamp(mentah + offset, SNBT_MIN, SNBT_MAX)
+    dengan_offset = mentah + offset
+    acuan = clamp(dengan_offset, SNBT_MIN, SNBT_MAX)
     return {
         "skor_acuan_mentah": round(mentah, 1),
         "offset_diterapkan": _offset_out(offset),
         "skor_acuan": round(acuan, 1),
+        "acuan_dibatasi": _clamp_flag(dengan_offset, SNBT_MIN, SNBT_MAX),
     }
 
 
 def proxy_snbp(rasio: float, offset: float = 0) -> dict:
     mentah = SNBP_MEAN + SNBP_SD * z_score(rasio)
-    acuan = clamp(mentah + offset, SNBP_MIN, SNBP_MAX)
+    dengan_offset = mentah + offset
+    acuan = clamp(dengan_offset, SNBP_MIN, SNBP_MAX)
     return {
         "rapor_acuan_mentah": round(mentah, 2),
         "offset_diterapkan": _offset_out(offset),
         "rapor_acuan": round(acuan, 2),
+        "acuan_dibatasi": _clamp_flag(dengan_offset, SNBP_MIN, SNBP_MAX),
     }
 
 
@@ -301,7 +313,12 @@ def index_item(ptn_obj: dict, prodi: dict) -> dict:
     def ringkas(j: dict, key: str) -> dict:
         if not j.get("tersedia"):
             return {"tersedia": False}
-        return {"tersedia": True, key: j[key], "jumlah_tahun_histori": len(j["historis"])}
+        return {
+            "tersedia": True,
+            key: j[key],
+            "jumlah_tahun_histori": len(j["historis"]),
+            "acuan_dibatasi": j.get("acuan_dibatasi"),
+        }
 
     return {
         "id_ptn": ptn_obj["id_ptn"],

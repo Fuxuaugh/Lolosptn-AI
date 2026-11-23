@@ -1,4 +1,6 @@
-# PRD: LolosPTN.AI (MVP v1.2.1)
+# PRD: LolosPTN.AI (MVP v1.3)
+
+**Perubahan dari v1.2.1 (Sinkronisasi Rencana v4 — Tahap 1–3):** pembagian fitur gratis vs premium diperjelas (peluang, target skor 75% SNBT dengan catatan batas skala `acuan_dibatasi`, ringkasan otomatis deterministik, dan 3 alternatif gratis lewat `POST /api/recommend` tanpa kode dan tanpa Gemini; Strategi AI hanya untuk Beta/Premium); blok Beta disatukan dengan fake-door test untuk 2 fitur lanjutan (`klik_fd_tabel`, `klik_fd_simulator`, `klik_fd_ai`); cek eligibilitas SNBP menambahkan konfirmasi nilai TKA dan catatan juknis 2027; aturan netralitas ditambahkan; rencana F8 (Skor Target 60/75/90% + 10 alternatif) & F9 (Simulator rentang) dicatat sebagai tahap pasca-validasi.
 
 **Perubahan dari v1.1:** urutan kata kunci rumpun diperbaiki, input alumni per pilihan, F5 dihitung di server (paywall nyata), dataset dipecah per PTN, contoh data dikoreksi, kalibrasi dibatasi sampel minimum, istilah "rentang sensitivitas", fallback error, metrik sukses, pengecekan eligibilitas, privasi IP, dan **sistem desain yang mudah diubah (Bagian 7)**.
 
@@ -261,22 +263,23 @@ Semua probabilitas dihitung di TypeScript, tidak oleh LLM. Semua konstanta (koef
 5. Cache miss: hitung F5, panggil Gemini (atau analisis template jika gagal), simpan ke cache.
 6. Kuota kode dikurangi hanya setelah analisis Gemini berhasil. Jika yang tampil analisis template karena Gemini gagal, kuota tidak dikurangi.
 
-**Metrik anonim:** endpoint ringan `/api/metric` hanya menerima event dari daftar putih (`sesi_selesai`, `klik_paywall`, `klik_wa`), diberi rate limit, lalu melakukan `INCR` di Redis. Klik paywall dan WhatsApp terjadi sebelum ada permintaan analisis, sehingga tidak bisa dicatat dari `/api/analyze`.
+**Metrik anonim:** endpoint ringan `/api/metric` hanya menerima event dari daftar putih (`sesi_selesai`, `klik_paywall`, `klik_wa`, `klik_fd_tabel`, `klik_fd_simulator`, `klik_fd_ai`), diberi rate limit, lalu melakukan `INCR` di Redis. Klik paywall, fake-door, dan WhatsApp terjadi sebelum ada permintaan analisis, sehingga tidak bisa dicatat dari `/api/analyze`.
 
-**Pengingat UI:** kartu hasil F5 dan F6 menampilkan catatan dari `copy.ts`: "Simpan atau screenshot hasil analisis ini sebelum menutup halaman."
+**Pengingat UI:** kartu hasil F6 menampilkan catatan dari `copy.ts`: "Simpan atau screenshot hasil strategi AI ini sebelum menutup halaman."
 
-### F5. Smart Alternative Recommender (dihitung di server)
+### F5. Smart Alternative Recommender & Ringkasan Otomatis (Gratis via `POST /api/recommend`, dihitung di server)
 
-- Sumber data: data/index.json (flat list tanpa historis, diimpor statis di route handler), sehingga tidak perlu membuka file per PTN. Kandidat: prodi `tersedia: true` pada jalur terkait dengan `rumpun` sama dengan Pilihan 1, kecuali Pilihan 1 dan 2.
+- Sumber data: `data/index.json` (flat list tanpa historis, diimpor statis di route handler), sehingga tidak perlu membuka file per PTN. Kandidat: prodi `tersedia: true` pada jalur terkait dengan `rumpun` sama dengan Pilihan 1, kecuali Pilihan 1 dan 2.
+- Endpoint gratis `POST /api/recommend` tanpa kode akses dan tanpa panggilan Gemini, dilindungi rate limit per IP-hash, mengembalikan maksimal 3 alternatif dan **Ringkasan Otomatis** (template `fallback.ts`, berlabel jujur bukan AI).
 - Alumni SNBP: PTN sama dengan Pilihan 1 → pakai input pengguna; PTN berbeda → `Tidak Ada`.
 - Pilih kandidat berstatus **Aman**, urutkan `skor_acuan` / `rapor_acuan` menurun, ambil 3 teratas.
 - *Fallback:* jika kurang dari 3, lengkapi dari **Moderat** (P tertinggi ke terendah) dengan label status yang sesuai.
 - Jika kandidat kosong, tampilkan pesan "belum ada alternatif yang cocok", bukan layar kosong.
 
-### F6. AI Strategy Advisor (`/api/analyze`)
+### F6. AI Strategy Advisor (`/api/analyze` — Beta / Premium)
 
 - Memanggil `process.env.GEMINI_MODEL` dengan payload anonim: jalur, skor pengguna, hasil F2 Pilihan 1 & 2, 3 alternatif F5.
-- *System prompt:* dilarang mengubah atau mengarang angka; maksimal 3 paragraf (\~250–300 kata): posisi Pilihan 1 & 2, saran urutan pilihan, target kenaikan skor/nilai yang realistis.
+- *System prompt:* dilarang mengubah atau mengarang angka; maksimal 3 paragraf (\~250–300 kata): posisi Pilihan 1 & 2, saran strategi pilihan, langkah taktis (untuk SNBP dilarang menyarankan menaikkan rapor).
 - **Cache:** Upstash Redis, TTL 24 jam. Kunci cache = input yang dibulatkan + versi dataset + `GEMINI_MODEL`. Fallback `Map` in-memory hanya untuk dev lokal. Cache hit tidak mengurangi kuota kode akses.
 - **Error state:** jika Gemini gagal, timeout, atau kuota habis, tampilkan analisis template dari `fallback.ts` berbasis angka F2/F5 dengan catatan "Analisis AI sedang tidak tersedia". F5 tetap tampil dan kuota kode tidak dikurangi.
 
@@ -284,6 +287,17 @@ Semua probabilitas dihitung di TypeScript, tidak oleh LLM. Semua konstanta (koef
 
 - Tautan ke Google Form anonim yang terhubung ke Google Sheets (tanpa endpoint /api/report di MVP): jalur, prodi, rentang skor/nilai, hasil (lolos/tidak). Tanpa nama, kontak, atau sekolah.
 - Digunakan sebagai sanity check proxy. Offset per prodi baru diterapkan jika `n_laporan >= 10` untuk prodi itu.
+
+### F8 & F9 (Pasca-Validasi Fake-Door — lihat `docs/rencana_fitur_berbayar.md`)
+
+- **F8 (Premium, menunggu validasi):** Tabel hingga 10 alternatif (5 rumpun Pilihan 1 + 5 rumpun Pilihan 2, tanpa duplikat) + target skor 60/75/90% dengan catatan batas skala `acuan_dibatasi` dan "Di luar skala". Target skor 75% untuk Pilihan 1 & 2 SNBT sudah tersedia gratis di kartu hasil.
+- **F9 (Premium, menunggu validasi):** Simulator susunan pilihan berbasis rentang `max(P1, P2)` sampai `1 - (1-P1)(1-P2)` beserta keterangan asumsi (bukan probabilitas terkalibrasi).
+
+### Prinsip Netralitas (berlaku sejak sekarang)
+
+- Mitra atau pihak luar tidak boleh memengaruhi angka peluang, skor target, urutan alternatif, atau teks AI.
+- Konten kerja sama wajib diberi label **"Kerja sama"** dan dipisah secara visual dari hasil perhitungan.
+- Mitra hanya menerima statistik agregat; tidak ada data per siswa dan tidak ada rekomendasi kelas/bimbel berdasarkan hasil.
 
 ## 6. Batasan MVP (Out of Scope)
 

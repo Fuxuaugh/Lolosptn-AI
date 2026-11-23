@@ -21,10 +21,10 @@
   --color-surface-muted: #f4f4f5;
   --color-surface-warm: #fffdf7;
   --color-fg: #18181b;
-  --color-fg-muted: #52525b;
-  --color-fg-subtle: #71717a;
+  --color-fg-muted: #45454e;
+  --color-fg-subtle: #575761;
   --color-line: #18181b;
-  --color-line-soft: #d4d4d8;
+  --color-line-soft: #c4c4cc;
   --color-line-strong: #18181b;
   --color-focus: #4f46e5;
   --color-overlay: rgb(24 24 27 / 0.58);
@@ -37,18 +37,18 @@
   --color-bento-green: #f0fdf4;
   --color-ai-header: #eef2ff;
 
-  /* Status (kontras WCAG AA, selaras spesifikasi Soft Neo-Brutalism) */
-  --color-status-safe: #16a34a;
+  /* Status (kontras WCAG AA >= 4.5:1 di seluruh permukaan, selaras Soft Neo-Brutalism) */
+  --color-status-safe: #147a3a;
   --color-status-safe-soft: #86efac;
   --color-status-safe-fg: #14532d;
 
-  --color-status-target: #ca8a04;
+  --color-status-target: #9a5b06;
   --color-status-target-soft: #fde047;
   --color-status-target-fg: #713f12;
 
-  --color-status-reach: #dc2626;
+  --color-status-reach: #c51f1f;
   --color-status-reach-soft: #fca5a5;
-  --color-status-reach-fg: #7f1d1d;
+  --color-status-reach-fg: #6b1111;
 
   /* Callout Disclaimer */
   --color-callout-bg: #fef9c3;

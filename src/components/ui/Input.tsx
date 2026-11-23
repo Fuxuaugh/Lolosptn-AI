@@ -30,7 +30,7 @@ export function Input({
       .join(" ") || undefined;
 
   return (
-    <div className={cn("flex flex-col gap-1.5", containerClassName)}>
+    <div className={cn("flex min-w-0 flex-col gap-1.5", containerClassName)}>
       <label
         htmlFor={inputId}
         className="text-xs font-bold tracking-wide text-fg uppercase"
@@ -50,9 +50,9 @@ export function Input({
         aria-invalid={error ? true : undefined}
         aria-describedby={describedBy}
         className={cn(
-          "min-h-12 w-full rounded-control border-2 bg-surface px-3.5 text-base font-semibold text-fg placeholder:font-normal placeholder:text-fg-subtle",
+          "min-h-12 min-w-0 w-full rounded-control border-2 bg-surface px-3.5 text-base font-semibold text-fg placeholder:font-normal placeholder:text-fg-subtle",
           "transition-colors motion-reduce:transition-none",
-          "disabled:cursor-not-allowed disabled:bg-surface-muted disabled:opacity-70",
+          "disabled:cursor-not-allowed disabled:border-fg-subtle disabled:bg-surface-muted disabled:text-fg-subtle",
           error ? "border-danger" : "border-line",
           focusRing,
           className
